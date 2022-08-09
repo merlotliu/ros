@@ -1,5 +1,6 @@
 # Table of contents
 
+* [README](README.md)
 * [ROS Overview](ros-overview.md)
 
 ## ROS Installation
@@ -11,12 +12,10 @@
 
 * [Getting Start](ros-tutorials/ros-hello-world.md)
 * [ROS 文件系统 & 命令行工具](ros-tutorials/ros-filesys.md)
-
-- [ROS Topic 通信简单示例](ros-tutorials/ros-writing-publisher-subscriber-cpp.md)
-
-- [ROS Service 通信简单示例](ros-tutorials/ros-writing-service-client-cpp.md)
-- [ROS 参数服务器](ros-tutorials/ros-parameter-server.md)
-- [ROS 分布式通信](ros-tutorials/ros-multiple-machines.md)
+* [ROS Topic 通信简单示例](ros-tutorials/ros-writing-publisher-subscriber-cpp.md)
+* [ROS Service 通信简单示例](ros-tutorials/ros-writing-service-client-cpp.md)
+* [ROS 参数服务器](ros-tutorials/ros-parameter-server.md)
+* [ROS 分布式通信](ros-tutorials/ros-multiple-machines.md)
 
 ## Rotors Simulator
 
