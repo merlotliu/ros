@@ -8,9 +8,12 @@
 * [ROS Installation](ros-installation/ros-installation.md)
 * [IDE](ros-installation/ros-ide-config.md)
 
+## Getting Start
+
+- [ROS Hello World](ros-getting-start/ros-hello-world.md)
+
 ## ROS Tutorials
 
-* [Getting Start](ros-tutorials/ros-hello-world.md)
 * [ROS 文件系统 & 命令行工具](ros-tutorials/ros-filesys.md)
 * [ROS Topic 通信简单示例](ros-tutorials/ros-writing-publisher-subscriber-cpp.md)
 * [ROS Service 通信简单示例](ros-tutorials/ros-writing-service-client-cpp.md)
