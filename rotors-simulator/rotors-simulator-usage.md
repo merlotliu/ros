@@ -8,7 +8,7 @@ categories:
 - [ROS, RotorS]
 ---
 
-# Rotors Simulator Example Usage
+# RotorS 简单示例
 
 ## 1 创建功能包
 

@@ -1,2 +1,0 @@
-# Rotors Simulator Example Usage
-

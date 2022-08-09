@@ -1,5 +1,5 @@
 ---
-title: ROS 架構
+title: ROS 文件系统 & 工具
 comments: true
 date: 2022-07-15 15:45:12
 updated: 2022-07-15 15:45:12
@@ -8,7 +8,7 @@ categories:
 - [ROS,beginner-tutorials]
 ---
 
-### ROS文件系統
+## ROS 文件系統
 
 ROS文件系统级指的是在硬盘上ROS源代码的组织形式，其结构大致可以如下图所示：
 
@@ -49,17 +49,17 @@ WorkSpace --- 自定义的工作空间
         
 ```
 
-#### launch文件
+### launch文件
 
 `launch`文件實質也是`xml`文件
 
-##### 需求
+#### 需求
 
 > 一个程序中可能需要启动多个节点，比如:ROS 内置的小乌龟案例，如果要控制乌龟运动，要启动多个窗口，分别启动 roscore、乌龟界面节点、键盘控制节点。如果每次都调用 rosrun 逐一启动，显然效率低下，如何优化?
 
 官方给出的优化策略是使用 launch 文件，可以一次性启动多个 ROS 节点。
 
-##### 實現
+#### 實現
 
 1. 在功能包下創建`launch`文件夾，通過在命令行輸入：
 
@@ -103,7 +103,7 @@ WorkSpace --- 自定义的工作空间
 5. 運行結果：
    原來需要分別啓動的roscore、烏龜GUI和鍵盤控制節點，能夠一次性全部啓動。
 
-#### package.xml
+### package.xml
 
 该文件定义有关软件包的属性，例如软件包名称，版本号，作者，维护者以及对其他catkin软件包的依赖性。请注意，该概念类似于旧版 rosbuild 构建系统中使用的*manifest.xml*文件。
 
@@ -192,7 +192,7 @@ WorkSpace --- 自定义的工作空间
 
 ```
 
-#### CMakelists.txt
+### CMakelists.txt
 
 文件**CMakeLists.txt**是CMake构建系统的输入，用于构建软件包。任何兼容CMake的软件包都包含一个或多个CMakeLists.txt文件，这些文件描述了如何构建代码以及将代码安装到何处。
 
@@ -423,11 +423,11 @@ catkin_install_python(PROGRAMS
 
 ```
 
-### ROS Tools
+## ROS Tools
 
-#### 查找、安裝和刪除相關ROS功能包
+### 查找、安裝和刪除相關ROS功能包
 
-##### 查找
+#### 查找
 
 ```shell
 $ apt search ros-<distro>-<package>
@@ -447,19 +447,19 @@ $ apt search ros-kinetic-*
 $ apt search ros-kinetic-* | grep -i gmmaping
 ```
 
-##### 安裝
+#### 安裝
 
 ```shell
 $ sudo apt install  ros-<distro>-<package>
 ```
 
-##### 刪除
+#### 刪除
 
 ```shell
 $ sudo apt purge ros-<distro>-<package>
 ```
 
-#### roscore
+### roscore
 
 `roscore`是節點運行和通信的必要條件:
 
@@ -481,7 +481,7 @@ $ roscore -p xxxx
 
 ![image-20220703203034222](../images/posts/ros-filesys.assets/image-20220703203034222.png)
 
-#### rosrun
+### rosrun
 
 用法:
 
@@ -495,19 +495,19 @@ $ rosrun <package> <node>
 $ rosrun turtlesim turtlesim_node
 ```
 
-#### roslaunch
+### roslaunch
 
 ```shell
 $ roslaunch <package> <launch>
 ```
 
-#### catkin_create_pkg 
+### catkin_create_pkg 
 
 ```shell
 catkin_create_pkg <package> <dependencies>
 ```
 
-#### rospack
+### rospack
 
 **作用**：獲取`packages`相關信息；
 
@@ -537,11 +537,11 @@ ROS_INSTALL_PATH/share/roscpp
 /opt/ros/kinetic/share/roscpp
 ```
 
-#### roscd
+### roscd
 
 **作用**：直接切換到`ROS package`的路徑下；
 
-##### ROS package 根目錄
+#### ROS package 根目錄
 
 用法：
 
@@ -581,7 +581,7 @@ $ echo $ROS_PACKAGE_PATH
 
 與其他環境變量一樣的是，可以向`ROS_PACKAGE_PATH`添加其他目錄，不同路徑用 `:` 分割。
 
-##### ROS package 子目錄
+#### ROS package 子目錄
 
 示例：
 
@@ -596,7 +596,7 @@ $ pwd
 ROS_INSTALL_PATH/share/roscpp/cmake
 ```
 
-##### roscd log
+#### roscd log
 
 `roscd log`將切換到ROS日志文件的存放路徑。
 
@@ -606,7 +606,7 @@ ROS_INSTALL_PATH/share/roscpp/cmake
 $ roscd log
 ```
 
-#### rosls
+### rosls
 
 **作用**：通過`ROS package`名稱即可列出其子目錄，而不需要完整的路徑；
 
@@ -628,7 +628,7 @@ $ rosls roscpp_tutorials
 cmake launch package.xml  srv
 ```
 
-#### Tab 補全（Tab-completion）
+### Tab 補全（Tab-completion）
 
 輸入完整的`package`名稱是一件冗長乏味的事情。在前面的例子中，`roscpp_tutorials`無疑是一個相當長的名字了。所幸的是，一些ROS工具支持Tab補全。
 
@@ -688,7 +688,7 @@ $ roscd turtlesim/
 $ rosls <<< now push the TAB key twice >>>
 ```
 
-#### rosed
+### rosed
 
 需要安裝`vim`，用法：
 
@@ -702,7 +702,7 @@ $ rosed <package> <file>
 $ rosed turtlesim Color.msg
 ```
 
-#### 幫助
+### 幫助
 
 當不明確`ROS Tools`使用規則時，可以在命令後鍵入`-h`獲得使用説明，如下：
 
