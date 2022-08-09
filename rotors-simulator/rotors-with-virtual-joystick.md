@@ -1,11 +1,14 @@
 ---
 title: RotorS with virtual joystick
 comments: true
-date: 2022-07-25 16:26:42
-updated: 2022-07-25 16:26:42
-tags: [ROS, RotorS]
+date: 2022-07-25T16:26:42.000Z
+updated: 2022-07-25T16:26:42.000Z
+tags:
+  - ROS
+  - RotorS
 categories:
-- [ROS, RotorS]
+  - - ROS
+    - RotorS
 ---
 
 # RotorS with virtual joystick
@@ -20,7 +23,7 @@ roslaunch rotors_gazebo mav_with_keyboard.launch mav_name:=firefly world_name:=b
 
 ## 设置虚拟键盘控制器
 
-配置原文 : [Setup virtual keyboard joystick · ethz-asl/rotors_simulator Wiki (github.com)](https://github.com/ethz-asl/rotors_simulator/wiki/Setup-virtual-keyboard-joystick)
+配置原文 : [Setup virtual keyboard joystick · ethz-asl/rotors\_simulator Wiki (github.com)](https://github.com/ethz-asl/rotors\_simulator/wiki/Setup-virtual-keyboard-joystick)
 
 为了创建虚拟键盘控制器，需要用到`Python-uniput`(https://github.com/devbharat/python-uinput)
 
@@ -93,17 +96,17 @@ roslaunch rotors_gazebo mav_with_keyboard.launch
 
 ## 相关键盘操作
 
-w - throttle up                       ↑   - pitch up
+w - throttle up ↑ - pitch up
 
-s - throttle down                   ↓   - pitch down
+s - throttle down ↓ - pitch down
 
-a - yaw left                             →  - roll right
+a - yaw left → - roll right
 
-d - yaw right                          ←  - roll left  
+d - yaw right ← - roll left
 
 ## 相关问题
 
-### Error 1 : Unable to find uri [model://xxx]
+### Error 1 : Unable to find uri \[model://xxx]
 
 #### 错误描述
 
@@ -114,7 +117,7 @@ Error [parser.cc:581] Unable to find uri[model://ground_plane]
 
 #### 解决方案
 
-`Gazebo` 需要互联网连接才能下载模型文件（例如默认世界的太阳和地平面）。如果您在第一次运行 `Gazebo` 时没有访问 Internet，则会出现此错误。还可以从[gazebosim.org/models](gazebosim.org/models) 手动下载模型文件并将它们放在您的`~/.gazebo/models文件`夹中。
+`Gazebo` 需要互联网连接才能下载模型文件（例如默认世界的太阳和地平面）。如果您在第一次运行 `Gazebo` 时没有访问 Internet，则会出现此错误。还可以从[gazebosim.org/models](../ros-tutorials/gazebosim.org/models/) 手动下载模型文件并将它们放在您的`~/.gazebo/models文件`夹中。
 
 ```
 # 解压缩
@@ -133,7 +136,7 @@ tar -xzvf models.tar.gz
 
 #### 解决方案
 
-##### 方法1
+**方法1**
 
 使用以下命令关闭硬件加速
 
@@ -142,15 +145,15 @@ echo " export SVGA_VGPU10=0" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-##### 方法2
+**方法2**
 
 关闭虚拟机的3D图形加速
 
-##### 方法3
+**方法3**
 
 更新`gazebo`
 
-## Reference 
+## Reference
 
-1. [(71条消息) ROS 无人机仿真系统4 —— 通过键盘控制飞行器飞行_KongDaQing1290的博客-CSDN博客_ros无人机](https://blog.csdn.net/KongDaQing1290/article/details/79743026#:~:text=键盘控制无人机飞行)
-2. [Setup virtual keyboard joystick · ethz-asl/rotors_simulator Wiki (github.com)](https://github.com/ethz-asl/rotors_simulator/wiki/Setup-virtual-keyboard-joystick)
+1. [(71条消息) ROS 无人机仿真系统4 —— 通过键盘控制飞行器飞行\_KongDaQing1290的博客-CSDN博客\_ros无人机](https://blog.csdn.net/KongDaQing1290/article/details/79743026)
+2. [Setup virtual keyboard joystick · ethz-asl/rotors\_simulator Wiki (github.com)](https://github.com/ethz-asl/rotors\_simulator/wiki/Setup-virtual-keyboard-joystick)

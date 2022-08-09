@@ -1,18 +1,22 @@
 ---
 title: ROS 文件系统 & 工具
 comments: true
-date: 2022-07-15 15:45:12
-updated: 2022-07-15 15:45:12
-tags: [ROS]
-categories: 
-- [ROS,beginner-tutorials]
+date: 2022-07-15T15:45:12.000Z
+updated: 2022-07-15T15:45:12.000Z
+tags:
+  - ROS
+categories:
+  - - ROS
+    - beginner-tutorials
 ---
 
-## ROS 文件系統
+# ROS 文件系统 & 命令行工具
+
+### ROS 文件系統
 
 ROS文件系统级指的是在硬盘上ROS源代码的组织形式，其结构大致可以如下图所示：
 
-![img](../images/posts/ros-filesys.assets/文件系统.jpg)
+![img](../images/posts/ros-filesys.assets/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F.jpg)
 
 ```
 WorkSpace --- 自定义的工作空间
@@ -49,63 +53,56 @@ WorkSpace --- 自定义的工作空间
         
 ```
 
-### launch文件
+#### launch文件
 
 `launch`文件實質也是`xml`文件
 
-#### 需求
+**需求**
 
 > 一个程序中可能需要启动多个节点，比如:ROS 内置的小乌龟案例，如果要控制乌龟运动，要启动多个窗口，分别启动 roscore、乌龟界面节点、键盘控制节点。如果每次都调用 rosrun 逐一启动，显然效率低下，如何优化?
 
 官方给出的优化策略是使用 launch 文件，可以一次性启动多个 ROS 节点。
 
-#### 實現
+**實現**
 
-1. 在功能包下創建`launch`文件夾，通過在命令行輸入：
+1.  在功能包下創建`launch`文件夾，通過在命令行輸入：
 
-   ```shell
-   mkdir launch
-   ```
+    ```shell
+    mkdir launch
+    ```
+2.  在`launch`文件夾下，創建`launch`文件：
 
-2. 在`launch`文件夾下，創建`launch`文件：
+    ```shell
+    vim LAUNCH_NAME.launch
+    ```
+3.  編輯`launch`文件内容
 
-   ```shell
-   vim LAUNCH_NAME.launch
-   ```
+    ```xml
+    <launch>
+        <node pkg="turtlesim" type="turtlesim_node" name="turtle_gui" />
+        <node pkg="turtlesim" type="turtle_teleop_key" name="turtle_ctl"/>
+    </launch>
+    ```
 
-3. 編輯`launch`文件内容
+    node : 需要啓動的節點
 
-   ```xml
-   <launch>
-       <node pkg="turtlesim" type="turtlesim_node" name="turtle_gui" />
-       <node pkg="turtlesim" type="turtle_teleop_key" name="turtle_ctl"/>
-   </launch>
-   ```
+    pkg : 功能包
 
-   node : 需要啓動的節點
+    type : 被執行的節點文件
 
-   pkg : 功能包
+    name : 節點名稱
 
-   type : 被執行的節點文件
+    **特别的**，使用`launch`文件会默认启动`roscore`，不需要额外启动。
+4.  運行`launch`文件
 
-   name : 節點名稱
+    ```shell
+    roslaunch PKG_NAME LAUNCH_NAME.launch
+    ```
+5. 運行結果： 原來需要分別啓動的roscore、烏龜GUI和鍵盤控制節點，能夠一次性全部啓動。
 
-   
+#### package.xml
 
-   **特别的**，使用`launch`文件会默认启动`roscore`，不需要额外启动。
-
-4. 運行`launch`文件
-
-   ```shell
-   roslaunch PKG_NAME LAUNCH_NAME.launch
-   ```
-
-5. 運行結果：
-   原來需要分別啓動的roscore、烏龜GUI和鍵盤控制節點，能夠一次性全部啓動。
-
-### package.xml
-
-该文件定义有关软件包的属性，例如软件包名称，版本号，作者，维护者以及对其他catkin软件包的依赖性。请注意，该概念类似于旧版 rosbuild 构建系统中使用的*manifest.xml*文件。
+该文件定义有关软件包的属性，例如软件包名称，版本号，作者，维护者以及对其他catkin软件包的依赖性。请注意，该概念类似于旧版 rosbuild 构建系统中使用的_manifest.xml_文件。
 
 ```xml
 <?xml version="1.0"?>
@@ -189,14 +186,13 @@ WorkSpace --- 自定义的工作空间
 
   </export>
 </package>
-
 ```
 
-### CMakelists.txt
+#### CMakelists.txt
 
 文件**CMakeLists.txt**是CMake构建系统的输入，用于构建软件包。任何兼容CMake的软件包都包含一个或多个CMakeLists.txt文件，这些文件描述了如何构建代码以及将代码安装到何处。
 
-```txt
+```
 cmake_minimum_required(VERSION 3.0.2) #所需 cmake 版本
 project(demo01_hello_vscode) #包名称，会被 ${PROJECT_NAME} 的方式调用
 
@@ -420,14 +416,13 @@ catkin_install_python(PROGRAMS
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-
 ```
 
-## ROS Tools
+### ROS Tools
 
-### 查找、安裝和刪除相關ROS功能包
+#### 查找、安裝和刪除相關ROS功能包
 
-#### 查找
+**查找**
 
 ```shell
 $ apt search ros-<distro>-<package>
@@ -447,25 +442,25 @@ $ apt search ros-kinetic-*
 $ apt search ros-kinetic-* | grep -i gmmaping
 ```
 
-#### 安裝
+**安裝**
 
 ```shell
 $ sudo apt install  ros-<distro>-<package>
 ```
 
-#### 刪除
+**刪除**
 
 ```shell
 $ sudo apt purge ros-<distro>-<package>
 ```
 
-### roscore
+#### roscore
 
 `roscore`是節點運行和通信的必要條件:
 
-- ros master；
-- ros 参数服务器；
-- rosout 日志节点；
+* ros master；
+* ros 参数服务器；
+* rosout 日志节点；
 
 用法:
 
@@ -481,7 +476,7 @@ $ roscore -p xxxx
 
 ![image-20220703203034222](../images/posts/ros-filesys.assets/image-20220703203034222.png)
 
-### rosrun
+#### rosrun
 
 用法:
 
@@ -495,19 +490,19 @@ $ rosrun <package> <node>
 $ rosrun turtlesim turtlesim_node
 ```
 
-### roslaunch
+#### roslaunch
 
 ```shell
 $ roslaunch <package> <launch>
 ```
 
-### catkin_create_pkg 
+#### catkin\_create\_pkg
 
 ```shell
 catkin_create_pkg <package> <dependencies>
 ```
 
-### rospack
+#### rospack
 
 **作用**：獲取`packages`相關信息；
 
@@ -537,11 +532,11 @@ ROS_INSTALL_PATH/share/roscpp
 /opt/ros/kinetic/share/roscpp
 ```
 
-### roscd
+#### roscd
 
 **作用**：直接切換到`ROS package`的路徑下；
 
-#### ROS package 根目錄
+**ROS package 根目錄**
 
 用法：
 
@@ -581,7 +576,7 @@ $ echo $ROS_PACKAGE_PATH
 
 與其他環境變量一樣的是，可以向`ROS_PACKAGE_PATH`添加其他目錄，不同路徑用 `:` 分割。
 
-#### ROS package 子目錄
+**ROS package 子目錄**
 
 示例：
 
@@ -596,7 +591,7 @@ $ pwd
 ROS_INSTALL_PATH/share/roscpp/cmake
 ```
 
-#### roscd log
+**roscd log**
 
 `roscd log`將切換到ROS日志文件的存放路徑。
 
@@ -606,7 +601,7 @@ ROS_INSTALL_PATH/share/roscpp/cmake
 $ roscd log
 ```
 
-### rosls
+#### rosls
 
 **作用**：通過`ROS package`名稱即可列出其子目錄，而不需要完整的路徑；
 
@@ -628,7 +623,7 @@ $ rosls roscpp_tutorials
 cmake launch package.xml  srv
 ```
 
-### Tab 補全（Tab-completion）
+#### Tab 補全（Tab-completion）
 
 輸入完整的`package`名稱是一件冗長乏味的事情。在前面的例子中，`roscpp_tutorials`無疑是一個相當長的名字了。所幸的是，一些ROS工具支持Tab補全。
 
@@ -670,7 +665,7 @@ turtle_actionlib/  turtlesim/ turtle_tf/
 $ roscd turtle
 ```
 
-如果想要定位到`turtlesim/ `，則需要至少再繼續在`turtle`後面輸入一個`s`，然後按下`TAB`：
+如果想要定位到`turtlesim/` ，則需要至少再繼續在`turtle`後面輸入一個`s`，然後按下`TAB`：
 
 ```shell
 $ roscd turtles<<< now push the TAB key >>>
@@ -688,7 +683,7 @@ $ roscd turtlesim/
 $ rosls <<< now push the TAB key twice >>>
 ```
 
-### rosed
+#### rosed
 
 需要安裝`vim`，用法：
 
@@ -702,7 +697,7 @@ $ rosed <package> <file>
 $ rosed turtlesim Color.msg
 ```
 
-### 幫助
+#### 幫助
 
 當不明確`ROS Tools`使用規則時，可以在命令後鍵入`-h`獲得使用説明，如下：
 
@@ -714,9 +709,7 @@ $ rospack -h
 
 ![image-20220703170334323](../images/posts/ros-filesys.assets/image-20220703170334323.png)
 
-
-
-## Reference 
+### Reference
 
 1. [ROS/Tutorials/NavigatingTheFilesystem - ROS Wiki](http://wiki.ros.org/ROS/Tutorials/NavigatingTheFilesystem)
-1. [1.5 ROS架构 · Autolabor-ROS机器人入门课程《ROS理论与实践》零基础教程](http://www.autolabor.com.cn/book/ROSTutorials/chapter1/15-ben-zhang-xiao-jie.html)
+2. [1.5 ROS架构 · Autolabor-ROS机器人入门课程《ROS理论与实践》零基础教程](http://www.autolabor.com.cn/book/ROSTutorials/chapter1/15-ben-zhang-xiao-jie.html)
