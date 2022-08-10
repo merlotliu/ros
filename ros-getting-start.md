@@ -1,12 +1,16 @@
 ---
 title: ROS HelloWorld
 comments: true
-date: 2022-07-15 15:38:24
-updated: 2022-07-15 15:38:24
-tags: [ROS]
+date: 2022-07-15T15:38:24.000Z
+updated: 2022-07-15T15:38:24.000Z
+tags:
+  - ROS
 categories:
-- [ROS,beginner-tutorials]
+  - - ROS
+    - beginner-tutorials
 ---
+
+# Getting Start
 
 编写ROS的第一个程序，实现流程大致如下：
 
@@ -16,7 +20,7 @@ categories:
 4. 编辑配置文件；
 5. 编译、执行；
 
-## 1 创建工作空间并初始化
+### 1 创建工作空间并初始化
 
 创建含有`src`目录的工作空间，切换到工作空间下，`catkin_make`编译完成初始化：
 
@@ -29,7 +33,7 @@ cd WORKSPACE_NAME/
 catkin_make
 ```
 
-## 2 创建功能包并添加依赖
+### 2 创建功能包并添加依赖
 
 切换到工作空间的`src`目录下，使用`catkin_create_pkg`创建功能包并添加依赖：
 
@@ -42,11 +46,11 @@ catkin_create_pkg PKG_NAME roscpp rospy std_msgs
 
 该功能包添加的依赖为`roscpp`、`rospy`和`std_msgs`，`roscpp`表示使用C++实现的库，`rospy`表示使用Python实现的库，`std_msgs`为标准消息库。功能包通常都会依赖这三个库实现。
 
-## 3 编写源文件
+### 3 编写源文件
 
 在ROS中，虽然实现同一功能时，C++和Python可以互换，但是具体选择哪种语言，需要视需求而定，因为两种语言相较而言:C++运行效率高但是编码效率低，而Python则反之，基于二者互补的特点，ROS设计者分别设计了`roscpp`与`rospy`库，前者旨在成为ROS的高性能库，而后者则一般用于对性能无要求的场景，旨在提高开发效率。
 
-### C++实现
+#### C++实现
 
 使用`vim`创建并打开`cpp`文件：
 
@@ -71,7 +75,7 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-### Python实现
+#### Python实现
 
 使用`vim`创建并打开`python`文件：
 
@@ -100,11 +104,9 @@ if __name__ == "__main__":
 chmod +x PYTHON_NAME.py
 ```
 
+### 4 编辑功能包下的`CMakelist.txt`文件
 
-
-## 4 编辑功能包下的`CMakelist.txt`文件
-
-### C++
+#### C++
 
 ```shell
 # hello_world 为可执行程序的名字，可随意命名，一般为源文件名去掉后缀
@@ -118,7 +120,7 @@ target_link_libearies(hello_world_exe
 )
 ```
 
-### Python
+#### Python
 
 ```shell
 catkin_install_python(PROGRAMS scripts/PYTHON_NAME.py
@@ -126,9 +128,7 @@ catkin_install_python(PROGRAMS scripts/PYTHON_NAME.py
 )
 ```
 
-
-
-## 5 编译并执行
+### 5 编译并执行
 
 切换进入工作空间，使用`catkin_make`编译
 
@@ -168,9 +168,7 @@ rosrun PKG_NAME PYTHON_NAME.py
 
 输入完，回车就能在命令行看见输出：**Hello World ！**
 
-
-
-**Tips : **
+Tips :&#x20;
 
 `source ~/工作空间/devel/setup.bash`可以添加进`.bashrc`文件，使用上更方便
 
@@ -178,8 +176,6 @@ rosrun PKG_NAME PYTHON_NAME.py
 
 添加方式2 : `echo "source ~/工作空间/devel/setup.bash" >> ~/.bashrc`
 
-
-
-## Reference 
+### Reference
 
 1. [1.3.1 HelloWorld实现简介 · Autolabor-ROS机器人入门课程《ROS理论与实践》零基础教程](http://www.autolabor.com.cn/book/ROSTutorials/chapter1/13-rosji-cheng-kai-fa-huan-jing-da-jian/131-helloworldshi-xian-jian-jie.html)
