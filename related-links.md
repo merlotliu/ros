@@ -1,15 +1,13 @@
 # Related Links
 
-### 基础知识储备
+## 基础知识储备
 
 * Linux常用指令；
 * 掌握C++或Python；
 
-### 学习链接
+## 学习链接
 
-**视频**
-
-#### **古月居（了解）**
+### **古月居（了解）**
 
 讲的非常浅显，但可以帮助快速了解ROS，简单看一两遍遍就可以了
 
@@ -17,7 +15,7 @@
 
 古月居论坛：[https://www.guyuehome.com/](https://www.guyuehome.com/)
 
-#### **B站赵虚左（推荐）**
+### **B站赵虚左（推荐）**
 
 讲的非常详细，从基础概念、通信机制到实战都有详细的说明，对新手非常友好
 
@@ -25,7 +23,7 @@
 
 讲义链接：[http://www.autolabor.com.cn/book/ROSTutorials/index.html](http://www.autolabor.com.cn/book/ROSTutorials/index.html)
 
-#### **ROS 开源社区**
+### **ROS 开源社区**
 
 [ROS Wiki (http://wiki.ros.org/)](http://wiki.ros.org/)：ROS Wiki是用于记录有关ROS系统信息的主要论坛。任何人都可以注册账户、贡献自己的文件、提供更正或更新、编写教程以及其他行为。**学习ROS最重要的一个网站！！！**
 
@@ -37,7 +35,7 @@
 
 [ROS官方教程](http://wiki.ros.org/ROS/Tutorials)：ROS官方提供的帮助新手入门的一系列教程，如创建工作空间、功能包、话题通信等。
 
-### Reference
+## Reference
 
 1. [http://www.autolabor.com.cn/book/ROSTutorials/index.html](http://www.autolabor.com.cn/book/ROSTutorials/index.html)
 2. [https://www.guyuehome.com/](https://www.guyuehome.com/)
