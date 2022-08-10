@@ -6,7 +6,7 @@
 * [ROS Env Configuration](<README (1).md>)
   * [ROS Installation](ros-installation/ros-installation.md)
   * [IDE & Tools Configuration](ros-installation/ros-ide-config.md)
-* [Getting Start](ros-getting-start.md)
+* [Getting Start](ros-getting-start/ros-hello-world.md)
 * [ROS Tutorials](ros-tutorials/README.md)
   * [ROS 文件系统 & 命令行工具](ros-tutorials/ros-filesys.md)
   * [ROS Topic 通信简单示例](ros-tutorials/ros-writing-publisher-subscriber-cpp.md)

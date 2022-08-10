@@ -1,15 +1,3 @@
----
-title: ROS HelloWorld
-comments: true
-date: 2022-07-15T15:38:24.000Z
-updated: 2022-07-15T15:38:24.000Z
-tags:
-  - ROS
-categories:
-  - - ROS
-    - beginner-tutorials
----
-
 # Getting Start
 
 编写ROS的第一个程序，实现流程大致如下：
