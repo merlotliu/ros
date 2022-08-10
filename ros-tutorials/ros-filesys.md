@@ -12,7 +12,7 @@ categories:
 
 # ROS 文件系统 & 命令行工具
 
-### ROS 文件系統
+## ROS 文件系統
 
 ROS文件系统级指的是在硬盘上ROS源代码的组织形式，其结构大致可以如下图所示：
 
@@ -53,7 +53,7 @@ WorkSpace --- 自定义的工作空间
         
 ```
 
-#### launch文件
+### launch文件
 
 `launch`文件實質也是`xml`文件
 
@@ -100,7 +100,7 @@ WorkSpace --- 自定义的工作空间
     ```
 5. 運行結果： 原來需要分別啓動的roscore、烏龜GUI和鍵盤控制節點，能夠一次性全部啓動。
 
-#### package.xml
+### package.xml
 
 该文件定义有关软件包的属性，例如软件包名称，版本号，作者，维护者以及对其他catkin软件包的依赖性。请注意，该概念类似于旧版 rosbuild 构建系统中使用的_manifest.xml_文件。
 
@@ -188,7 +188,7 @@ WorkSpace --- 自定义的工作空间
 </package>
 ```
 
-#### CMakelists.txt
+### CMakelists.txt
 
 文件**CMakeLists.txt**是CMake构建系统的输入，用于构建软件包。任何兼容CMake的软件包都包含一个或多个CMakeLists.txt文件，这些文件描述了如何构建代码以及将代码安装到何处。
 
@@ -418,9 +418,9 @@ catkin_install_python(PROGRAMS
 # catkin_add_nosetests(test)
 ```
 
-### ROS Tools
+## ROS Tools
 
-#### 查找、安裝和刪除相關ROS功能包
+### 查找、安裝和刪除相關ROS功能包
 
 **查找**
 
@@ -454,7 +454,7 @@ $ sudo apt install  ros-<distro>-<package>
 $ sudo apt purge ros-<distro>-<package>
 ```
 
-#### roscore
+### roscore
 
 `roscore`是節點運行和通信的必要條件:
 
@@ -476,7 +476,7 @@ $ roscore -p xxxx
 
 ![image-20220703203034222](../.gitbook/assets/ros-filesys.assets/image-20220703203034222.png)
 
-#### rosrun
+### rosrun
 
 用法:
 
@@ -490,19 +490,19 @@ $ rosrun <package> <node>
 $ rosrun turtlesim turtlesim_node
 ```
 
-#### roslaunch
+### roslaunch
 
 ```shell
 $ roslaunch <package> <launch>
 ```
 
-#### catkin\_create\_pkg
+### catkin\_create\_pkg
 
 ```shell
 catkin_create_pkg <package> <dependencies>
 ```
 
-#### rospack
+### rospack
 
 **作用**：獲取`packages`相關信息；
 
@@ -532,7 +532,7 @@ ROS_INSTALL_PATH/share/roscpp
 /opt/ros/kinetic/share/roscpp
 ```
 
-#### roscd
+### roscd
 
 **作用**：直接切換到`ROS package`的路徑下；
 
@@ -601,7 +601,7 @@ ROS_INSTALL_PATH/share/roscpp/cmake
 $ roscd log
 ```
 
-#### rosls
+### rosls
 
 **作用**：通過`ROS package`名稱即可列出其子目錄，而不需要完整的路徑；
 
@@ -623,7 +623,7 @@ $ rosls roscpp_tutorials
 cmake launch package.xml  srv
 ```
 
-#### Tab 補全（Tab-completion）
+### Tab 補全（Tab-completion）
 
 輸入完整的`package`名稱是一件冗長乏味的事情。在前面的例子中，`roscpp_tutorials`無疑是一個相當長的名字了。所幸的是，一些ROS工具支持Tab補全。
 
@@ -683,7 +683,7 @@ $ roscd turtlesim/
 $ rosls <<< now push the TAB key twice >>>
 ```
 
-#### rosed
+### rosed
 
 需要安裝`vim`，用法：
 
@@ -697,7 +697,7 @@ $ rosed <package> <file>
 $ rosed turtlesim Color.msg
 ```
 
-#### 幫助
+### 幫助
 
 當不明確`ROS Tools`使用規則時，可以在命令後鍵入`-h`獲得使用説明，如下：
 
@@ -709,7 +709,7 @@ $ rospack -h
 
 ![image-20220703170334323](../.gitbook/assets/ros-filesys.assets/image-20220703170334323.png)
 
-### Reference
+## Reference
 
 1. [ROS/Tutorials/NavigatingTheFilesystem - ROS Wiki](http://wiki.ros.org/ROS/Tutorials/NavigatingTheFilesystem)
 2. [1.5 ROS架构 · Autolabor-ROS机器人入门课程《ROS理论与实践》零基础教程](http://www.autolabor.com.cn/book/ROSTutorials/chapter1/15-ben-zhang-xiao-jie.html)
