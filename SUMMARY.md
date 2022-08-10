@@ -1,16 +1,16 @@
 # Table of contents
 
 * [简介](README.md)
-* [Related Links](related-links.md)
-* [ROS Overview](ros-overview.md)
-* [ROS Env Configuration](ros-env-config/README.md)
-  * [ROS Installation](ros-env-config/ros-installation.md)
-  * [IDE & Tools Configuration](ros-env-config/ros-ide-config.md)
+* [Related Links](ros-notes/related-links.md)
+* [ROS Overview](ros-notes/ros-overview.md)
+* [ROS Env Configuration](ros-notes/ros-env-config/README.md)
+  * [ROS Installation](ros-notes/ros-env-config/ros-installation.md)
+  * [IDE & Tools Configuration](ros-notes/ros-env-config/ros-ide-config.md)
 
 ## My Notes
 
 * [Getting Start](ros-notes/ros-getting-start/ros-hello-world.md)
-* [ROS Concepts](my-notes/ros-concepts/README.md)
+* [ROS Concepts](ros-notes/ros-concepts/README.md)
   * [ROS Topic 理论模型](ros-notes/ros-concepts/ros-esablishing-topic-connection.md)
   * [ROS Service 理论模型](ros-notes/ros-concepts/ros-establishing-service-connection.md)
 * [ROS Tutorials](ros-notes/ros-tutorials/README.md)
