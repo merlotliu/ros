@@ -1,6 +1,7 @@
 # Table of contents
 
 * [README](README.md)
+* [Related Links](related-links.md)
 * [ROS Overview](ros-overview.md)
 
 ## ROS Installation
@@ -10,7 +11,7 @@
 
 ## Getting Start
 
-- [ROS Hello World](ros-getting-start/ros-hello-world.md)
+* [ROS Hello World](ros-getting-start/ros-hello-world.md)
 
 ## ROS Tutorials
 
