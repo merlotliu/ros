@@ -6,4 +6,4 @@
 
 **Tutorial Level:** BEGINNER
 
-**Next Tutorial:** [Understanding ROS Nodes](./ros-tutorials-beginner-5-understanding-nodes.md)
+**Next Tutorial:** [Understanding ROS Nodes](./ros-tutorials-beginner-5-understanding-nodes)

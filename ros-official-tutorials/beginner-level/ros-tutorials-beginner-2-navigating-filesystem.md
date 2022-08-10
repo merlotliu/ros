@@ -4,7 +4,7 @@
 
 **描述**：介紹ROS文件系統相關概念，包括使用`roscd`, `rosls`, `rospack` 命令行工具。
 
-**下一节:** [Creating a ROS Package](./ros-tutorials-beginner-3-creating-package.md)
+**下一节:** [Creating a ROS Package](./ros-tutorials-beginner-3-creating-package)
 
 ## 必要準備
 

@@ -20,10 +20,10 @@
   * [Rotors Simulator Usage](rotors-simulator/rotors-simulator-usage.md)
   * [RotorS 分布式通信综合案例](rotors-simulator/rotors-distributed-comm-comprehensive-case.md)
 
-- [ROS Official Tutorials](ros-official-tutorials/README.md)
-  - [Beginner Level](ros-official-tutorials/beginner-level/README.md)
-    - [Navigating the ROS Filesystem](ros-official-tutorials/beginner-level/ros-tutorials-beginner-2-navigating-filesystem.md)
-    - [Understanding ROS Nodes](ros-official-tutorials/beginner-level/ros-tutorials-beginner-5-understanding-nodes.md)
-    - [Understanding ROS Topics](ros-official-tutorials/beginner-level/ros-tutorials-beginner-6-understanding-topics.md)
-    - [Understanding ROS Services and Parameters](ros-official-tutorials/beginner-level/ros-tutorials-beginner-7-understanding-services-params.md)
+* [ROS Official Tutorials](ros-official-tutorials/README.md)
+  * [Beginner Level](ros-official-tutorials/beginner-level/README.md)
+    * [Navigating the ROS Filesystem](ros-official-tutorials/beginner-level/ros-tutorials-beginner-2-navigating-filesystem.md)
+    * [Understanding ROS Nodes](ros-official-tutorials/beginner-level/ros-tutorials-beginner-5-understanding-nodes.md)
+    * [Understanding ROS Topics](ros-official-tutorials/beginner-level/ros-tutorials-beginner-6-understanding-topics.md)
+    * [Understanding ROS Services and Parameters](ros-official-tutorials/beginner-level/ros-tutorials-beginner-7-understanding-services-params.md)
 
