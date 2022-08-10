@@ -1,10 +1,10 @@
 # Navigating the ROS Filesystem
 
-[ROS](https://wiki.ros.org/ROS)/ [Tutorials](https://wiki.ros.org/ROS/Tutorials)/ [NavigatingTheFilesystem](https://wiki.ros.org/action/fullsearch/ROS/Tutorials/NavigatingTheFilesystem?action=fullsearch&context=180&value=linkto%3A"ROS%2FTutorials%2FNavigatingTheFilesystem")
+[ROS](https://wiki.ros.org/ROS)/ [Tutorials](https://wiki.ros.org/ROS/Tutorials)/ [NavigatingTheFilesystem](https://wiki.ros.org/action/fullsearch/ROS/Tutorials/NavigatingTheFilesystem?action=fullsearch\&context=180\&value=linkto%3A%22ROS%2FTutorials%2FNavigatingTheFilesystem%22)
 
 **描述**：介紹ROS文件系統相關概念，包括使用`roscd`, `rosls`, `rospack` 命令行工具。
 
-**下一节:** [Creating a ROS Package](./ros-tutorials-beginner-3-creating-package)
+**下一节:** [Creating a ROS Package](../../../ros-official-tutorials/beginner-level/ros-tutorials-beginner-3-creating-package/)
 
 ## 必要準備
 
@@ -20,7 +20,7 @@ $ sudo apt-get install ros-<distro>-ros-tutorials
 
 **Packages**：ROS中的代碼組織單元，包含庫文件、可執行文件、脚本文件和其他手動加入的文件。
 
-**Manifests(package.xml)：**當前功能包的描述文件，用於定義衆多包之間的依賴和獲取版本、維護者、許可證等信息。
+\*\*Manifests(package.xml)：\*\*當前功能包的描述文件，用於定義衆多包之間的依賴和獲取版本、維護者、許可證等信息。
 
 ## 文件系統工具
 
@@ -189,7 +189,7 @@ turtle_actionlib/  turtlesim/ turtle_tf/
 $ roscd turtle
 ```
 
-如果想要定位到`turtlesim/ `，則需要至少再繼續在`turtle`後面輸入一個`s`，然後按下`TAB`：
+如果想要定位到`turtlesim/` ，則需要至少再繼續在`turtle`後面輸入一個`s`，然後按下`TAB`：
 
 ```shell
 $ roscd turtles<<< now push the TAB key >>>
@@ -217,7 +217,7 @@ $ rospack -h
 
 命令行將顯示如下内容：
 
-![image-20220703170334323](.\ros_tutorials_navigating_filesystem.assets\image-20220703170334323.png)
+![image-20220703170334323](../../../ros-official-tutorials/beginner-level/ros\_tutorials\_navigating\_filesystem.assets/image-20220703170334323.png)
 
 ## 總結
 
@@ -231,6 +231,6 @@ rosls = ros + ls
 
 其實，這個命名格式在許多`ROS Tools`都適用。
 
-## Reference 
+## Reference
 
 1. http://wiki.ros.org/ROS/Tutorials/NavigatingTheFilesystem

@@ -1,10 +1,10 @@
 # Understanding ROS Nodes
 
-[ROS](http://wiki.ros.org/ROS)/ [Tutorials](http://wiki.ros.org/ROS/Tutorials)/ [UnderstandingNodes](http://wiki.ros.org/action/fullsearch/ROS/Tutorials/UnderstandingNodes?action=fullsearch&context=180&value=linkto%3A"ROS%2FTutorials%2FUnderstandingNodes")
+[ROS](http://wiki.ros.org/ROS)/ [Tutorials](http://wiki.ros.org/ROS/Tutorials)/ [UnderstandingNodes](http://wiki.ros.org/action/fullsearch/ROS/Tutorials/UnderstandingNodes?action=fullsearch\&context=180\&value=linkto%3A%22ROS%2FTutorials%2FUnderstandingNodes%22)
 
 **描述**：本文介绍ROS图形概念，并讨论了命令行工具 [roscore](http://wiki.ros.org/roscore), [rosnode](http://wiki.ros.org/rosnode), 和[rosrun](http://wiki.ros.org/rosrun) 的使用。
 
-**下一节:** [Understanding ROS Topics](./ros-tutorials-beginner-6-understanding-topics)
+**下一节:** [Understanding ROS Topics](../../../ros-official-tutorials/beginner-level/ros-tutorials-beginner-6-understanding-topics/)
 
 ## Prerequisites
 
@@ -78,7 +78,6 @@ ROS_MASTER_URI=http://ml-ros-kinetic:11311/
 setting /run_id to 1fbff624-fcd4-11ec-9814-000c2963efd7
 process[rosout-1]: started with pid [3065]
 started core service [/rosout]
-
 ```
 
 ## rosnode
@@ -125,7 +124,6 @@ Services:
 
 contacting node http://ml-ros-kinetic:41947/ ...
 Pid: 3065
-
 ```
 
 ## rosrun
@@ -146,9 +144,9 @@ $ rosrun turtlesim turtlesim_node
 
 将弹出以下窗口：
 
-![image-20220706105748105](.\ros_tutorials_understanding_nodes.assets\image-20220706105748105.png)
+![image-20220706105748105](../../../ros-official-tutorials/beginner-level/ros\_tutorials\_understanding\_nodes.assets/image-20220706105748105.png)
 
-**Notes**：这只乌龟的样式可能与你的不同。这是因为ROS提供了许多[乌龟的样式](http://wiki.ros.org/Distributions#Current_Distribution_Releases)，可以说是官方的小彩蛋。
+**Notes**：这只乌龟的样式可能与你的不同。这是因为ROS提供了许多[乌龟的样式](http://wiki.ros.org/Distributions#Current\_Distribution\_Releases)，可以说是官方的小彩蛋。
 
 打开新终端，重新输入：
 
@@ -165,7 +163,7 @@ $ rosnode list
 
 ROS一个比较有用的特性就是，可以在命令行修改节点的名称。
 
-关闭`turtlesim`终端以关闭节点（或者在该终端使用`ctrl+c`）。然后重新运行，并且需要在后面添加 [重映射参数（Remapping Argument）](http://wiki.ros.org/Remapping Arguments)：
+关闭`turtlesim`终端以关闭节点（或者在该终端使用`ctrl+c`）。然后重新运行，并且需要在后面添加 \[重映射参数（Remapping Argument）]\(http://wiki.ros.org/Remapping Arguments)：
 
 ```shell
 $ rosrun turtlesim turtlesim_node __name:=my_turtle
@@ -199,7 +197,6 @@ xmlrpc reply from http://ml-ros-kinetic:46881/	time=0.463009ms
 xmlrpc reply from http://ml-ros-kinetic:46881/	time=1.638889ms
 xmlrpc reply from http://ml-ros-kinetic:46881/	time=1.659870ms
 xmlrpc reply from http://ml-ros-kinetic:46881/	time=1.644135ms
-
 ```
 
 ## Conclusion
@@ -212,6 +209,6 @@ rosnode = ros + node : 获取节点信息的 ROS 工具；
 
 rosrun = ros + run : 运行指定`package`下的指定`node`；
 
-## Reference 
+## Reference
 
 1. http://wiki.ros.org/ROS/Tutorials/UnderstandingNodes

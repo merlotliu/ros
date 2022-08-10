@@ -1,4 +1,4 @@
-# README
+# 简介
 
 ROS 个人学习笔记
 
@@ -20,8 +20,8 @@ ROS 个人学习笔记
 
 ROS 版本安装及相关环境配置：
 
-{% content-ref url="README (1).md" %}
-[README (1).md](<README (1).md>)
+{% content-ref url="ros-env-config/" %}
+[ros-env-config](ros-env-config/)
 {% endcontent-ref %}
 
 写下你的第一个 ROS 程序：

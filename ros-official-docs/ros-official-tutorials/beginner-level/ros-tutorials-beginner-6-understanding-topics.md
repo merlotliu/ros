@@ -1,10 +1,10 @@
 # Understanding ROS Topics
 
-[ROS](https://wiki.ros.org/ROS)/ [Tutorials](https://wiki.ros.org/ROS/Tutorials)/ [UnderstandingTopics](http://wiki.ros.org/action/fullsearch/ROS/Tutorials/UnderstandingTopics?action=fullsearch&context=180&value=linkto%3A"ROS%2FTutorials%2FUnderstandingTopics")
+[ROS](https://wiki.ros.org/ROS)/ [Tutorials](https://wiki.ros.org/ROS/Tutorials)/ [UnderstandingTopics](http://wiki.ros.org/action/fullsearch/ROS/Tutorials/UnderstandingTopics?action=fullsearch\&context=180\&value=linkto%3A%22ROS%2FTutorials%2FUnderstandingTopics%22)
 
-**描述**：介绍 ROS 话题（Topics），以及 [rostopic](http://wiki.ros.org/rostopic) 和 [rqt_plot](http://wiki.ros.org/rqt_plot) 命令行工具使用。
+**描述**：介绍 ROS 话题（Topics），以及 [rostopic](http://wiki.ros.org/rostopic) 和 [rqt\_plot](http://wiki.ros.org/rqt\_plot) 命令行工具使用。
 
-**下一节**：[Understanding ROS services and parameters](./ros-tutorials-beginner-7-understanding-services-params)
+**下一节**：[Understanding ROS services and parameters](../../../ros-official-tutorials/beginner-level/ros-tutorials-beginner-7-understanding-services-params/)
 
 ## Setup
 
@@ -47,12 +47,11 @@ $ rosrun turtlesim turtle_teleop_key
 Reading from keyboard
 ---------------------------
 Use arrow keys to move the turtle.
-
 ```
 
 现在就可以通过方向键控制乌龟移动。如果乌龟没有移动，请先确保当前鼠标焦点在`turtle_teleop_key`所在的窗口。
 
-![image-20220706152723907](.\ros_tutorials_understanding_topics.assets\image-20220706152723907.png)
+![image-20220706152723907](../../../ros-official-tutorials/beginner-level/ros\_tutorials\_understanding\_topics.assets/image-20220706152723907.png)
 
 下面将讲述其背后的原理和实现。
 
@@ -62,7 +61,7 @@ Use arrow keys to move the turtle.
 
 Note: 如果使用的是`electric` 会更早版本，`rqt`是不可用的。可以使用`rxgraph`代替。
 
-### Using rqt_graph
+### Using rqt\_graph
 
 `rqt_graph`会创建当前系统运行的节点和话题的动态图。`rqt_graph`是`rqt`功能包的一部分。如果尚未安装，可以输入：
 
@@ -71,7 +70,7 @@ $ sudo apt-get install ros-<distro>-rqt
 $ sudo apt-get install ros-<distro>-rqt-common-plugins
 ```
 
-replacing <distro> with the name of your [ROS distribution](http://wiki.ros.org/Distributions) (e.g. indigo, jade, kinetic, lunar ...)
+replacing with the name of your [ROS distribution](http://wiki.ros.org/Distributions) (e.g. indigo, jade, kinetic, lunar ...)
 
 打开新窗口，输入：
 
@@ -81,11 +80,11 @@ $ rosrun rqt_graph rqt_graph
 
 将会弹出以下类似窗口：
 
-![image-20220706154057421](.\ros_tutorials_understanding_topics.assets\image-20220706154057421.png)
+![image-20220706154057421](../../../ros-official-tutorials/beginner-level/ros\_tutorials\_understanding\_topics.assets/image-20220706154057421.png)
 
 如果将鼠标悬停在`/turtle1/com_vel`，图形将会高亮，节点显示为蓝色和绿色，话题显示为红色。正如图片表示的那样， `turtlesim_node` 和 `turtle_teleop_key` 通过 `/turtle1/com_vel`话题通信。
 
-![image-20220706154713117](.\ros_tutorials_understanding_topics.assets\image-20220706154713117.png)
+![image-20220706154713117](../../../ros-official-tutorials/beginner-level/ros\_tutorials\_understanding\_topics.assets/image-20220706154713117.png)
 
 ### Introducing rostopic
 
@@ -184,7 +183,7 @@ angular: 0.0
 
 打开`rqt_graph`图形窗口，点击左上角的刷新按钮。图中红色的节点现在也订阅了 `/turtle1/cmd_vel` 话题。
 
-![image-20220706162203170](.\ros_tutorials_understanding_topics.assets\image-20220706162203170.png)
+![image-20220706162203170](../../../ros-official-tutorials/beginner-level/ros\_tutorials\_understanding\_topics.assets/image-20220706162203170.png)
 
 ### Using rostopic list
 
@@ -231,7 +230,6 @@ Subscribed topics:
  * /turtle1/cmd_vel [geometry_msgs/Twist] 2 subscribers
  * /rosout [rosgraph_msgs/Log] 1 subscriber
  * /statistics [rosgraph_msgs/TopicStatistics] 1 subscriber
-
 ```
 
 ## ROS Messages
@@ -299,7 +297,7 @@ $ rostopic pub -1 /turtle1/cmd_vel geometry_msgs/Twist -- '[2.0, 0.0, 0.0]' '[0.
 
 这一指令将发布一次消息给`turtlesim`，指引乌龟以2.0的线速度和1.8的角速度运动。
 
-![turtle(rostopicpub).png](.\ros_tutorials_understanding_topics.assets\UnderstandingTopicsaction=AttachFile&do=get&target=turtle(rostopicpub).png)
+![turtle(rostopicpub).png](../../../ros-official-tutorials/beginner-level/ros\_tutorials\_understanding\_topics.assets/UnderstandingTopicsaction=AttachFile\&do=get\&target=turtle\(rostopicpub\).png)
 
 这是一条较为复杂的指令，下面将给出详细的解释.
 
@@ -333,13 +331,11 @@ geometry_msgs/Twist
 --
 ```
 
-前面已经提到，`geometry_msgs/Twist`消息有两个长度为三的浮点数组：`linear` 和 `angular`。在这个例子中，`'[2.0, 0.0, 0.0]'` 将为线速度`linear`赋值为`x=2.0`, `y=0.0`, 和`z=0.0`,  `'[0.0, 0.0, 1.8]'`将为角速度 `angular`赋值为 `x=0.0`, `y=0.0`, 和 `z=1.8`。这是符合**YAML** 语法的格式，详细内容请参见 [YAML command line documentation](http://wiki.ros.org/ROS/YAMLCommandLine).
+前面已经提到，`geometry_msgs/Twist`消息有两个长度为三的浮点数组：`linear` 和 `angular`。在这个例子中，`'[2.0, 0.0, 0.0]'` 将为线速度`linear`赋值为`x=2.0`, `y=0.0`, 和`z=0.0`, `'[0.0, 0.0, 1.8]'`将为角速度 `angular`赋值为 `x=0.0`, `y=0.0`, 和 `z=1.8`。这是符合**YAML** 语法的格式，详细内容请参见 [YAML command line documentation](http://wiki.ros.org/ROS/YAMLCommandLine).
 
 ```
 '[2.0, 0.0, 0.0]' '[0.0, 0.0, 1.8]' 
 ```
-
-
 
 值得注意的是，乌龟运动一会后会自动停下来。为了使乌龟持续的运动下去，需要通过 `rostopic pub -r`持续发布稳定的消息流。
 
@@ -351,11 +347,11 @@ $ rostopic pub /turtle1/cmd_vel geometry_msgs/Twist -r 1 -- '[2.0, 0.0, 0.0]' '[
 
 这一条速度发布指令的速率是**1Hz**。
 
-![turtle(rostopicpub)2.png](.\ros_tutorials_understanding_topics.assets\UnderstandingTopicsaction=AttachFile&do=get&target=turtle(rostopicpub)2.png)
+![turtle(rostopicpub)2.png](../../../ros-official-tutorials/beginner-level/ros\_tutorials\_understanding\_topics.assets/UnderstandingTopicsaction=AttachFile\&do=get\&target=turtle\(rostopicpub\)2.png)
 
 在`rqt_graph`的图形界面中，我们可以清楚看到各节点以及话题之间的关系。这里的红色节点，即为当前发布速度消息的节点。
 
-![image-20220706175256283](.\ros_tutorials_understanding_topics.assets\image-20220706175256283.png)
+![image-20220706175256283](../../../ros-official-tutorials/beginner-level/ros\_tutorials\_understanding\_topics.assets/image-20220706175256283.png)
 
 在`turtlesim`的图形界面中，能清楚的看到小乌龟沿着一个连续的圆运动。打开一个新窗口，使用`rostopic echo`来查看乌龟的位姿信息：
 
@@ -391,7 +387,6 @@ average rate: 62.469
 	min: 0.014s max: 0.019s std dev: 0.00062s window: 187
 average rate: 62.480
 	min: 0.014s max: 0.019s std dev: 0.00063s window: 249
-
 ```
 
 可以看出，当前`turtlesim`发布位姿消息的频率大概为62 Hz。同样的，我们可以使用`rostopic type` 和 `rosmsg show` 联合的方式获取消息的详细定义：
@@ -402,7 +397,7 @@ average rate: 62.480
 $ rostopic type /turtle1/cmd_vel | rosmsg show
 ```
 
-## Using rqt_plot
+## Using rqt\_plot
 
 `rqt_plot`显示有关主题的已发布数据随时间推进的图。在这里，我们将使用`rqt_plot`来绘制在 `/turtle1/pose` 主题上发布的数据。在新窗口通过输入以下内容，打开`rqt_plot`图形界面：
 
@@ -410,14 +405,14 @@ $ rostopic type /turtle1/cmd_vel | rosmsg show
 $ rosrun rqt_plot rqt_plot
 ```
 
-在左上角的文本框，可以输入任何想要绘制的话题数据。输入 `/turtle1/pose/x` ，点击高亮的**加号**按钮，或者直接回车。按同样的方式添加 `/turtle1/pose/y`。很快就可以看到 `x-y`坐标绘制在图中。 
+在左上角的文本框，可以输入任何想要绘制的话题数据。输入 `/turtle1/pose/x` ，点击高亮的**加号**按钮，或者直接回车。按同样的方式添加 `/turtle1/pose/y`。很快就可以看到 `x-y`坐标绘制在图中。
 
-![rqt_plot.png](.\ros_tutorials_understanding_topics.assets\UnderstandingTopicsaction=AttachFile&do=get&target=rqt_plot.png)
+![rqt\_plot.png](../../../ros-official-tutorials/beginner-level/ros\_tutorials\_understanding\_topics.assets/UnderstandingTopicsaction=AttachFile\&do=get\&target=rqt\_plot.png)
 
 点击减号➖，下拉选择需要隐藏的绘图。隐藏前面添加的话题内容，添加`/turtle1/pose/theta`以形成如下绘图。
 
-![rqt_plot2.png](.\ros_tutorials_understanding_topics.assets\UnderstandingTopicsaction=AttachFile&do=get&target=rqt_plot2.png)
+![rqt\_plot2.png](../../../ros-official-tutorials/beginner-level/ros\_tutorials\_understanding\_topics.assets/UnderstandingTopicsaction=AttachFile\&do=get\&target=rqt\_plot2.png)
 
-## Reference 
+## Reference
 
 1. http://wiki.ros.org/ROS/Tutorials/UnderstandingTopics
