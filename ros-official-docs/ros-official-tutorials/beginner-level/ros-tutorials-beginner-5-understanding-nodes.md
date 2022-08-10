@@ -144,7 +144,7 @@ $ rosrun turtlesim turtlesim_node
 
 将弹出以下窗口：
 
-![](../../../.gitbook/assets/ros-turtlesim-1.png)
+![](../../../.gitbook/assets/ros-tutorials-beginner-5-understanding-nodes.assets/ros-turtlesim-1.png)
 
 **Notes**：这只乌龟的样式可能与你的不同。这是因为ROS提供了许多[乌龟的样式](http://wiki.ros.org/Distributions#Current\_Distribution\_Releases)，可以说是官方的小彩蛋。
 

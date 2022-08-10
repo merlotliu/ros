@@ -4,7 +4,7 @@
 
 **描述**：介绍 ROS 话题（Topics），以及 [rostopic](http://wiki.ros.org/rostopic) 和 [rqt\_plot](http://wiki.ros.org/rqt\_plot) 命令行工具使用。
 
-**下一节**：[Understanding ROS services and parameters](../../../ros-official-tutorials/beginner-level/ros-tutorials-beginner-7-understanding-services-params/)
+**下一节**：[Understanding ROS services and parameters](./ros-tutorials-beginner-7-understanding-services-params/)
 
 ## Setup
 
@@ -51,7 +51,7 @@ Use arrow keys to move the turtle.
 
 现在就可以通过方向键控制乌龟移动。如果乌龟没有移动，请先确保当前鼠标焦点在`turtle_teleop_key`所在的窗口。
 
-![image-20220706152723907](../../../ros-official-tutorials/beginner-level/ros\_tutorials\_understanding\_topics.assets/image-20220706152723907.png)
+![image-20220706152723907](../../../.gitbook/assets/ros-tutorials-beginner-6-understanding-topics.assets/image-20220706152723907.png)
 
 下面将讲述其背后的原理和实现。
 
@@ -80,11 +80,11 @@ $ rosrun rqt_graph rqt_graph
 
 将会弹出以下类似窗口：
 
-![image-20220706154057421](../../../ros-official-tutorials/beginner-level/ros\_tutorials\_understanding\_topics.assets/image-20220706154057421.png)
+![image-20220706154057421](../../../.gitbook/assets/ros-tutorials-beginner-6-understanding-topics.assets/image-20220706154057421.png)
 
 如果将鼠标悬停在`/turtle1/com_vel`，图形将会高亮，节点显示为蓝色和绿色，话题显示为红色。正如图片表示的那样， `turtlesim_node` 和 `turtle_teleop_key` 通过 `/turtle1/com_vel`话题通信。
 
-![image-20220706154713117](../../../ros-official-tutorials/beginner-level/ros\_tutorials\_understanding\_topics.assets/image-20220706154713117.png)
+![image-20220706154713117](../../../.gitbook/assets/ros-tutorials-beginner-6-understanding-topics.assets/image-20220706154713117.png)
 
 ### Introducing rostopic
 
@@ -183,7 +183,7 @@ angular: 0.0
 
 打开`rqt_graph`图形窗口，点击左上角的刷新按钮。图中红色的节点现在也订阅了 `/turtle1/cmd_vel` 话题。
 
-![image-20220706162203170](../../../ros-official-tutorials/beginner-level/ros\_tutorials\_understanding\_topics.assets/image-20220706162203170.png)
+![image-20220706162203170](../../../.gitbook/assets/ros-tutorials-beginner-6-understanding-topics.assets/image-20220706162203170.png)
 
 ### Using rostopic list
 
@@ -297,7 +297,7 @@ $ rostopic pub -1 /turtle1/cmd_vel geometry_msgs/Twist -- '[2.0, 0.0, 0.0]' '[0.
 
 这一指令将发布一次消息给`turtlesim`，指引乌龟以2.0的线速度和1.8的角速度运动。
 
-![turtle(rostopicpub).png](../../../ros-official-tutorials/beginner-level/ros\_tutorials\_understanding\_topics.assets/UnderstandingTopicsaction=AttachFile\&do=get\&target=turtle\(rostopicpub\).png)
+![turtle(rostopicpub).png](../../../.gitbook/assets/ros-tutorials-beginner-6-understanding-topics.assets/UnderstandingTopicsActionRostopicpub.png)
 
 这是一条较为复杂的指令，下面将给出详细的解释.
 
@@ -347,11 +347,11 @@ $ rostopic pub /turtle1/cmd_vel geometry_msgs/Twist -r 1 -- '[2.0, 0.0, 0.0]' '[
 
 这一条速度发布指令的速率是**1Hz**。
 
-![turtle(rostopicpub)2.png](../../../ros-official-tutorials/beginner-level/ros\_tutorials\_understanding\_topics.assets/UnderstandingTopicsaction=AttachFile\&do=get\&target=turtle\(rostopicpub\)2.png)
+![turtle(rostopicpub)2.png](../../../.gitbook/assets/ros-tutorials-beginner-6-understanding-topics.assets/UnderstandingTopicsActionRostopicpub2.png)
 
 在`rqt_graph`的图形界面中，我们可以清楚看到各节点以及话题之间的关系。这里的红色节点，即为当前发布速度消息的节点。
 
-![image-20220706175256283](../../../ros-official-tutorials/beginner-level/ros\_tutorials\_understanding\_topics.assets/image-20220706175256283.png)
+![image-20220706175256283](../../../.gitbook/assets/ros-tutorials-beginner-6-understanding-topics.assets/image-20220706175256283.png)
 
 在`turtlesim`的图形界面中，能清楚的看到小乌龟沿着一个连续的圆运动。打开一个新窗口，使用`rostopic echo`来查看乌龟的位姿信息：
 
@@ -407,11 +407,11 @@ $ rosrun rqt_plot rqt_plot
 
 在左上角的文本框，可以输入任何想要绘制的话题数据。输入 `/turtle1/pose/x` ，点击高亮的**加号**按钮，或者直接回车。按同样的方式添加 `/turtle1/pose/y`。很快就可以看到 `x-y`坐标绘制在图中。
 
-![rqt\_plot.png](../../../ros-official-tutorials/beginner-level/ros\_tutorials\_understanding\_topics.assets/UnderstandingTopicsaction=AttachFile\&do=get\&target=rqt\_plot.png)
+![rqt\_plot.png](../../../.gitbook/assets/ros-tutorials-beginner-6-understanding-topics.assets/UnderstandingTopicsActionRqtPlot.png)
 
 点击减号➖，下拉选择需要隐藏的绘图。隐藏前面添加的话题内容，添加`/turtle1/pose/theta`以形成如下绘图。
 
-![rqt\_plot2.png](../../../ros-official-tutorials/beginner-level/ros\_tutorials\_understanding\_topics.assets/UnderstandingTopicsaction=AttachFile\&do=get\&target=rqt\_plot2.png)
+![rqt\_plot2.png](../../../.gitbook/assets/ros-tutorials-beginner-6-understanding-topics.assets/UnderstandingTopicsActionRqtPlot2.png)
 
 ## Reference
 

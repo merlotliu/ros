@@ -215,10 +215,6 @@ $ rosls <<< now push the TAB key twice >>>
 $ rospack -h
 ```
 
-命令行將顯示如下内容：
-
-![image-20220703170334323](../../../ros-official-tutorials/beginner-level/ros\_tutorials\_navigating\_filesystem.assets/image-20220703170334323.png)
-
 ## 總結
 
 可以注意到`ROS Tools`的命名格式：
