@@ -4,6 +4,8 @@
 
 **描述**：本文介绍ROS图形概念，并讨论了命令行工具 [roscore](http://wiki.ros.org/roscore), [rosnode](http://wiki.ros.org/rosnode), 和[rosrun](http://wiki.ros.org/rosrun) 的使用。
 
+**下一节:** [Understanding ROS Topics](./ros-tutorials-beginner-6-understanding-topics.md)
+
 ## Prerequisites
 
 安装`ros-tutorials`元功能包，使用以下命令：

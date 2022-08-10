@@ -4,7 +4,7 @@
 
 **描述**：介绍 ROS 话题（Topics），以及 [rostopic](http://wiki.ros.org/rostopic) 和 [rqt_plot](http://wiki.ros.org/rqt_plot) 命令行工具使用。
 
-**下一节**：[Understanding ROS services and parameters](./ros_tutorials_understanding_services_params.md)
+**下一节**：[Understanding ROS services and parameters](./ros-tutorials-beginner-7-understanding-services-params.md)
 
 ## Setup
 
