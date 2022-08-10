@@ -18,7 +18,7 @@ categories:
 
 在 ROS 中，需要频繁的使用到终端，且可能需要同时开启多个窗口，推荐一款较为好用的终端: Terminator。效果如下:
 
-![img](../images/posts/ros-IDE-config.assets/terminator%E6%95%88%E6%9E%9C.PNG)
+![img](../.gitbook/assets/ros-IDE-config.assets/terminator%E6%95%88%E6%9E%9C.PNG)
 
 **安裝**
 
@@ -105,7 +105,7 @@ sudo dpkg --purge  code
 
 `C/C++`、`CMake Tools`、`Python`、`ROS`
 
-![image-20220702144712035](../images/posts/ros-IDE-config.assets/image-20220702144712035.png)
+![image-20220702144712035](../.gitbook/assets/ros-IDE-config.assets/image-20220702144712035.png)
 
 **基本配置**
 
@@ -136,7 +136,7 @@ sudo dpkg --purge  code
 }
 ```
 
-![image-20220702154100502](../images/posts/ros-IDE-config.assets/image-20220702154100502.png)
+![image-20220702154100502](../.gitbook/assets/ros-IDE-config.assets/image-20220702154100502.png)
 
 ### Reference
 

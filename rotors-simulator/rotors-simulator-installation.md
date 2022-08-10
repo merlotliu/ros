@@ -51,7 +51,7 @@ git clone git@github.com:ethz-asl/mav_comm.git
 
 切换到工作目录下，`catkin_make`
 
-![image-20220628164318968](../images/posts/rotors-simulator-installation.assets/image-20220628164318968.png)
+![image-20220628164318968](../.gitbook/assets/rotors-simulator-installation.assets/image-20220628164318968.png)
 
 ### 编译过程错误及解决
 
@@ -61,7 +61,7 @@ git clone git@github.com:ethz-asl/mav_comm.git
 
 ##### 错误描述
 
-![image-20220628162940914](../images/posts/rotors-simulator-installation.assets/image-20220628162940914.png)
+![image-20220628162940914](../.gitbook/assets/rotors-simulator-installation.assets/image-20220628162940914.png)
 
 ##### 原因及解决方案
 
@@ -81,7 +81,7 @@ CMake Error at rotors_simulator/rotors_gazebo_plugins/cmake/FindGlog.cmake:77 (M
   GLOG_INCLUDE_DIR to directory containing glog/logging.h
 ```
 
-![image-20220628162714152](../images/posts/rotors-simulator-installation.assets/image-20220628162714152.png)
+![image-20220628162714152](../.gitbook/assets/rotors-simulator-installation.assets/image-20220628162714152.png)
 
 ##### 解决方案
 
@@ -97,7 +97,7 @@ sudo apt-get install libgoogle-glog-dev -y
 No rule to make target '/home/ml/ws_all/rotors_test_20220628/src/rotors_simulator/rotors_gazebo_plugins/PROTOBUF_PROTOC_EXECUTABLE-NOTFOUND', needed by 'rotors_simulator/rotors_gazebo_plugins/NavSatFix.pb.cc'.  Stop.
 ```
 
-![image-20220628163222050](../images/posts/rotors-simulator-installation.assets/image-20220628163222050.png)
+![image-20220628163222050](../.gitbook/assets/rotors-simulator-installation.assets/image-20220628163222050.png)
 
 ##### 原因及解决
 
@@ -138,7 +138,7 @@ rosservice call gazebo/unpause_physics
 
 运行结果如下：
 
-![image-20220628165558532](../images/posts/rotors-simulator-installation.assets/image-20220628165558532.png)
+![image-20220628165558532](../.gitbook/assets/rotors-simulator-installation.assets/image-20220628165558532.png)
 
 使用`rostopic`查看当前发布的话题：
 
@@ -146,7 +146,7 @@ rosservice call gazebo/unpause_physics
 rostopic list
 ```
 
-![image-20220629155741418](../images/posts/rotors-simulator-installation.assets/image-20220629155741418.png)
+![image-20220629155741418](../.gitbook/assets/rotors-simulator-installation.assets/image-20220629155741418.png)
 
 其中`/firefly/command/pose`为无人机位置信息话题，可以通过`rostopic pub 话题名 消息类型 消息内容`，发布新消息，以控制无人机移动：
 
@@ -156,7 +156,7 @@ rostopic pub -1 /firefly/command/pose geometry_msgs/PoseStamped "header:  seq: 0
 
 这表明设置的新位置为 (1.0, 1.0, 1.0)，`-1`表示发布一次消息后退出。
 
-![image-20220629155920780](../images/posts/rotors-simulator-installation.assets/image-20220629155920780.png)
+![image-20220629155920780](../.gitbook/assets/rotors-simulator-installation.assets/image-20220629155920780.png)
 
 ## 其他注意事项
 

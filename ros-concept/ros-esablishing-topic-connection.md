@@ -31,7 +31,7 @@ categories:
 
 > 为了控制 Hokuyo 激光测距仪，我们启动 hokuyo_node 节点，该节点与激光对话并在扫描主题上发布 sensor_msgs/Laser Scan 消息。为了可视化激光扫描数据，我们启动 rviz 节点并订阅扫描主题。订阅后，rviz 节点开始接收激光扫描消息，并将其呈现到屏幕上。
 
-![master-node-example.png](../images/posts/ros-esablishing-topic-connection.assets/Technical Overviewaction=AttachFile&do=get&target=master-node-example.png)
+![master-node-example.png](../.gitbook/assets/ros-esablishing-topic-connection.assets/Technical Overviewaction=AttachFile&do=get&target=master-node-example.png)
 
 ## 官方原文
 

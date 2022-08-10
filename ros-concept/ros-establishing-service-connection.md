@@ -25,7 +25,7 @@ categories:
 
 > 在无人机任务执行的过程中，可能会遇到不可识别的单位，需要将采集到的数据，传输给数据处理节点，并获取有关信息。在这一情况下，通常对通信有着实时性的要求，并期待获得响应。基于请求响应的服务通信具备这样的功能，且能完成一定的逻辑处理。
 
-![img](../images/posts/ros-establishing-service-connection.assets/02_服务通信模型.jpg)
+![img](../.gitbook/assets/ros-establishing-service-connection.assets/02_服务通信模型.jpg)
 
 ## 官方原文
 

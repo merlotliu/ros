@@ -16,7 +16,7 @@ categories:
 
 ROS文件系统级指的是在硬盘上ROS源代码的组织形式，其结构大致可以如下图所示：
 
-![img](../images/posts/ros-filesys.assets/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F.jpg)
+![img](../.gitbook/assets/ros-filesys.assets/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F.jpg)
 
 ```
 WorkSpace --- 自定义的工作空间
@@ -474,7 +474,7 @@ $ roscore
 $ roscore -p xxxx
 ```
 
-![image-20220703203034222](../images/posts/ros-filesys.assets/image-20220703203034222.png)
+![image-20220703203034222](../.gitbook/assets/ros-filesys.assets/image-20220703203034222.png)
 
 #### rosrun
 
@@ -707,7 +707,7 @@ $ rospack -h
 
 命令行將顯示如下内容：
 
-![image-20220703170334323](../images/posts/ros-filesys.assets/image-20220703170334323.png)
+![image-20220703170334323](../.gitbook/assets/ros-filesys.assets/image-20220703170334323.png)
 
 ### Reference
 
