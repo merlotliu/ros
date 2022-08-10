@@ -25,7 +25,7 @@ ROS 是一个为机器人设计的**开源**的**元操作系统**。它提供�
 
 ROS 的主要目标是为机器人研究和开发提供代码复用的支持。ROS是一个分布式的进程（也就是“节点”）框架，这些进程被封装在易于被分享和发布的程序包和功能包中。ROS也支持一种类似于代码储存库的联合系统，这个系统也可以实现工程的协作及发布。这个设计可以使一个工程的开发和实现从文件系统到用户接口完全独立决策（不受ROS限制）。同时，所有的工程都可以被ROS的基础工具整合在一起。
 
-![](.gitbook/assets/ros-overview.assets/ros-equation.png)
+![](../.gitbook/assets/ros-overview.assets/ros-equation.png)
 
 ROS设计者将ROS表述为“ROS = Plumbing + Tools + Capabilities + Community”，即ROS是通讯机制、工具软件包、机器人高层技能以及机器人社区的集合体。
 
@@ -41,7 +41,7 @@ ROS设计者将ROS表述为“ROS = Plumbing + Tools + Capabilities + Community�
 
 ROS 的目标并不是成为多功能的框架，而是希望在机器人研发过程中，代码复用、技术共享以及协同开发。
 
-![](.gitbook/assets/ros-overview.assets/image-20220711173816466.png)
+![](../.gitbook/assets/ros-overview.assets/image-20220711173816466.png)
 
 **代码复用（reuse）**：支持机器人研发过程中代码复用。
 
@@ -65,7 +65,7 @@ ROS 的目标并不是成为多功能的框架，而是希望在机器人研发�
 
 建议版本: noetic 或 melodic 或 kinetic
 
-![](.gitbook/assets/ros-overview.assets/distributions.png)
+![](../.gitbook/assets/ros-overview.assets/distributions.png)
 
 ## Reference
 
