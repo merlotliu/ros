@@ -10,27 +10,27 @@ categories:
   - - ROS
 ---
 
-# IDE
+# IDE & Tools Configuration
 
 和大多数开发环境一样，理论上，在 ROS 中，只需要记事本就可以编写基本的 ROS 程序，但是工欲善其事必先利其器，为了提高开发效率，可以先安装集成开发工具和使用方便的工具 : 终端、IDE....
 
-#### 終端Terminator安裝
+### 終端Terminator安裝
 
 在 ROS 中，需要频繁的使用到终端，且可能需要同时开启多个窗口，推荐一款较为好用的终端: Terminator。效果如下:
 
-![img](../.gitbook/assets/ros-IDE-config.assets/terminator%E6%95%88%E6%9E%9C.PNG)
+![img](../.gitbook/assets/ros-IDE-config.assets/terminator效果.PNG)
 
-**安裝**
+#### **安裝**
 
 ```shell
 sudo apt install terminator
 ```
 
-**添加到收藏夾**
+#### **添加到收藏夾**
 
 顯示應用程序 ---- 搜索 terminator ---- 右擊選擇 添加到收藏夾
 
-**常用快捷鍵**
+#### **常用快捷鍵**
 
 **第一部分：關於在同一個標簽内的操作**
 
@@ -79,15 +79,15 @@ Ctrl+Shift+I                    //打开一个窗口，新窗口与原来的窗�
 Super+i                         //打开一个新窗口，新窗口与原来的窗口使用不同的进程
 ```
 
-#### VScode安裝
+### VScode安裝
 
-**安装包下载**
+#### **安装包下载**
 
 vscode linux64下载:https://code.visualstudio.com/docs/?dv=linux64\_deb
 
 历史版本: https://code.visualstudio.com/updates
 
-**安装与卸载**
+#### **安装与卸载**
 
 **安装**
 
