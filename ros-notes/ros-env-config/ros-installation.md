@@ -562,11 +562,7 @@ rosrun turtlesim turtle_teleop_key
 
 通用安装完成，如果还需要更多操作，需要下载相关依赖和扩展，比如无人机还需要大疆SDK等。
 
+## Reference
 
-
-@merlotliu 2022.06.25
-
-
-
-
+1. [kinetic/Installation/Ubuntu - ROS Wiki](http://wiki.ros.org/kinetic/Installation/Ubuntu)
 
