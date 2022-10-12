@@ -133,6 +133,26 @@ rosrun rospy_tutorials talker
 
 没有问题后，可以在`lea`运行`talker`，在`shaun`运行`listener`在测试一遍。
 
+## ROS_MASTER_URI 设置
+
+### 临时设置
+
+从用户的本次设置到用户注销有效：
+
+```shell
+export ROS_MASTER_URI=http://<ip-address/hostname>:11311
+```
+
+### 用户设置
+
+修改 `.bashrc`，用户每次打开一个终端都会执行 `.bashrc`，所以对于该用户每次都会自动执行该语句：
+
+```shell
+echo "export ROS_MASTER_URI=http://<ip-address/hostname>:11311" >> .bashrc
+```
+
+也就是我们对于环境变量的临时修改，都可以通过修改 `.bashrc` 的方式做到 “长久自动” 的修改。
+
 ## rostopic
 
 对于测试，您可以在连接到Master的所有机器上使用 rostopic 工具。您将获得所有可用主题的列表。如果您未连接到Master，则会出现错误。
