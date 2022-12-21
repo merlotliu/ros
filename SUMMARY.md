@@ -4,7 +4,8 @@
 * [Related Links](ros-notes/related-links.md)
 * [ROS Overview](ros-notes/ros-overview.md)
 * [ROS Env Configuration](ros-notes/ros-env-config/README.md)
-  * [ROS Installation](ros-notes/ros-env-config/ros-installation.md)
+  * [Kinetic Installation](ros-notes/ros-env-config/ros-installation.md)
+  * [Noetic Installation](ros-notes/ros-env-config/ros-noetic-ubuntu20.md)
   * [IDE & Tools Configuration](ros-notes/ros-env-config/ros-ide-config.md)
 
 ## My Notes
