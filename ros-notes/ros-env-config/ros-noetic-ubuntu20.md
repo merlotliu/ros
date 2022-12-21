@@ -95,10 +95,10 @@ rosdep update
 
 ### rosdep 初始化错误
 
-参见 rosdep 初始化部分 ：https://merlotliu.gitbook.io/ros-learning/ros-env-config/ros-installation
+参见 rosdep 初始化部分 ：[Kinetic 安装 ](https://merlotliu.gitbook.io/ros-learning/ros-env-config/ros-installation)
 
 ## Reference 
 
-1. https://wiki.ros.org/noetic/Installation/Ubuntu
+1. [https://wiki.ros.org/noetic/Installation/Ubuntu](https://wiki.ros.org/noetic/Installation/Ubuntu)
 1. [【安装】Ubuntu20.04下安装ROS的完整过程（内含已装好ROS的虚拟机、虚拟机创建过程、ROS安装过程及全过程录屏）](https://blog.csdn.net/qq_46106285/article/details/120982412)
 1. [rosdep不初始化到底行不行](https://juejin.cn/post/7064453605901729829)
