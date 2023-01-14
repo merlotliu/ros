@@ -1,13 +1,11 @@
 ---
+layout: post
 title: ROS 文件系统 & 工具
 comments: true
-date: 2022-07-15T15:45:12.000Z
-updated: 2022-07-15T15:45:12.000Z
-tags:
-  - ROS
-categories:
-  - - ROS
-    - beginner-tutorials
+date: 2022-07-15 15:45:12 
+updated: 2022-07-15 15:45:12 
+tags: [ROS]
+categories: [ROS,beginner-tutorials]
 ---
 
 # ROS 文件系统 & 命令行工具

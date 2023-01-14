@@ -1,11 +1,10 @@
 ---
+layout: post
 title: Ubuntu20 Install Noetic
-date: 2022-12-20
-updated: 2022-12-20
-tags: 
-- [ROS, Noetic]
-categories: 
-- [ROS, Noetic]
+date: 2022-12-20 21:10:00
+updated: 2022-12-20 21:10:00
+tags: [ROS, Noetic]
+categories: [ROS, Noetic]
 comments: true
 ---
 

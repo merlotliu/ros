@@ -1,13 +1,11 @@
 ---
+layout: post
 title: ROS 集成开发环境搭建
 comments: true
-date: 2022-07-15T15:42:07.000Z
-updated: 2022-07-15T15:42:07.000Z
-tags:
-  - ROS
-  - ROS-IDE
-categories:
-  - - ROS
+date: 2022-07-15 15:42:07
+updated: 2022-07-15 15:42:07
+tags: [ROS, ROS-IDE]
+categories: [ROS]
 ---
 
 # IDE & Tools Configuration

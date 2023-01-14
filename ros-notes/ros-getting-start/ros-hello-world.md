@@ -1,3 +1,13 @@
+---
+layout: post
+title: Getting Start
+date: 2022-12-20 21:10:00
+updated: 2022-12-20 21:10:00
+tags: [ROS]
+categories: [ROS]
+comments: true
+---
+
 # Getting Start
 
 编写ROS的第一个程序，实现流程大致如下：

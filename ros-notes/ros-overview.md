@@ -1,12 +1,11 @@
 ---
+layout: post
 title: ROS Overview
 comments: true
-date: 2022-07-15T15:24:57.000Z
-updated: 2022-07-15T15:24:57.000Z
-tags:
-  - ROS
-categories:
-  - [ROS]
+date: 2022-07-15 15:24:57 
+updated: 2022-07-15 15:24:57 
+tags: [ROS]
+categories: [ROS]
 ---
 
 # ROS Overview

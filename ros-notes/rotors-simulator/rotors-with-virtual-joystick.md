@@ -1,14 +1,11 @@
 ---
+layout: post
 title: RotorS with virtual joystick
 comments: true
-date: 2022-07-25T16:26:42.000Z
-updated: 2022-07-25T16:26:42.000Z
-tags:
-  - ROS
-  - RotorS
-categories:
-  - - ROS
-    - RotorS
+date: 2022-07-25 16:26:42 
+updated: 2022-07-25 16:26:42 
+tags: [ROS,RotorS]
+categories: [ROS, RotorS]
 ---
 
 # RotorS with virtual joystick
