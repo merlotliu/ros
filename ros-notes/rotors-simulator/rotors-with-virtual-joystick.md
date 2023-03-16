@@ -114,7 +114,7 @@ Error [parser.cc:581] Unable to find uri[model://ground_plane]
 
 #### 解决方案
 
-`Gazebo` 需要互联网连接才能下载模型文件（例如默认世界的太阳和地平面）。如果您在第一次运行 `Gazebo` 时没有访问 Internet，则会出现此错误。还可以从[gazebosim.org/models](gazebosim.org/models/) 手动下载模型文件并将它们放在您的`~/.gazebo/models文件`夹中。
+`Gazebo` 需要互联网连接才能下载模型文件（例如默认世界的太阳和地平面）。如果您在第一次运行 `Gazebo` 时没有访问 Internet，则会出现此错误。还可以从[gazebosim.org/models](http://models.gazebosim.org/gazebo/) 手动下载模型文件并将它们放在您的`~/.gazebo/models文件`夹中。
 
 ```
 # 解压缩
