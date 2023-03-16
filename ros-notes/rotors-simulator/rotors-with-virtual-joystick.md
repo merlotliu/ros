@@ -129,7 +129,7 @@ tar -xzvf models.tar.gz
 [gazebo_gui-3]process has died
 ```
 
-![erro2](../.gitbook/assets/rotors-simulator-keyboard-usage.assets/erro2.png)
+![erro2](../../.gitbook/assets/rotors-simulator-keyboard-usage.assets/erro2.png)
 
 #### 解决方案
 
