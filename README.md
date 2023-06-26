@@ -8,7 +8,7 @@ ROS 个人学习笔记
 
 获取相关链接，请跳到这：
 
-{% content-ref url="related-links.md" %}
+
 [related-links.md](related-links.md)
 {% endcontent-ref %}
 
