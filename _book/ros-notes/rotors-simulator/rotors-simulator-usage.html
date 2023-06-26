@@ -1,0 +1,1075 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Rotors Simulator Usage · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="rotors-distributed-comm-comprehensive-case.html" />
+    
+    
+    <link rel="prev" href="rotors-with-virtual-joystick.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../related-links.html">
+            
+                <a href="../related-links.html">
+            
+                    
+                    Related Links
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ros-overview.html">
+            
+                <a href="../ros-overview.html">
+            
+                    
+                    ROS Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../ros-env-config/">
+            
+                <a href="../ros-env-config/">
+            
+                    
+                    ROS Env Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../ros-env-config/ros-installation.html">
+            
+                <a href="../ros-env-config/ros-installation.html">
+            
+                    
+                    Kinetic Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../ros-env-config/ros-noetic-ubuntu20.html">
+            
+                <a href="../ros-env-config/ros-noetic-ubuntu20.html">
+            
+                    
+                    Noetic Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../ros-env-config/ros-ide-config.html">
+            
+                <a href="../ros-env-config/ros-ide-config.html">
+            
+                    
+                    IDE & Tools Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">My Notes</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../ros-getting-start/ros-hello-world.html">
+            
+                <a href="../ros-getting-start/ros-hello-world.html">
+            
+                    
+                    Getting Start
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../ros-concepts/">
+            
+                <a href="../ros-concepts/">
+            
+                    
+                    ROS Concepts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../ros-concepts/ros-esablishing-topic-connection.html">
+            
+                <a href="../ros-concepts/ros-esablishing-topic-connection.html">
+            
+                    
+                    ROS Topic 理论模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../ros-concepts/ros-establishing-service-connection.html">
+            
+                <a href="../ros-concepts/ros-establishing-service-connection.html">
+            
+                    
+                    ROS Service 理论模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../ros-tutorials/">
+            
+                <a href="../ros-tutorials/">
+            
+                    
+                    ROS Tutorials
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../ros-tutorials/ros-filesys.html">
+            
+                <a href="../ros-tutorials/ros-filesys.html">
+            
+                    
+                    ROS 文件系统 & 命令行工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../ros-tutorials/ros-writing-publisher-subscriber-cpp.html">
+            
+                <a href="../ros-tutorials/ros-writing-publisher-subscriber-cpp.html">
+            
+                    
+                    ROS Topic 通信简单示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="../ros-tutorials/ros-writing-service-client-cpp.html">
+            
+                <a href="../ros-tutorials/ros-writing-service-client-cpp.html">
+            
+                    
+                    ROS Service 通信简单示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="../ros-tutorials/ros-parameter-server.html">
+            
+                <a href="../ros-tutorials/ros-parameter-server.html">
+            
+                    
+                    ROS 参数服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="../ros-tutorials/ros-multiple-machines.html">
+            
+                <a href="../ros-tutorials/ros-multiple-machines.html">
+            
+                    
+                    ROS 分布式通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Rotors Simulator
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="rotors-simulator-installation.html">
+            
+                <a href="rotors-simulator-installation.html">
+            
+                    
+                    RotorS Simulator Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="rotors-with-virtual-joystick.html">
+            
+                <a href="rotors-with-virtual-joystick.html">
+            
+                    
+                    RotorS with virtual joystick
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.4.3" data-path="rotors-simulator-usage.html">
+            
+                <a href="rotors-simulator-usage.html">
+            
+                    
+                    Rotors Simulator Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="rotors-distributed-comm-comprehensive-case.html">
+            
+                <a href="rotors-distributed-comm-comprehensive-case.html">
+            
+                    
+                    RotorS 分布式通信综合案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS Official Docs</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../ros-official-docs/ros-official-tutorials/">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/">
+            
+                    
+                    ROS Official Tutorials
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/">
+            
+                    
+                    Beginner Level
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-1-installing-configuring-environment.html">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-1-installing-configuring-environment.html">
+            
+                    
+                    Installing and Configuring Your ROS Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.2" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-2-navigating-filesystem.html">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-2-navigating-filesystem.html">
+            
+                    
+                    Navigating the ROS Filesystem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.3" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/creating-a-ros-package.html">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/creating-a-ros-package.html">
+            
+                    
+                    Creating a ROS Package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.4" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/building-a-ros-package.html">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/building-a-ros-package.html">
+            
+                    
+                    Building a ROS Package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.5" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-5-understanding-nodes.html">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-5-understanding-nodes.html">
+            
+                    
+                    Understanding ROS Nodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.6" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-6-understanding-topics.html">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-6-understanding-topics.html">
+            
+                    
+                    Understanding ROS Topics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.7" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-7-understanding-services-params.html">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-7-understanding-services-params.html">
+            
+                    
+                    Understanding ROS Services and Parameters
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../ros-official-docs/ros-concepts.html">
+            
+                <a href="../../ros-official-docs/ros-concepts.html">
+            
+                    
+                    ROS Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../ros-official-docs/ros-command-line-tools.html">
+            
+                <a href="../../ros-official-docs/ros-command-line-tools.html">
+            
+                    
+                    ROS Command Line Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 2</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../ros2-notes/understanding-ros2-actions.html">
+            
+                <a href="../../ros2-notes/understanding-ros2-actions.html">
+            
+                    
+                    Action
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Rotors Simulator Usage</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="rotors-&#x7B80;&#x5355;&#x793A;&#x4F8B;">RotorS &#x7B80;&#x5355;&#x793A;&#x4F8B;</h1>
+<h2 id="1-&#x521B;&#x5EFA;&#x529F;&#x80FD;&#x5305;">1 &#x521B;&#x5EFA;&#x529F;&#x80FD;&#x5305;</h2>
+<p>&#x5207;&#x6362;&#x5230;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x7684;<code>src</code>&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x521B;&#x5EFA;<code>rotors_control_test</code>&#x529F;&#x80FD;&#x5305;</p>
+<pre><code class="lang-shell"># &#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x76EE;&#x5F55;&#x4E0B;&#x7684;src
+cd catkin_ws/src
+# &#x521B;&#x5EFA;&#x529F;&#x80FD;&#x5305;&#xFF0C;&#x5305;&#x540D;&#x540E;&#x9762;&#x7684;&#x53C2;&#x6570;&#x662F;&#x76F8;&#x5173;&#x4F9D;&#x8D56;
+catkin_create_pkg rotors_control_test roscpp rospy std_msgs 
+# sensor_msgs geometry_msgs mav_msgs gazebo_msgs
+</code></pre>
+<h2 id="2-&#x4FEE;&#x6539;&#x76F8;&#x5173;&#x529F;&#x80FD;&#x5305;&#x76F8;&#x5173;&#x4F9D;&#x8D56;">2 &#x4FEE;&#x6539;&#x76F8;&#x5173;&#x529F;&#x80FD;&#x5305;&#x76F8;&#x5173;&#x4F9D;&#x8D56;</h2>
+<p>&#x5982;&#x679C;&#x521B;&#x5EFA;&#x529F;&#x80FD;&#x5305;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C11;&#x6216;&#x9519;&#x8BEF;&#x6DFB;&#x52A0;&#x76F8;&#x5173;&#x4F9D;&#x8D56;&#xFF0C;&#x53EF;&#x4EE5;&#x6253;&#x5F00;<code>CMakeLists.txt</code>&#xFF0C;&#x4FEE;&#x6539;&#x76F8;&#x5173;&#x5185;&#x5BB9;:</p>
+<pre><code class="lang-shell">find_package(catkin REQUIRED COMPONETS
+    roscpp
+    rospy
+    std_msgs
+    # &#x4EE5;&#x4E0A;&#x4E09;&#x4E2A;&#x662F;&#x5E38;&#x7528;&#x7684;&#x4F9D;&#x8D56;&#xFF0C;&#x4EE5;&#x4E0B;&#x662F;&#x672C;&#x529F;&#x80FD;&#x5305;&#x9700;&#x8981;&#x7528;&#x5230;&#x7684;&#x989D;&#x5916;&#x7684;&#x4F9D;&#x8D56;
+    sensor_msgs
+    geometry_msgs
+    mav_msgs
+    gazebo_msgs
+)
+</code></pre>
+<p>&#x540C;&#x65F6;&#x9700;&#x8981;&#x4FEE;&#x6539;<code>package.xml</code>&#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x5176;&#x4E2D;&#x6DFB;&#x52A0;:</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">depend</span>&gt;</span>gazebo_msgs<span class="hljs-tag">&lt;/<span class="hljs-name">depend</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">depend</span>&gt;</span>gazebo_plugins<span class="hljs-tag">&lt;/<span class="hljs-name">depend</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">depend</span>&gt;</span>geometry_msgs<span class="hljs-tag">&lt;/<span class="hljs-name">depend</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">depend</span>&gt;</span>joy<span class="hljs-tag">&lt;/<span class="hljs-name">depend</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">depend</span>&gt;</span>mav_msgs<span class="hljs-tag">&lt;/<span class="hljs-name">depend</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">depend</span>&gt;</span>rotors_gazebo_plugins<span class="hljs-tag">&lt;/<span class="hljs-name">depend</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">depend</span>&gt;</span>sensor_msgs<span class="hljs-tag">&lt;/<span class="hljs-name">depend</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">depend</span>&gt;</span>xacro<span class="hljs-tag">&lt;/<span class="hljs-name">depend</span>&gt;</span>
+</code></pre>
+<p>&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;XXX&#xFF0C;&#x5728;&#x529F;&#x80FD;&#x5305;&#x4E2D;&#x5373;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;XXX/XXX&#x7684;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#xFF0C;&#x5982;<code>mav_msgs</code>&#xFF0C;&#x80FD;&#x591F;&#x8BA9;&#x529F;&#x80FD;&#x5305;&#x4F7F;&#x7528;<code>mav_msgs/xxx</code>&#x7C7B;&#x578B;&#x7684;&#x6D88;&#x606F;&#x3002;</p>
+<h2 id="3-&#x521B;&#x5EFA;&#x6E90;&#x6587;&#x4EF6;&#x5E76;&#x4FEE;&#x6539;cmakeliststxt">3 &#x521B;&#x5EFA;&#x6E90;&#x6587;&#x4EF6;&#x5E76;&#x4FEE;&#x6539;<code>CMakeLists.txt</code></h2>
+<p>&#x5728;<code>rotors_control_test/src</code>&#x4E0B;&#x521B;&#x5EFA;<code>rotors_control_node.cpp</code>&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4FEE;&#x6539;<code>CMakeLists.txt</code>&#xFF1A;</p>
+<pre><code class="lang-shell">add_executable(
+    rotors_control_node src/rotors_control_node.cpp
+)
+
+target_link_libraries(
+    rotors_control_node ${catkin_LIBRARIES}
+)
+</code></pre>
+<h2 id="4-&#x7F16;&#x5199;&#x6E90;&#x6587;&#x4EF6;&#x4EE3;&#x7801;">4 &#x7F16;&#x5199;&#x6E90;&#x6587;&#x4EF6;&#x4EE3;&#x7801;</h2>
+<h3 id="&#x4EE3;&#x7801;&#x601D;&#x8DEF;">&#x4EE3;&#x7801;&#x601D;&#x8DEF;</h3>
+<ol>
+<li>&#x521D;&#x59CB;&#x5316; ROS &#x8282;&#x70B9;&#xFF1B;</li>
+<li>&#x521B;&#x5EFA;<code>position_sub</code>&#x8BA2;&#x9605;&#x65E0;&#x4EBA;&#x673A;&#x4F4D;&#x7F6E;&#x4FE1;&#x606F;&#x8BDD;&#x9898;&#xFF1A;<ol>
+<li>&#x8BDD;&#x9898;&#x540D;&#x4E3A;<code>/odometry_sensor1/position</code>&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>rqt</code>&#x67E5;&#x8BE2;&#x5176;&#x4ED6;&#x8BDD;&#x9898;&#x540D;&#x79F0;&#x53CA;&#x5BF9;&#x5E94;&#x7684;&#x6D88;&#x606F;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1B;</li>
+<li>&#x521B;&#x5EFA;<code>updateUAVPosition</code>&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x4F4D;&#x7F6E;&#x4FE1;&#x606F;&#x7C7B;&#x578B;&#x4E3A;<code>geometry_msgs::PointStamped</code>&#xFF1B;</li>
+<li><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;&#x5F53;<code>GPS</code>&#x521D;&#x59CB;&#x5316;&#x6210;&#x529F;&#x5E76;&#x80FD;&#x591F;&#x63A5;&#x6536;&#x5230;&#x4F4D;&#x7F6E;&#x4FE1;&#x606F;&#x65F6;&#xFF0C;&#x624D;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x4EFB;&#x52A1;&#xFF1B;</li>
+</ol>
+</li>
+<li>&#x521B;&#x5EFA;&#x540D;&#x4E3A;<code>trajectory_pub</code>&#x7684;&#x63A7;&#x5236;&#x6307;&#x4EE4;<code>publisher</code>:<ol>
+<li>&#x63A7;&#x5236;&#x65E0;&#x4EBA;&#x673A;&#x79FB;&#x52A8;&#x53EF;&#x4F7F;&#x7528;<code>rotors_simulator</code>&#x5305;&#x4E2D;&#x7684;&#x63A7;&#x5236;&#x8282;&#x70B9;&#xFF1A;&#x5F53;&#x524D;<code>pulisher</code>&#x4E2D;&#x53D1;&#x5E03;&#x7684;&#x8BDD;&#x9898;&#x5373;&#x4E3A;<code>rotors_simulator</code>&#x4E2D;&#x5DF2;&#x5B9A;&#x4E49;&#x597D;&#x7684;&#x8BDD;&#x9898;&#xFF1B;</li>
+<li>&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;<code>rotors_simulator</code>&#x4E2D;&#x63A7;&#x5236;&#x8282;&#x70B9;&#x4EC5;&#x5BF9;&#x65E0;&#x4EBA;&#x673A;&#x4F4D;&#x7F6E;&#x8FDB;&#x884C;&#x63A7;&#x5236;&#xFF0C;&#x5373;&#x53D1;&#x9001;<strong>&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;</strong>&#x3002;&#x540C;&#x65F6;&#xFF0C;&#x5728;&#x8D77;&#x70B9;&#x4E0E;&#x76EE;&#x6807;&#x4F4D;&#x7F6E;&#x76F8;&#x8DDD;&#x8F83;&#x8FDC;&#x65F6;&#xFF0C;&#x65E0;&#x4EBA;&#x673A;&#x4F1A;&#x4FA7;&#x7FFB;&#xFF08;&#x5BF9;&#x4E8E;&#x4EFF;&#x771F;&#x662F;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x5F71;&#x54CD;&#xFF0C;&#x4F46;&#x5BF9;&#x4E8E;&#x5C06;&#x7B97;&#x6CD5;&#x6295;&#x5165;&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x7269;&#x7406;&#x673A;&#x5219;&#x9700;&#x8981;&#x66F4;&#x591A;&#x8003;&#x91CF;&#xFF09;&#xFF1B;</li>
+<li>&#x4E3A;&#x907F;&#x514D;&#x65E0;&#x4EBA;&#x673A;&#x4FA7;&#x7FFB;&#xFF0C;&#x5E73;&#x6ED1;&#x79FB;&#x52A8;&#x8F68;&#x8FF9;&#x4ECD;&#x5341;&#x5206;&#x91CD;&#x8981;&#x3002;</li>
+</ol>
+</li>
+</ol>
+<h3 id="&#x76F8;&#x5173;api">&#x76F8;&#x5173;API</h3>
+<p><code>mav_msgs::msgMultiDofJointTrajectoryFromPositionYaw</code></p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// Convenience method to quickly create a trajectory from a single waypoint.</span>
+</code></pre>
+<h3 id="&#x6E90;&#x4EE3;&#x7801;">&#x6E90;&#x4EE3;&#x7801;</h3>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;ros/ros.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;chrono&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;thread&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;Eigen/Core&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;std_srvs/Empty.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;geometry_msgs/PointStamped.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;mav_msgs/conversions.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;mav_msgs/default_topics.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;trajectory_msgs/MultiDOFJointTrajectory.h&gt;</span></span>
+
+ros::Publisher trajectory_pub;
+geometry_msgs::PointStamped cur_pos_msg;
+
+<span class="hljs-keyword">float</span> linear_smoothing_navigation_step = <span class="hljs-number">2</span>;
+<span class="hljs-keyword">bool</span> gps_init_ok = <span class="hljs-literal">false</span>;
+<span class="hljs-keyword">bool</span> take_off_ok = <span class="hljs-literal">false</span>;
+<span class="hljs-keyword">int</span> tasks_ok = <span class="hljs-number">0</span>;
+Eigen::Vector3d home_pos;
+
+<span class="hljs-comment">/*
+ *Description:
+ *    when gps position changed, we update related parameters.
+ *Parameters:
+ *    msg : current position message
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">updateUAVPosition</span><span class="hljs-params">(<span class="hljs-keyword">const</span> geometry_msgs::PointStamped&amp; msg)</span> </span>{
+    <span class="hljs-keyword">if</span>(!gps_init_ok) {
+        <span class="hljs-comment">// prepare to take off</span>
+        gps_init_ok = <span class="hljs-literal">true</span>;
+        <span class="hljs-comment">// record current position</span>
+        home_pos[<span class="hljs-number">0</span>] = msg.point.x;
+        home_pos[<span class="hljs-number">1</span>] = msg.point.y;
+        home_pos[<span class="hljs-number">2</span>] = msg.point.z;
+        ROS_INFO(<span class="hljs-string">&quot;Home Position is &lt;%f, %f, %f&gt;&quot;</span>, msg.point.x, msg.point.y, msg.point.z);
+    }
+    cur_pos_msg = msg;
+    <span class="hljs-comment">// ROS_INFO(&quot;Current Position is &lt;%f, %f, %f&gt;&quot;, msg.point.x, msg.point.y, msg.point.z);</span>
+}
+
+<span class="hljs-comment">/*
+ *Description:
+ *    calculate the distance between current position and target position
+ *Parameters:
+ *    target_pos : destination position    
+ *Return:
+ *    double : distance 
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">getDistanceToDestination</span><span class="hljs-params">(<span class="hljs-keyword">const</span> Eigen::Vector3d&amp; target_pos)</span> </span>{
+    <span class="hljs-keyword">double</span> distance = <span class="hljs-number">0.0</span>;
+    distance = <span class="hljs-built_in">pow</span>((target_pos[<span class="hljs-number">0</span>] - cur_pos_msg.point.x), <span class="hljs-number">2</span>) + 
+               <span class="hljs-built_in">pow</span>((target_pos[<span class="hljs-number">1</span>] - cur_pos_msg.point.y), <span class="hljs-number">2</span>) +
+               <span class="hljs-built_in">pow</span>((target_pos[<span class="hljs-number">2</span>] - cur_pos_msg.point.z), <span class="hljs-number">2</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">sqrt</span>(distance);
+}
+
+<span class="hljs-comment">/*
+ *Description:
+ *    
+ *Parameters:
+ *    target_pos : destination position    
+ *    max_err : max error (default = 0.0001)
+ *Return:
+ *    true : arrival
+ *    false : not arrival
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">isReachDestination</span><span class="hljs-params">(<span class="hljs-keyword">const</span> Eigen::Vector3d&amp; target_pos, <span class="hljs-keyword">float</span> max_err = <span class="hljs-number">0.2</span>)</span> </span>{
+    <span class="hljs-keyword">double</span> cur_err = getDistanceToDestination(target_pos);
+    <span class="hljs-keyword">return</span> cur_err &lt; max_err;
+}
+
+
+<span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">linearSmoothingNavigationTask</span><span class="hljs-params">(<span class="hljs-keyword">const</span> Eigen::Vector3d&amp; target_pos)</span> </span>{
+    trajectory_msgs::MultiDOFJointTrajectory trajectory_msg;
+    trajectory_msg.header.stamp = ros::Time::now();
+    <span class="hljs-keyword">if</span>(isReachDestination(target_pos)) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    }
+    <span class="hljs-keyword">double</span> dist = getDistanceToDestination(target_pos);
+    Eigen::Vector3d next_pos;
+    <span class="hljs-keyword">if</span>(dist &lt; linear_smoothing_navigation_step) {
+        next_pos = target_pos;
+    } <span class="hljs-keyword">else</span> {
+        next_pos[<span class="hljs-number">0</span>] = cur_pos_msg.point.x + 
+            (target_pos[<span class="hljs-number">0</span>] - cur_pos_msg.point.x) / dist * linear_smoothing_navigation_step;
+        next_pos[<span class="hljs-number">1</span>] = cur_pos_msg.point.y + 
+            (target_pos[<span class="hljs-number">1</span>] - cur_pos_msg.point.y) / dist * linear_smoothing_navigation_step;
+        next_pos[<span class="hljs-number">2</span>] = cur_pos_msg.point.z + 
+            (target_pos[<span class="hljs-number">2</span>] - cur_pos_msg.point.z) / dist * linear_smoothing_navigation_step;
+    }
+    <span class="hljs-keyword">double</span> target_yaw = <span class="hljs-number">0.0</span>;
+    mav_msgs::msgMultiDofJointTrajectoryFromPositionYaw(target_pos, target_yaw, &amp;trajectory_msg);
+    trajectory_pub.publish(trajectory_msg);
+
+    ROS_INFO(<span class="hljs-string">&quot;point %d&quot;</span>, tasks_ok);
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;    
+}
+
+<span class="hljs-comment">/*
+ *Description:
+ *    UAV reach the height of taking off.
+ *Parameters:
+ *    altitude : the height of taking off
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">takeOff</span><span class="hljs-params">(<span class="hljs-keyword">float</span> altitude)</span> </span>{
+    trajectory_msgs::MultiDOFJointTrajectory trajectory_msg;
+    trajectory_msg.header.stamp = ros::Time::now();
+    <span class="hljs-keyword">static</span> Eigen::<span class="hljs-function">Vector3d <span class="hljs-title">target_pos</span><span class="hljs-params">(cur_pos_msg.point.x, cur_pos_msg.point.y, altitude)</span></span>;
+    <span class="hljs-keyword">double</span> target_yaw = <span class="hljs-number">0.0</span>;
+    <span class="hljs-keyword">if</span>(isReachDestination(target_pos)) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    }
+
+    mav_msgs::msgMultiDofJointTrajectoryFromPositionYaw(target_pos, target_yaw, &amp;trajectory_msg);
+    trajectory_pub.publish(trajectory_msg);
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+}
+
+<span class="hljs-comment">/*
+ *Description:
+ *    Go back to the origin position. UAV move to home_pos with current altitude. Then UAV lands.
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">goHome</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">static</span> Eigen::<span class="hljs-function">Vector3d <span class="hljs-title">home_pos_bar</span><span class="hljs-params">(home_pos[<span class="hljs-number">0</span>], 
+                                        home_pos[<span class="hljs-number">1</span>],
+                                        cur_pos_msg.point.z)</span></span>;
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">bool</span> home_pos_ok = <span class="hljs-literal">false</span>;
+    <span class="hljs-keyword">if</span>(!home_pos_ok) {
+        home_pos_ok = linearSmoothingNavigationTask(home_pos_bar);    
+    } <span class="hljs-keyword">else</span> {
+        linearSmoothingNavigationTask(home_pos);
+        ROS_INFO(<span class="hljs-string">&quot;UAV aready go back.&quot;</span>);
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> *argv[])</span> </span>{
+    <span class="hljs-comment">// set local code</span>
+    setlocale(LC_ALL, <span class="hljs-string">&quot;&quot;</span>);
+    <span class="hljs-comment">// ros node init</span>
+    ros::init(argc, argv, <span class="hljs-string">&quot;rotors_control_node&quot;</span>);
+    ros::NodeHandle nh;
+    <span class="hljs-comment">// create a private node for accessing node parameters</span>
+    ros::<span class="hljs-function">NodeHandle <span class="hljs-title">nh_private</span><span class="hljs-params">(<span class="hljs-string">&quot;~&quot;</span>)</span></span>;
+
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> uav_name = <span class="hljs-string">&quot;&quot;</span>;
+    ros::param::get(<span class="hljs-string">&quot;~mav_name&quot;</span>, uav_name);
+
+    <span class="hljs-comment">// subcribe topic</span>
+    <span class="hljs-comment">// uav position info : /odometry_sensor1/position</span>
+    ros::Subscriber position_sub = nh.subscribe(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span>(<span class="hljs-string">&quot;/&quot;</span>+uav_name+<span class="hljs-string">&quot;/odometry_sensor1/position&quot;</span>).c_str(), <span class="hljs-number">10</span>, &amp;updateUAVPosition);
+    <span class="hljs-comment">// global variable</span>
+    trajectory_pub = nh.advertise&lt;trajectory_msgs::MultiDOFJointTrajectory&gt;(mav_msgs::default_topics::COMMAND_TRAJECTORY, <span class="hljs-number">10</span>);
+
+    <span class="hljs-comment">// wait 5s for gazebo successfully startup</span>
+    ros::Duration(<span class="hljs-number">5.0</span>).sleep();
+
+    <span class="hljs-comment">// make gazebo auto-play</span>
+    std_srvs::Empty srv;
+    <span class="hljs-keyword">bool</span> unpaused = ros::service::call(<span class="hljs-string">&quot;/gazebo/unpause_physics&quot;</span>, srv);
+
+    <span class="hljs-comment">// try to make gazebo auto-play</span>
+    <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span>(i &lt;= <span class="hljs-number">10</span> &amp;&amp; !unpaused) {
+        ROS_INFO(<span class="hljs-string">&quot;Wait for 1 second before trying to unpause Gazebo again!&quot;</span>);
+        <span class="hljs-built_in">std</span>::this_thread::sleep_for(<span class="hljs-built_in">std</span>::chrono::seconds(<span class="hljs-number">1</span>));
+        unpaused = ros::service::call(<span class="hljs-string">&quot;/gazebo/unpause_physics&quot;</span>, srv);
+        ++i;
+    }
+
+    <span class="hljs-comment">// if Gazebo is not auto-play, then exit</span>
+    <span class="hljs-keyword">if</span>(!unpaused) {
+        ROS_FATAL(<span class="hljs-string">&quot;Fail to wake up Gazebo.&quot;</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;    
+    } <span class="hljs-keyword">else</span> {
+        ROS_INFO(<span class="hljs-string">&quot;Unpaused the Gazebo simulation.&quot;</span>);
+    }
+
+    <span class="hljs-comment">// trajectory</span>
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;Eigen::Vector3d&gt; path;
+    path.push_back(Eigen::Vector3d(<span class="hljs-number">5.f</span>, <span class="hljs-number">5.f</span>, <span class="hljs-number">5.f</span>));
+    path.push_back(Eigen::Vector3d(<span class="hljs-number">-5.</span>f, <span class="hljs-number">5.f</span>, <span class="hljs-number">5.f</span>));
+    path.push_back(Eigen::Vector3d(<span class="hljs-number">-5.</span>f, <span class="hljs-number">-5.</span>f, <span class="hljs-number">5.f</span>));
+    path.push_back(Eigen::Vector3d(<span class="hljs-number">5.f</span>, <span class="hljs-number">-5.</span>f, <span class="hljs-number">5.f</span>));
+    path.push_back(Eigen::Vector3d(<span class="hljs-number">5.f</span>, <span class="hljs-number">5.f</span>, <span class="hljs-number">5.f</span>));
+    ROS_INFO(<span class="hljs-string">&quot;Trajectory has %d points.&quot;</span>, path.size());
+
+    ros::<span class="hljs-function">Rate <span class="hljs-title">loop_rate</span><span class="hljs-params">(<span class="hljs-number">10</span>)</span></span>;
+    <span class="hljs-keyword">while</span>(ros::ok()) {
+        <span class="hljs-keyword">if</span>(gps_init_ok &amp;&amp; !take_off_ok) {
+            take_off_ok = takeOff(<span class="hljs-number">3</span>);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(take_off_ok &amp;&amp; tasks_ok &lt; path.size()) {
+            ROS_INFO(<span class="hljs-string">&quot;Move&quot;</span>);
+            <span class="hljs-keyword">if</span>(tasks_ok &lt; path.size()) {
+                <span class="hljs-keyword">bool</span> tmp = linearSmoothingNavigationTask(path[tasks_ok]);
+                <span class="hljs-keyword">if</span>(tmp) {
+                    tasks_ok++;
+                }
+            }
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(tasks_ok &gt;= path.size()) {
+            goHome();
+        }
+        ROS_INFO(<span class="hljs-string">&quot;take off : %d, task number : %d&quot;</span>, take_off_ok, tasks_ok);
+        ros::spinOnce();
+        loop_rate.sleep();
+    }
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h2 id="5-launch&#x6587;&#x4EF6;&#x914D;&#x7F6E;">5 <code>launch</code>&#x6587;&#x4EF6;&#x914D;&#x7F6E;</h2>
+<p>&#x5728;<code>rotors_control_test</code>&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;<code>launch</code>&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5728;<code>launch</code>&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x521B;&#x5EFA;<code>rotors_control_test.launch</code>&#x6587;&#x4EF6;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">launch</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;mav_name&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;firefly&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;world_name&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;basic&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;enable_logging&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;false&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;enable_ground_truth&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;true&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;log_file&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;$(arg mav_name)&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;debug&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;false&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;gui&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;true&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;paused&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;false&quot;</span>/&gt;</span>
+    <span class="hljs-comment">&lt;!-- The following line causes gzmsg and gzerr messages to be printed to the console
+        (even when Gazebo is started through roslaunch) --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;verbose&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;false&quot;</span>/&gt;</span>
+
+    <span class="hljs-comment">&lt;!--Run Gazebo--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">env</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;GAZEBO_MODEL_PATH&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;${GAZEBO_MODEL_PATH}:$(find rotors_gazebo)/models&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">env</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;GAZEBO_RESOURCE_PATH&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;${GAZEBO_RESOURCE_PATH}:$(find rotors_gazebo)/models&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">include</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find gazebo_ros)/launch/empty_world.launch&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;world_name&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;$(find rotors_gazebo)/worlds/$(arg world_name).world&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;debug&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;$(arg debug)&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;paused&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;$(arg paused)&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;gui&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;$(arg gui)&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;verbose&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;$(arg verbose)&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">include</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!--Run UAV model and control node--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">group</span> <span class="hljs-attr">ns</span>=<span class="hljs-string">&quot;$(arg mav_name)&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">include</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find rotors_gazebo)/launch/spawn_mav.launch&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;mav_name&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;$(arg mav_name)&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;model&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;$(find rotors_description)/urdf/mav_generic_odometry_sensor.gazebo&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;enable_logging&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;$(arg enable_logging)&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;enable_ground_truth&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;$(arg enable_ground_truth)&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;log_file&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;$(arg log_file)&quot;</span>/&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">include</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;lee_position_controller_node&quot;</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;rotors_control&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;lee_position_controller_node&quot;</span> <span class="hljs-attr">output</span>=<span class="hljs-string">&quot;screen&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">rosparam</span> <span class="hljs-attr">command</span>=<span class="hljs-string">&quot;load&quot;</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find rotors_gazebo)/resource/lee_controller_$(arg mav_name).yaml&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">rosparam</span> <span class="hljs-attr">command</span>=<span class="hljs-string">&quot;load&quot;</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find rotors_gazebo)/resource/$(arg mav_name).yaml&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">remap</span> <span class="hljs-attr">from</span>=<span class="hljs-string">&quot;odometry&quot;</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;odometry_sensor1/odometry&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">node</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;robot_state_publisher&quot;</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;robot_state_publisher&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;robot_state_publisher&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;joint_state_publisher&quot;</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;joint_state_publisher&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;joint_state_publisher&quot;</span> /&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;rotors_control_node&quot;</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;rotors_control_test&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;rotors_control_node&quot;</span> <span class="hljs-attr">output</span>=<span class="hljs-string">&quot;screen&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;mav_name&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;string&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;$(arg mav_name)&quot;</span>/&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">node</span>&gt;</span>  
+    <span class="hljs-tag">&lt;/<span class="hljs-name">group</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">launch</span>&gt;</span>
+</code></pre>
+<h2 id="6-&#x7F16;&#x8BD1;&#x5E76;&#x8FD0;&#x884C;">6 &#x7F16;&#x8BD1;&#x5E76;&#x8FD0;&#x884C;</h2>
+<p>&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x76EE;&#x5F55;&#x7ED3;&#x6784;</p>
+<pre><code class="lang-shell">| -- catkin_ws
+    | -- build
+    | -- devel
+    | -- src
+        | -- rotors_control_test
+            | -- launch
+                | -- rotors_control_test.launch
+            | -- src
+                | -- rotors_control_test.cpp
+            CMakeLists.txt
+        | -- mav_comm
+        | -- rotors_simulator
+        CMakeLists.txt
+</code></pre>
+<p>&#x5148;&#x5207;&#x6362;&#x5230;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x4E0B;&#xFF0C;&#x7DE8;&#x8B6F;&#xFF0C;&#x904B;&#x884C;</p>
+<pre><code class="lang-shell"># &#x5148;&#x5207;&#x6362;&#x5230;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x4E0B;
+cd ./catkin_ws
+
+# &#x7F16;&#x8BD1;
+catkin_make
+
+# &#x8FD0;&#x884C;
+source ./devel/setup.bash
+roslaunch rotors_control_test rotors_control_test.launch
+</code></pre>
+<h2 id="reference">Reference</h2>
+<ol>
+<li></li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="rotors-with-virtual-joystick.html" class="navigation navigation-prev " aria-label="Previous page: RotorS with virtual joystick">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="rotors-distributed-comm-comprehensive-case.html" class="navigation navigation-next " aria-label="Next page: RotorS 分布式通信综合案例">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"layout":"post","title":"Rotors Simulator Usage","comments":true,"date":"2022-07-25T17:09:11.000Z","updated":"2022-07-25T17:09:11.000Z","tags":["ROS","RotorS"],"categories":["ROS","RotorS"],"level":"2.4.3","depth":2,"next":{"title":"RotorS 分布式通信综合案例","level":"2.4.4","depth":2,"path":"ros-notes/rotors-simulator/rotors-distributed-comm-comprehensive-case.md","ref":"ros-notes/rotors-simulator/rotors-distributed-comm-comprehensive-case.md","articles":[]},"previous":{"title":"RotorS with virtual joystick","level":"2.4.2","depth":2,"path":"ros-notes/rotors-simulator/rotors-with-virtual-joystick.md","ref":"ros-notes/rotors-simulator/rotors-with-virtual-joystick.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ros-notes/rotors-simulator/rotors-simulator-usage.md","mtime":"2023-06-26T12:55:34.262Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-06-26T13:16:25.944Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

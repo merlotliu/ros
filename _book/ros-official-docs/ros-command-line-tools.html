@@ -1,0 +1,818 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ROS Command Line Tools · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../ros2-notes/understanding-ros2-actions.html" />
+    
+    
+    <link rel="prev" href="ros-concepts.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../ros-notes/related-links.html">
+            
+                <a href="../ros-notes/related-links.html">
+            
+                    
+                    Related Links
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ros-notes/ros-overview.html">
+            
+                <a href="../ros-notes/ros-overview.html">
+            
+                    
+                    ROS Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../ros-notes/ros-env-config/">
+            
+                <a href="../ros-notes/ros-env-config/">
+            
+                    
+                    ROS Env Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../ros-notes/ros-env-config/ros-installation.html">
+            
+                <a href="../ros-notes/ros-env-config/ros-installation.html">
+            
+                    
+                    Kinetic Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../ros-notes/ros-env-config/ros-noetic-ubuntu20.html">
+            
+                <a href="../ros-notes/ros-env-config/ros-noetic-ubuntu20.html">
+            
+                    
+                    Noetic Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../ros-notes/ros-env-config/ros-ide-config.html">
+            
+                <a href="../ros-notes/ros-env-config/ros-ide-config.html">
+            
+                    
+                    IDE & Tools Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">My Notes</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../ros-notes/ros-getting-start/ros-hello-world.html">
+            
+                <a href="../ros-notes/ros-getting-start/ros-hello-world.html">
+            
+                    
+                    Getting Start
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../ros-notes/ros-concepts/">
+            
+                <a href="../ros-notes/ros-concepts/">
+            
+                    
+                    ROS Concepts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../ros-notes/ros-concepts/ros-esablishing-topic-connection.html">
+            
+                <a href="../ros-notes/ros-concepts/ros-esablishing-topic-connection.html">
+            
+                    
+                    ROS Topic 理论模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../ros-notes/ros-concepts/ros-establishing-service-connection.html">
+            
+                <a href="../ros-notes/ros-concepts/ros-establishing-service-connection.html">
+            
+                    
+                    ROS Service 理论模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../ros-notes/ros-tutorials/">
+            
+                <a href="../ros-notes/ros-tutorials/">
+            
+                    
+                    ROS Tutorials
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../ros-notes/ros-tutorials/ros-filesys.html">
+            
+                <a href="../ros-notes/ros-tutorials/ros-filesys.html">
+            
+                    
+                    ROS 文件系统 & 命令行工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../ros-notes/ros-tutorials/ros-writing-publisher-subscriber-cpp.html">
+            
+                <a href="../ros-notes/ros-tutorials/ros-writing-publisher-subscriber-cpp.html">
+            
+                    
+                    ROS Topic 通信简单示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="../ros-notes/ros-tutorials/ros-writing-service-client-cpp.html">
+            
+                <a href="../ros-notes/ros-tutorials/ros-writing-service-client-cpp.html">
+            
+                    
+                    ROS Service 通信简单示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="../ros-notes/ros-tutorials/ros-parameter-server.html">
+            
+                <a href="../ros-notes/ros-tutorials/ros-parameter-server.html">
+            
+                    
+                    ROS 参数服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="../ros-notes/ros-tutorials/ros-multiple-machines.html">
+            
+                <a href="../ros-notes/ros-tutorials/ros-multiple-machines.html">
+            
+                    
+                    ROS 分布式通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../ros-notes/rotors-simulator/">
+            
+                <a href="../ros-notes/rotors-simulator/">
+            
+                    
+                    Rotors Simulator
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../ros-notes/rotors-simulator/rotors-simulator-installation.html">
+            
+                <a href="../ros-notes/rotors-simulator/rotors-simulator-installation.html">
+            
+                    
+                    RotorS Simulator Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../ros-notes/rotors-simulator/rotors-with-virtual-joystick.html">
+            
+                <a href="../ros-notes/rotors-simulator/rotors-with-virtual-joystick.html">
+            
+                    
+                    RotorS with virtual joystick
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../ros-notes/rotors-simulator/rotors-simulator-usage.html">
+            
+                <a href="../ros-notes/rotors-simulator/rotors-simulator-usage.html">
+            
+                    
+                    Rotors Simulator Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="../ros-notes/rotors-simulator/rotors-distributed-comm-comprehensive-case.html">
+            
+                <a href="../ros-notes/rotors-simulator/rotors-distributed-comm-comprehensive-case.html">
+            
+                    
+                    RotorS 分布式通信综合案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS Official Docs</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="ros-official-tutorials/">
+            
+                <a href="ros-official-tutorials/">
+            
+                    
+                    ROS Official Tutorials
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="ros-official-tutorials/beginner-level/">
+            
+                <a href="ros-official-tutorials/beginner-level/">
+            
+                    
+                    Beginner Level
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="ros-official-tutorials/beginner-level/ros-tutorials-beginner-1-installing-configuring-environment.html">
+            
+                <a href="ros-official-tutorials/beginner-level/ros-tutorials-beginner-1-installing-configuring-environment.html">
+            
+                    
+                    Installing and Configuring Your ROS Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.2" data-path="ros-official-tutorials/beginner-level/ros-tutorials-beginner-2-navigating-filesystem.html">
+            
+                <a href="ros-official-tutorials/beginner-level/ros-tutorials-beginner-2-navigating-filesystem.html">
+            
+                    
+                    Navigating the ROS Filesystem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.3" data-path="ros-official-tutorials/beginner-level/creating-a-ros-package.html">
+            
+                <a href="ros-official-tutorials/beginner-level/creating-a-ros-package.html">
+            
+                    
+                    Creating a ROS Package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.4" data-path="ros-official-tutorials/beginner-level/building-a-ros-package.html">
+            
+                <a href="ros-official-tutorials/beginner-level/building-a-ros-package.html">
+            
+                    
+                    Building a ROS Package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.5" data-path="ros-official-tutorials/beginner-level/ros-tutorials-beginner-5-understanding-nodes.html">
+            
+                <a href="ros-official-tutorials/beginner-level/ros-tutorials-beginner-5-understanding-nodes.html">
+            
+                    
+                    Understanding ROS Nodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.6" data-path="ros-official-tutorials/beginner-level/ros-tutorials-beginner-6-understanding-topics.html">
+            
+                <a href="ros-official-tutorials/beginner-level/ros-tutorials-beginner-6-understanding-topics.html">
+            
+                    
+                    Understanding ROS Topics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.7" data-path="ros-official-tutorials/beginner-level/ros-tutorials-beginner-7-understanding-services-params.html">
+            
+                <a href="ros-official-tutorials/beginner-level/ros-tutorials-beginner-7-understanding-services-params.html">
+            
+                    
+                    Understanding ROS Services and Parameters
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="ros-concepts.html">
+            
+                <a href="ros-concepts.html">
+            
+                    
+                    ROS Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.3" data-path="ros-command-line-tools.html">
+            
+                <a href="ros-command-line-tools.html">
+            
+                    
+                    ROS Command Line Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 2</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../ros2-notes/understanding-ros2-actions.html">
+            
+                <a href="../ros2-notes/understanding-ros2-actions.html">
+            
+                    
+                    Action
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >ROS Command Line Tools</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="ros-command-line-tools">ROS Command-line tools</h1>
+<p><a href="http://wiki.ros.org/ROS" target="_blank">ROS</a><a href="http://wiki.ros.org/action/fullsearch/ROS/CommandLineTools?action=fullsearch&amp;context=180&amp;value=linkto%3A&quot;ROS%2FCommandLineTools&quot;" target="_blank">/CommandLineTools</a></p>
+<h2 id="common-user-tools">Common user tools</h2>
+<h3 id="rosbag">rosbag</h3>
+<p><a href="http://wiki.ros.org/rosbag" target="_blank">rosbag</a> is a command-line tool for performing various operations on ROS <a href="http://wiki.ros.org/Bags" target="_blank">bag files</a>, including playing, recording, and validating.</p>
+<h3 id="rosreadbagfile">ros_readbagfile</h3>
+<p>See <a href="http://wiki.ros.org/ROS/Tutorials/reading msgs from a bag file" target="_blank">ROS/Tutorials/reading msgs from a bag file</a> for help and a tutorial on how to use the 3rd-party <code>ros_readbagfile</code> command-line tool.</p>
+<h3 id="rosbash">rosbash</h3>
+<p><a href="http://wiki.ros.org/rosbash" target="_blank">rosbash</a> is not a command, but rather a suite of commands and functionality. It requires that you source the contents of the rosbash file</p>
+<pre><code>source $ROS_ROOT/tools/rosbash/rosbash
+</code></pre><p>which, if you followed the installation guide, should already be done by your bashrc file.</p>
+<p>rosbash provides the commands <code>roscd</code> and <code>rosed</code>, in addition to adding correct tab-completion functionality to <code>roscd</code>, <code>rosed</code>, <code>rosmake</code>, and <code>rosrun</code>.</p>
+<h3 id="roscd">roscd</h3>
+<p><code>roscd</code> is part of the <a href="http://wiki.ros.org/rosbash" target="_blank">rosbash</a> suite. It allows you to cd directly to a package, stack, or common location by name rather than having to know the package path.</p>
+<p>Usage:</p>
+<pre><code>roscd locationname[/subdir]
+</code></pre><p>Example:</p>
+<pre><code>roscd roscpp/include
+</code></pre><p>roscd without an argument will take you <code>$ROS_ROOT</code>. In addition to your packages and stacks, there are some common locations, &quot;log&quot;, and &quot;test_results&quot; which will take you directly to those locations.</p>
+<p>For advanced users, you can extend <code>roscd</code> with your own keywords by modifying the <code>$ROS_LOCATIONS</code> environment variable to contain a colon-separated list of keys and locations that will be included in the roscd path. For example,</p>
+<pre><code>export $ROS_LOCATIONS=&quot;rospkg=/path/to/rospkg:stairpkg=/path/to/stairpkg&quot;
+</code></pre><p>Prior to ROS-0.8, you could roscd to the first directory on your <code>$ROS_PACKAGE_PATH</code> using the pkg keyword. This functionality can be restored with:</p>
+<pre><code>export $ROS_LOCATIONS=&quot;pkg=$ROS_PACKAGE_PATH&quot;
+</code></pre><h3 id="rosclean">rosclean</h3>
+<p><strong>New in C Turtle</strong></p>
+<p>Cleanup filesystem resources (e.g. log files) created by ROS. See <a href="http://wiki.ros.org/rosclean" target="_blank">rosclean</a>.</p>
+<h3 id="roscore">roscore</h3>
+<p><a href="http://wiki.ros.org/roscore" target="_blank">roscore</a> runs the ROS Core Stack (<a href="http://wiki.ros.org/Master" target="_blank">Master</a>, <a href="http://wiki.ros.org/Parameter Server" target="_blank">Parameter Server</a>, <a href="http://wiki.ros.org/rosout" target="_blank">rosout</a>, etc...).</p>
+<h3 id="rosdep">rosdep</h3>
+<p>Documented at <a href="http://wiki.ros.org/rosdep" target="_blank">rosdep</a>, this installs system dependencies</p>
+<p>Usage:</p>
+<pre><code>rosdep install PACKAGE_NAME
+</code></pre><h3 id="rosed">rosed</h3>
+<p><code>rosed</code> is part of the <a href="http://wiki.ros.org/rosbash" target="_blank">rosbash</a> suite. It allows you to directly edit a file within a package by package name rather than having to know the package path.</p>
+<p>Usage:</p>
+<pre><code>rosed packagename filename
+</code></pre><p>Example:</p>
+<pre><code>rosed roscpp ros.h
+</code></pre><p>If the filename is not uniquely defined within the package, a menu will prompt you to choose which of the possible files you want to edit.</p>
+<p><code>rosed</code> will open the editor defined in your <code>$EDITOR</code> environmental variable, or else default to <code>vim</code>.</p>
+<h3 id="roscreate-pkg">roscreate-pkg</h3>
+<p><code>roscreate-pkg</code> creates common <a href="http://wiki.ros.org/Manifest" target="_blank">Manifest</a>, <a href="http://wiki.ros.org/CMakeLists" target="_blank">CMakeLists</a>, <a href="http://wiki.ros.org/Doxygen" target="_blank">Doxygen</a> and other files necessary for a new ROS package. It is part of the <a href="http://wiki.ros.org/roscreate" target="_blank">roscreate</a> package.</p>
+<h3 id="roscreate-stack">roscreate-stack</h3>
+<p><code>roscreate-stack</code> creates common <a href="http://wiki.ros.org/Stack Manifest" target="_blank">Stack Manifest</a>, <a href="http://wiki.ros.org/CMakeLists" target="_blank">CMakeLists</a> and other files necessary for a new ROS stack. It is part of the <a href="http://wiki.ros.org/roscreate" target="_blank">roscreate</a> package.</p>
+<h3 id="rosrun">rosrun</h3>
+<p><code>rosrun</code> allows you to run an executable in an arbitrary package without having to cd (or roscd) there first.</p>
+<p>Usage:</p>
+<pre><code>rosrun package executable
+</code></pre><p>Example:</p>
+<pre><code>rosrun roscpp_tutorials talker
+</code></pre><h3 id="roslaunch">roslaunch</h3>
+<p><a href="http://wiki.ros.org/roslaunch" target="_blank">roslaunch</a> launches a set of nodes from an XML configuration file and includes support for launching on remote machines. More documentation is available on the <a href="http://wiki.ros.org/roslaunch" target="_blank">roslaunch page</a>.</p>
+<h3 id="roslocate">roslocate</h3>
+<p><strong>Removed in ROS 1.4: this is now part of the <a href="http://wiki.ros.org/rosinstall" target="_blank">rosinstall</a> tool</strong></p>
+<p><a href="http://wiki.ros.org/roslocate" target="_blank">roslocate</a> finds the repository that a ROS package is stored in, e.g. <code>roslocate svn tf</code>. It makes it easy to quickly checkout the source of a package: <code>svn co</code>roslocate svn tf``. More documentation is available on the <a href="http://wiki.ros.org/roslocate" target="_blank">roslocate page</a>.</p>
+<h3 id="rosmake">rosmake</h3>
+<p>See the <a href="http://wiki.ros.org/rosmake" target="_blank">rosmake</a> page.</p>
+<h3 id="rosmsg">rosmsg</h3>
+<p><a href="http://wiki.ros.org/rosmsg" target="_blank">rosmsg</a> displays <a href="http://wiki.ros.org/Message" target="_blank">Message</a> data structure definitions. More documentation is available on the <a href="http://wiki.ros.org/rosmsg" target="_blank">rosmsg page</a>.</p>
+<h3 id="rosnode">rosnode</h3>
+<p><a href="http://wiki.ros.org/rosnode" target="_blank">rosnode</a> displays runtime node information and lets you ping nodes to check connectivity. More documentation is available on the <a href="http://wiki.ros.org/rosnode" target="_blank">rosnode page</a>.</p>
+<h3 id="rospack">rospack</h3>
+<p>See the <a href="http://wiki.ros.org/rospack" target="_blank">rospack</a> page.</p>
+<h3 id="rosparam">rosparam</h3>
+<p><a href="http://wiki.ros.org/rosparam" target="_blank">rosparam</a> enables getting and setting parameter server values from the command-line using YAML-encoded text.</p>
+<h3 id="rossrv">rossrv</h3>
+<p><a href="http://wiki.ros.org/rossrv" target="_blank">rossrv</a> displays Service <a href="http://wiki.ros.org/srv" target="_blank">srv</a> data structure definitions. More documentation is available on the <a href="http://wiki.ros.org/rossrv" target="_blank">rossrv page</a>.</p>
+<h3 id="rosservice">rosservice</h3>
+<p><a href="http://wiki.ros.org/rosservice" target="_blank">rosservice</a> displays run-time information about <a href="http://wiki.ros.org/Services" target="_blank">Services</a> and also lets you print out messages being sent to a topic. More documentation is available on the <a href="http://wiki.ros.org/rosservice" target="_blank">rosservice page</a>.</p>
+<h3 id="rosstack">rosstack</h3>
+<p>See the <a href="http://wiki.ros.org/rosstack" target="_blank">rosstack</a> page.</p>
+<h3 id="rostopic">rostopic</h3>
+<p><a href="http://wiki.ros.org/rostopic" target="_blank">rostopic</a> displays run-time information about <a href="http://wiki.ros.org/Topics" target="_blank">Topics</a> and also lets you print out messages being sent to a topic. More documentation is available on the <a href="http://wiki.ros.org/rostopic" target="_blank">rostopic page</a>.</p>
+<h3 id="rosversion">rosversion</h3>
+<h2 id="graphical-tools">Graphical tools</h2>
+<p>The ROS graphical tools often require additional dependencies before they can be used, such as graphviz and Python GTK. You can use <code>bash &lt;(rosdep satisfy PACKAGE_NAME)</code> to quickly install the dependencies for these tools.</p>
+<h3 id="rqtbag">rqt_bag</h3>
+<p><a href="http://wiki.ros.org/rqt_bag" target="_blank">rqt_bag</a> is a graphical tool for viewing data in ROS <a href="http://wiki.ros.org/Bags" target="_blank">bag files</a>.</p>
+<h3 id="rqtdeps">rqt_deps</h3>
+<p><a href="http://wiki.ros.org/rqt_deps" target="_blank">rqt_deps</a> generates a PDF of ROS dependencies.</p>
+<h3 id="rqtgraph">rqt_graph</h3>
+<p><code>rqt_graph</code> displays an interactive graph of ROS nodes and topics. See the <a href="http://wiki.ros.org/rosgraph" target="_blank">rosgraph</a> package for documentation.</p>
+<p>&#x5982;&#x679C;&#x5DE5;&#x5177;&#x672A;&#x5B89;&#x88C5;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x5B89;&#x88C5;&#xFF1A;</p>
+<pre><code class="lang-shell"># &lt;distro&gt;&#x66FF;&#x6362;&#x4E3A;&#x5BF9;&#x5E94;&#x7684;ROS&#x7248;&#x672C;&#xFF0C;&#x5982;&#xFF1A;kinetic
+$ sudo apt install ros-&lt;distro&gt;-rqt
+$ sudo apt install ros-&lt;distro&gt;-rqt-common-plugins
+</code></pre>
+<p>&#x5728;&#x8282;&#x70B9;&#x8FD0;&#x884C;&#x540E;&#xFF0C;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x8F93;&#x5165;<code>rqt_graph</code>&#x548C;<code>rosrun rqt_graph rqt_graph</code>&#xFF0C;&#x5373;&#x53EF;&#x770B;&#x5230;&#x8868;&#x793A;&#x5404;&#x8282;&#x70B9;&#x4E4B;&#x95F4;&#x5173;&#x7CFB;&#x7684;&#x7F51;&#x7EDC;&#x62D3;&#x6251;&#x56FE;&#x3002;</p>
+<pre><code class="lang-shell">$ rqt_graph
+# &#x6216;&#x8005;
+$ rosrun rqt_graph rqt_graph
+</code></pre>
+<p><img src="../.gitbook/assets/ros-command-line-tools.assets/image-20220705185125331.png" alt="image-20220705185125331"></p>
+<h3 id="rqtplot">rqt_plot</h3>
+<p><a href="http://wiki.ros.org/rqt_plot" target="_blank">rqt_plot</a> plots numerical data on a ROS topic over time.</p>
+<h2 id="less-used-tools">Less-used tools</h2>
+<p>The following tools may be commonly used by internal tools, but aren&apos;t often used by end users.</p>
+<h3 id="gendeps">gendeps</h3>
+<p>See the <a href="http://wiki.ros.org/roslib" target="_blank">roslib</a> page</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ros-concepts.html" class="navigation navigation-prev " aria-label="Previous page: ROS Concepts">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../ros2-notes/understanding-ros2-actions.html" class="navigation navigation-next " aria-label="Next page: Action">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ROS Command Line Tools","level":"3.3","depth":1,"next":{"title":"Action","level":"4.1","depth":1,"path":"ros2-notes/understanding-ros2-actions.md","ref":"ros2-notes/understanding-ros2-actions.md","articles":[]},"previous":{"title":"ROS Concepts","level":"3.2","depth":1,"path":"ros-official-docs/ros-concepts.md","ref":"ros-official-docs/ros-concepts.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ros-official-docs/ros-command-line-tools.md","mtime":"2023-06-26T12:55:34.220Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-06-26T13:16:25.944Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
