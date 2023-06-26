@@ -1,0 +1,1080 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ROS Topic 通信简单示例 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ros-writing-service-client-cpp.html" />
+    
+    
+    <link rel="prev" href="ros-filesys.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../related-links.html">
+            
+                <a href="../related-links.html">
+            
+                    
+                    Related Links
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ros-overview.html">
+            
+                <a href="../ros-overview.html">
+            
+                    
+                    ROS Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../ros-env-config/">
+            
+                <a href="../ros-env-config/">
+            
+                    
+                    ROS Env Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../ros-env-config/ros-installation.html">
+            
+                <a href="../ros-env-config/ros-installation.html">
+            
+                    
+                    Kinetic Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../ros-env-config/ros-noetic-ubuntu20.html">
+            
+                <a href="../ros-env-config/ros-noetic-ubuntu20.html">
+            
+                    
+                    Noetic Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../ros-env-config/ros-ide-config.html">
+            
+                <a href="../ros-env-config/ros-ide-config.html">
+            
+                    
+                    IDE & Tools Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">My Notes</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../ros-getting-start/ros-hello-world.html">
+            
+                <a href="../ros-getting-start/ros-hello-world.html">
+            
+                    
+                    Getting Start
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../ros-concepts/">
+            
+                <a href="../ros-concepts/">
+            
+                    
+                    ROS Concepts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../ros-concepts/ros-esablishing-topic-connection.html">
+            
+                <a href="../ros-concepts/ros-esablishing-topic-connection.html">
+            
+                    
+                    ROS Topic 理论模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../ros-concepts/ros-establishing-service-connection.html">
+            
+                <a href="../ros-concepts/ros-establishing-service-connection.html">
+            
+                    
+                    ROS Service 理论模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    ROS Tutorials
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="ros-filesys.html">
+            
+                <a href="ros-filesys.html">
+            
+                    
+                    ROS 文件系统 & 命令行工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3.2" data-path="ros-writing-publisher-subscriber-cpp.html">
+            
+                <a href="ros-writing-publisher-subscriber-cpp.html">
+            
+                    
+                    ROS Topic 通信简单示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="ros-writing-service-client-cpp.html">
+            
+                <a href="ros-writing-service-client-cpp.html">
+            
+                    
+                    ROS Service 通信简单示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="ros-parameter-server.html">
+            
+                <a href="ros-parameter-server.html">
+            
+                    
+                    ROS 参数服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="ros-multiple-machines.html">
+            
+                <a href="ros-multiple-machines.html">
+            
+                    
+                    ROS 分布式通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../rotors-simulator/">
+            
+                <a href="../rotors-simulator/">
+            
+                    
+                    Rotors Simulator
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../rotors-simulator/rotors-simulator-installation.html">
+            
+                <a href="../rotors-simulator/rotors-simulator-installation.html">
+            
+                    
+                    RotorS Simulator Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../rotors-simulator/rotors-with-virtual-joystick.html">
+            
+                <a href="../rotors-simulator/rotors-with-virtual-joystick.html">
+            
+                    
+                    RotorS with virtual joystick
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../rotors-simulator/rotors-simulator-usage.html">
+            
+                <a href="../rotors-simulator/rotors-simulator-usage.html">
+            
+                    
+                    Rotors Simulator Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="../rotors-simulator/rotors-distributed-comm-comprehensive-case.html">
+            
+                <a href="../rotors-simulator/rotors-distributed-comm-comprehensive-case.html">
+            
+                    
+                    RotorS 分布式通信综合案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS Official Docs</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../ros-official-docs/ros-official-tutorials/">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/">
+            
+                    
+                    ROS Official Tutorials
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/">
+            
+                    
+                    Beginner Level
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-1-installing-configuring-environment.html">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-1-installing-configuring-environment.html">
+            
+                    
+                    Installing and Configuring Your ROS Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.2" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-2-navigating-filesystem.html">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-2-navigating-filesystem.html">
+            
+                    
+                    Navigating the ROS Filesystem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.3" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/creating-a-ros-package.html">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/creating-a-ros-package.html">
+            
+                    
+                    Creating a ROS Package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.4" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/building-a-ros-package.html">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/building-a-ros-package.html">
+            
+                    
+                    Building a ROS Package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.5" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-5-understanding-nodes.html">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-5-understanding-nodes.html">
+            
+                    
+                    Understanding ROS Nodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.6" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-6-understanding-topics.html">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-6-understanding-topics.html">
+            
+                    
+                    Understanding ROS Topics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.7" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-7-understanding-services-params.html">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-7-understanding-services-params.html">
+            
+                    
+                    Understanding ROS Services and Parameters
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../ros-official-docs/ros-concepts.html">
+            
+                <a href="../../ros-official-docs/ros-concepts.html">
+            
+                    
+                    ROS Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../ros-official-docs/ros-command-line-tools.html">
+            
+                <a href="../../ros-official-docs/ros-command-line-tools.html">
+            
+                    
+                    ROS Command Line Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 2</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../ros2-notes/understanding-ros2-actions.html">
+            
+                <a href="../../ros2-notes/understanding-ros2-actions.html">
+            
+                    
+                    Action
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >ROS Topic 通信简单示例</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="ros-topic-&#x901A;&#x4FE1;&#x7B80;&#x5355;&#x793A;&#x4F8B;">ROS Topic &#x901A;&#x4FE1;&#x7B80;&#x5355;&#x793A;&#x4F8B;</h1>
+<h2 id="&#x9700;&#x6C42;">&#x9700;&#x6C42;</h2>
+<p>&#x6B63;&#x5982;&#x524D;&#x9762;&#x6240;&#x63D0;&#x5230;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x6709;&#x65F6;&#x9700;&#x8981;&#x53EF;&#x89C6;&#x5316;&#x6FC0;&#x5149;&#x626B;&#x63CF;&#x6570;&#x636E;&#x3002;&#x9700;&#x8981;&#x5C06;&#x6570;&#x636E;&#x4ECE;&#x6FC0;&#x5149;&#x6D4B;&#x8DDD;&#x4EEA;&#x4F20;&#x8F93;&#x5230; rviz &#xFF0C;&#x4E3A;&#x4E86;&#x63A7;&#x5236; Hokuyo &#x6FC0;&#x5149;&#x6D4B;&#x8DDD;&#x4EEA;&#xFF0C;&#x6211;&#x4EEC;&#x542F;&#x52A8; hokuyo_node &#x8282;&#x70B9;&#xFF0C;&#x8BE5;&#x8282;&#x70B9;&#x4E0E;&#x6FC0;&#x5149;&#x5BF9;&#x8BDD;&#x5E76;&#x5728;&#x626B;&#x63CF;&#x4E3B;&#x9898;&#x4E0A;&#x53D1;&#x5E03; sensor_msgs/Laser Scan &#x6D88;&#x606F;&#x3002;&#x4E3A;&#x4E86;&#x53EF;&#x89C6;&#x5316;&#x6FC0;&#x5149;&#x626B;&#x63CF;&#x6570;&#x636E;&#xFF0C;&#x6211;&#x4EEC;&#x542F;&#x52A8; rviz &#x8282;&#x70B9;&#x5E76;&#x8BA2;&#x9605;&#x626B;&#x63CF;&#x4E3B;&#x9898;&#x3002;&#x8BA2;&#x9605;&#x540E;&#xFF0C;rviz &#x8282;&#x70B9;&#x5F00;&#x59CB;&#x63A5;&#x6536;&#x6FC0;&#x5149;&#x626B;&#x63CF;&#x6D88;&#x606F;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x5448;&#x73B0;&#x5230;&#x5C4F;&#x5E55;&#x4E0A;&#x3002;</p>
+<p>&#x5BF9;&#x8BE5;&#x793A;&#x4F8B;&#x7B80;&#x5316;&#x540E;&#xFF0C;&#x8BA9;&#x53D1;&#x5E03;&#x65B9;&#x4EE5; 10 hz&#x7684;&#x9891;&#x7387;&#x53D1;&#x5E03;&#x6587;&#x672C;&#x6D88;&#x606F;&#xFF0C;&#x8BA2;&#x9605;&#x65B9;&#x63A5;&#x6536;&#x6D88;&#x606F;&#x5E76;&#x6253;&#x5370;&#x3002;</p>
+<h2 id="&#x53D1;&#x5E03;&#x8282;&#x70B9;-publisher-node">&#x53D1;&#x5E03;&#x8282;&#x70B9; Publisher Node</h2>
+<h3 id="&#x601D;&#x8DEF;">&#x601D;&#x8DEF;</h3>
+<ol>
+<li>&#x521D;&#x59CB;&#x5316; ROS &#x8282;&#x70B9;&#x548C;&#x53E5;&#x67C4;&#xFF1B;</li>
+<li>&#x544A;&#x8BC9; master &#x8282;&#x70B9;&#xFF0C;&#x5C06;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4F7F;&#x7528; std_msgs/String &#x6D88;&#x606F;&#x7684;&#x8BDD;&#x9898; chatter&#xFF1B;</li>
+<li>&#x4EE5; 10 hz &#x7684;&#x9891;&#x7387;&#x5FAA;&#x73AF;&#x53D1;&#x5E03;&#x6D88;&#x606F;&#xFF1B;</li>
+</ol>
+<h3 id="cpp&#x5B9E;&#x73B0;">cpp&#x5B9E;&#x73B0;</h3>
+<p>&#x5728;<strong>&#x529F;&#x80FD;&#x5305;</strong>&#x7684;<code>src</code>&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;<code>talker.cpp</code>&#x6587;&#x4EF6;&#xFF0C;&#x7F16;&#x5199;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;ros/ros.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;std_msgs/String.h&quot;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sstream&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> **argv)</span> </span>{
+    ros::init(argc, argv, <span class="hljs-string">&quot;talker&quot;</span>);
+    ros::NodeHandle n;
+
+    ros::Publisher chatter_pub = n.advertise&lt;std_msgs::String&gt;(<span class="hljs-string">&quot;chatter&quot;</span>, <span class="hljs-number">1000</span>);
+
+    ros::<span class="hljs-function">Rate <span class="hljs-title">loop_rate</span><span class="hljs-params">(<span class="hljs-number">10</span>)</span></span>;
+    <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span> (ros::ok()) {
+        std_msgs::String msg;
+
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">stringstream</span> ss;
+        ss &lt;&lt; <span class="hljs-string">&quot;hello world &quot;</span> &lt;&lt; count++;
+        msg.data = ss.str();
+
+        ROS_INFO(<span class="hljs-string">&quot;%s&quot;</span>, msg.data.c_str());
+
+        chatter_pub.publish(msg);
+
+        ros::spinOnce();
+
+        loop_rate.sleep();
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h3 id="&#x4EE3;&#x7801;&#x89E3;&#x91CA;">&#x4EE3;&#x7801;&#x89E3;&#x91CA;</h3>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;ros/ros.h&quot;</span></span>
+</code></pre>
+<p><code>ros/ros.h</code>&#x4E2D;&#x5305;&#x542B;&#x4E86; ROS &#x6700;&#x5E38;&#x7528;&#x7684;&#x5934;&#x6587;&#x4EF6;&#x3002;</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;std_msgs/String.h&quot;</span></span>
+</code></pre>
+<p>&#x5305;&#x542B; <a href="http://wiki.ros.org/std_msgs" target="_blank">std_msgs</a> &#x5305;&#x4E2D;&#x7684; <a href="http://docs.ros.org/en/api/std_msgs/html/msg/String.html" target="_blank">std_msgs/String</a> &#x6D88;&#x606F;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;<code>std_msgs/String</code>&#x53EA;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x4E3A;<code>std::string</code>&#x7684;&#x53D8;&#x91CF;<code>data</code>&#x3002;&#x5173;&#x4E8E;&#x6D88;&#x606F;&#x7684;&#x66F4;&#x591A;&#x5B9A;&#x4E49;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x89C1; <a href="http://wiki.ros.org/msg" target="_blank">msg</a> &#x3002;</p>
+<pre><code class="lang-cpp">ros::init(argc, argv, <span class="hljs-string">&quot;talker&quot;</span>);
+</code></pre>
+<p>&#x521D;&#x59CB;&#x5316; ROS &#x8282;&#x70B9;&#x3002;<code>ros::init</code>&#x5305;&#x542B;&#x591A;&#x4E2A;&#x91CD;&#x8F7D;&#xFF0C;&#x5BF9;&#x4E8E;&#x5F53;&#x524D;&#x4F7F;&#x7528;&#x7684;&#x8FD9;&#x4E2A;&#x5B9E;&#x73B0;&#xFF0C;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x8282;&#x70B9;&#x7684;&#x540D;&#x5B57;&#x3002;&#x56E0;&#x4E3A;&#x4F20;&#x5165;&#x4E86;<code>argc</code>&#x548C;<code>argv</code>&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x884C;&#x6216;&#x8005;<code>roslaunch</code>&#xFF0C;&#x5BF9;&#x8282;&#x70B9;&#x540D;&#x79F0;&#x91CD;&#x6620;&#x5C04;&#xFF08;remapping&#xFF09;&#x3002;&#x6B64;&#x5916;&#xFF1A;</p>
+<ul>
+<li>&#x8282;&#x70B9;&#x540D;&#x5FC5;&#x987B;&#x552F;&#x4E00;&#xFF1B;</li>
+<li>&#x540D;&#x79F0;&#x5FC5;&#x987B;&#x662F;&#x57FA;&#x7840;&#x540D;&#x5B57;&#xFF08; <a href="http://wiki.ros.org/Names#Graph" target="_blank">base name</a>&#xFF09;&#xFF0C;&#x6BD4;&#x5982;&#xFF0C;&#x4E0D;&#x80FD;&#x5305;&#x542B;<code>/</code>&#xFF1B;</li>
+</ul>
+<pre><code class="lang-cpp">ros::NodeHandle n;
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x8FDB;&#x7A0B;&#x8282;&#x70B9;&#x53E5;&#x67C4;&#x3002;&#x521B;&#x5EFA;&#x7B2C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x53E5;&#x67C4;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x6267;&#x884C;&#x8282;&#x70B9;&#x521D;&#x59CB;&#x5316;&#x3002;&#x6790;&#x6784;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x53E5;&#x67C4;&#x65F6;&#xFF0C;&#x4F1A;&#x6E05;&#x695A;&#x8282;&#x70B9;&#x5360;&#x7528;&#x7684;&#x8D44;&#x6E90;&#xFF08;&#x5185;&#x5B58;&#x4E4B;&#x7C7B;&#x7684;&#xFF09;&#x3002;</p>
+<pre><code class="lang-cpp">ros::Publisher chatter_pub = n.advertise&lt;std_msgs::String&gt;(<span class="hljs-string">&quot;chatter&quot;</span>, <span class="hljs-number">1000</span>);
+</code></pre>
+<p>&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x8BDD;&#x9898;&#x540D;&#x79F0;&#x3002;&#x8FD9;&#x662F;&#x544A;&#x8BC9; <code>master</code>&#x8282;&#x70B9;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5728;&#x4E3B;&#x9898; <code>chatter</code> &#x4E0A;&#x53D1;&#x5E03;  <a href="http://docs.ros.org/en/api/std_msgs/html/msg/String.html" target="_blank">std_msgs/String</a> &#x7C7B;&#x578B;&#x7684;&#x6D88;&#x606F;&#x3002;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x76EE;&#x7684;&#x662F;&#xFF0C;&#x8BA9; <code>master</code>&#x8282;&#x70B9;&#x544A;&#x8BC9;&#x4EFB;&#x4F55;&#x8BA2;&#x9605;<code>chatter</code>&#x8BDD;&#x9898;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5728;&#x8FD9;&#x4E2A;&#x8BDD;&#x9898;&#x4E0A;&#x53D1;&#x5E03;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x53D1;&#x5E03;&#x961F;&#x5217;&#x957F;&#x5EA6;&#x3002;&#x4ED6;&#x7684;&#x610F;&#x601D;&#x662F;&#xFF0C;&#x5728;&#x4E22;&#x5F03;&#x65E7;&#x7684;&#x6D88;&#x606F;&#x4E4B;&#x524D;&#x6700;&#x591A;&#x5B58;&#x50A8; 1000&#xFF08;&#x53D1;&#x5E03;&#x961F;&#x5217;&#x957F;&#x5EA6;&#xFF09;&#x6761;&#x6D88;&#x606F;&#x3002;&#x901A;&#x5E38;&#x662F;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x8BBE;&#x7F6E;&#xFF0C;&#x5177;&#x4F53;&#x6839;&#x636E;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;&#x5D4C;&#x5165;&#x5F0F;&#x7F16;&#x7A0B;&#x4E2D;&#xFF0C;&#x4EFB;&#x4F55;&#x4E00;&#x70B9;&#x5C0F;&#x5C0F;&#x7684;&#x5185;&#x5B58;&#x90FD;&#x662F;&#x5F88;&#x73CD;&#x8D35;&#x7684;&#x3002;</p>
+<p><code>ros::NodeHandle::advertise()</code> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A; <code>ros::Publisher</code> &#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x7684;&#x4F5C;&#x7528;&#xFF1A;</p>
+<ul>
+<li>&#x542B;&#x6709;&#x4E00;&#x4E2A;&#x53D1;&#x5E03;&#x6D88;&#x606F;&#x5230;&#x521A;&#x624D;&#x521B;&#x5EFA;&#x7684;&#x8BDD;&#x9898;<code>chatter</code>&#x7684;&#x65B9;&#x6CD5;<code>publish()</code>&#xFF1B;</li>
+<li>&#x5F53;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x5230;&#x8BE5;&#x5BF9;&#x8C61;&#x4F5C;&#x7528;&#x8303;&#x56F4;&#x4E4B;&#x5916;&#xFF0C;</li>
+</ul>
+<pre><code class="lang-cpp">ros::<span class="hljs-function">Rate <span class="hljs-title">loop_rate</span><span class="hljs-params">(<span class="hljs-number">10</span>)</span></span>;
+</code></pre>
+<p><code>ros::Rate</code>&#x7528;&#x4E8E;&#x8BBE;&#x5B9A;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7684;&#x9891;&#x7387;&#x3002;&#x4ED6;&#x4F1A;&#x6839;&#x636E;&#x4E0A;&#x6B21;<code>Rate::sleep()</code>&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x81EA;&#x52A8;&#x63A8;&#x7B97;&#x4F11;&#x8981;&#x4F11;&#x7720;&#x591A;&#x957F;&#x65F6;&#x95F4;&#x3002;&#x5728;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x8BBE;&#x5B9A;&#x4E86; 10 Hz &#x7684;&#x9891;&#x7387;&#x3002;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">while</span> (ros::ok()) {
+</code></pre>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;roscpp &#x5C06;&#x5B89;&#x88C5;&#x4E00;&#x4E2A;&#x80FD;&#x591F;&#x63A5;&#x53D7;<code>Ctrl-C</code>&#x7684; SIGINT &#x5904;&#x7406;&#x7A0B;&#x5E8F;&#xFF0C;<code>ctrl+c</code>&#x5C06;&#x5BFC;&#x81F4; <code>ros::ok()</code> &#x8FD4;&#x56DE; false&#x3002;</p>
+<p><code>ros::ok()</code> &#x5C06;&#x5728;&#x4EE5;&#x4E0B;&#x60C5;&#x51B5;&#x4E0B;&#x8FD4;&#x56DE; false&#xFF1A;</p>
+<ul>
+<li><p>&#x6536;&#x5230; SIGINT (Ctrl-C)&#xFF1B;</p>
+</li>
+<li><p>&#x6211;&#x4EEC;&#x88AB;&#x53E6;&#x4E00;&#x4E2A;&#x540C;&#x540D;&#x8282;&#x70B9;&#x8E22;&#x51FA;&#x7F51;&#x7EDC;&#xFF1B;</p>
+</li>
+<li><p><code>ros::shutdown()</code> &#x5DF2;&#x88AB;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x53E6;&#x4E00;&#x90E8;&#x5206;&#x8C03;&#x7528;&#xFF1B;</p>
+</li>
+<li><p>&#x6240;&#x6709; <code>ros::Node</code> &#x53E5;&#x67C4;&#x5DF2;&#x88AB;&#x9500;&#x6BC1;&#xFF1B;</p>
+</li>
+</ul>
+<p>&#x4E00;&#x65E6; <code>ros::ok()</code> &#x8FD4;&#x56DE; false&#xFF0C;&#x6240;&#x6709; ROS &#x8C03;&#x7528;&#x90FD;&#x4F1A;&#x5931;&#x8D25;&#x3002;</p>
+<pre><code class="lang-cpp">std_msgs::String msg;
+
+<span class="hljs-built_in">std</span>::<span class="hljs-built_in">stringstream</span> ss;
+ss &lt;&lt; <span class="hljs-string">&quot;hello world &quot;</span> &lt;&lt; count;
+msg.data = ss.str();
+</code></pre>
+<p>&#x5728;ROS&#x4E2D;&#x5E7F;&#x64AD;&#x6D88;&#x606F;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x662F; <a href="http://wiki.ros.org/msg" target="_blank">msg file</a> &#x751F;&#x6210;&#x7684;&#x6D88;&#x606F;&#x7C7B;&#x3002;ROS &#x5185;&#x7F6E;&#x4E86;&#x8BB8;&#x591A;&#x53EF;&#x4F7F;&#x7528;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x76EE;&#x524D;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x7684;&#x662F;<code>String</code>&#x6D88;&#x606F;&#x7C7B;&#x578B;&#xFF0C;&#x5B83;&#x4EC5;&#x542B;&#x4E00;&#x4E2A;&#x6210;&#x5458;&#x53D8;&#x91CF;<code>data</code>&#x3002;</p>
+<pre><code class="lang-cpp">chatter_pub.publish(msg);
+</code></pre>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x51C6;&#x786E;&#x7684;&#x5C06;&#x6D88;&#x606F;&#x5E7F;&#x64AD;&#x7ED9;&#x8BA2;&#x9605;&#x8BE5;&#x6D88;&#x606F;&#x7684;&#x8282;&#x70B9;&#x3002;</p>
+<pre><code class="lang-cpp">ROS_INFO(<span class="hljs-string">&quot;%s&quot;</span>, msg.data.c_str());
+</code></pre>
+<p><code>ROS_INFO</code> &#x662F; ROS &#x4E2D;&#x66FF;&#x4EE3; <code>printf</code>/<code>cout</code> &#x7684;&#x547D;&#x4EE4;&#x884C;&#x8F93;&#x51FA;&#x65B9;&#x6CD5;&#x3002;&#x5177;&#x4F53;&#x53EF;&#x4EE5;&#x53C2;&#x89C1;<a href="http://wiki.ros.org/rosconsole" target="_blank">rosconsole documentation</a> &#x3002;</p>
+<pre><code class="lang-cpp">ros::spinOnce();
+</code></pre>
+<p>&#x5728;&#x5F53;&#x524D;&#x8FD9;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x8C03;&#x7528; <code>ros::spinOnce()</code> &#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x591A;&#x4F59;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x4E0D;&#x7528;&#x5904;&#x7406;&#x4EFB;&#x4F55;&#x56DE;&#x8C03;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x6709;&#x8BA2;&#x9605;&#x76F8;&#x5173;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5E76;&#x4E14;&#x6CA1;&#x6709;&#x4F7F;&#x7528;<code>ros::spinOnce()</code> &#xFF0C;&#x90A3;&#x4E48;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5C31;&#x4E0D;&#x4F1A;&#x8C03;&#x7528;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x6DFB;&#x52A0;&#x8FD9;&#x4E00;&#x884C;&#x8BED;&#x53E5;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#x7684;&#x3002;</p>
+<pre><code class="lang-cpp">loop_rate.sleep();
+</code></pre>
+<p>&#x4F7F;&#x7528;<code>ros::Rate</code>&#x8C03;&#x7528;<code>sleep()</code>&#x7684;&#x76EE;&#x7684;&#x662F;&#xFF0C;&#x4F11;&#x7720;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x4EE5;&#x4FDD;&#x8BC1; 10hz &#x7684;&#x53D1;&#x5E03;&#x9891;&#x7387;&#x3002;</p>
+<h3 id="&#x5B8C;&#x6574;&#x6CE8;&#x91CA;&#x7248;">&#x5B8C;&#x6574;&#x6CE8;&#x91CA;&#x7248;</h3>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;ros/ros.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;std_msgs/String.h&quot;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sstream&gt;</span></span>
+
+<span class="hljs-comment">/**
+ * &#x5728; ROS &#x4E2D;&#x53D1;&#x5E03;&#x6570;&#x636E;&#xFF1A;
+ *    1. &#x521D;&#x59CB;&#x5316; ROS &#x8282;&#x70B9;&#x548C;&#x53E5;&#x67C4;&#xFF1B;
+ *     2. &#x544A;&#x8BC9; master &#x8282;&#x70B9;&#xFF0C;&#x5C06;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4F7F;&#x7528; std_msgs/String &#x6D88;&#x606F;&#x7684;&#x8BDD;&#x9898; chatter&#xFF1B;
+ *    3. &#x4EE5; 10 hz &#x7684;&#x9891;&#x7387;&#x5FAA;&#x73AF;&#x53D1;&#x5E03;&#x6D88;&#x606F;&#xFF1B;
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> **argv)</span>
+</span>{
+  <span class="hljs-comment">/**
+   * The ros::init() function needs to see argc and argv so that it can perform
+   * any ROS arguments and name remapping that were provided at the command line.
+   * For programmatic remappings you can use a different version of init() which takes
+   * remappings directly, but for most command-line programs, passing argc and argv is
+   * the easiest way to do it.  The third argument to init() is the name of the node.
+   *
+   * You must call one of the versions of ros::init() before using any other
+   * part of the ROS system.
+   */</span>
+  ros::init(argc, argv, <span class="hljs-string">&quot;talker&quot;</span>);
+
+  <span class="hljs-comment">/**
+   * NodeHandle is the main access point to communications with the ROS system.
+   * The first NodeHandle constructed will fully initialize this node, and the last
+   * NodeHandle destructed will close down the node.
+   */</span>
+  ros::NodeHandle n;
+
+  <span class="hljs-comment">/**
+   * The advertise() function is how you tell ROS that you want to
+   * publish on a given topic name. This invokes a call to the ROS
+   * master node, which keeps a registry of who is publishing and who
+   * is subscribing. After this advertise() call is made, the master
+   * node will notify anyone who is trying to subscribe to this topic name,
+   * and they will in turn negotiate a peer-to-peer connection with this
+   * node.  advertise() returns a Publisher object which allows you to
+   * publish messages on that topic through a call to publish().  Once
+   * all copies of the returned Publisher object are destroyed, the topic
+   * will be automatically unadvertised.
+   *
+   * The second parameter to advertise() is the size of the message queue
+   * used for publishing messages.  If messages are published more quickly
+   * than we can send them, the number here specifies how many messages to
+   * buffer up before throwing some away.
+   */</span>
+  ros::Publisher chatter_pub = n.advertise&lt;std_msgs::String&gt;(<span class="hljs-string">&quot;chatter&quot;</span>, <span class="hljs-number">1000</span>);
+
+  ros::<span class="hljs-function">Rate <span class="hljs-title">loop_rate</span><span class="hljs-params">(<span class="hljs-number">10</span>)</span></span>;
+
+  <span class="hljs-comment">/**
+   * A count of how many messages we have sent. This is used to create
+   * a unique string for each message.
+   */</span>
+  <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">while</span> (ros::ok())
+  {
+    <span class="hljs-comment">/**
+     * This is a message object. You stuff it with data, and then publish it.
+     */</span>
+    std_msgs::String msg;
+
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">stringstream</span> ss;
+    ss &lt;&lt; <span class="hljs-string">&quot;hello world &quot;</span> &lt;&lt; count;
+    msg.data = ss.str();
+
+    ROS_INFO(<span class="hljs-string">&quot;%s&quot;</span>, msg.data.c_str());
+
+    <span class="hljs-comment">/**
+     * The publish() function is how you send messages. The parameter
+     * is the message object. The type of this object must agree with the type
+     * given as a template parameter to the advertise&lt;&gt;() call, as was done
+     * in the constructor above.
+     */</span>
+    chatter_pub.publish(msg);
+
+    ros::spinOnce();
+
+    loop_rate.sleep();
+    ++count;
+  }
+
+
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h2 id="&#x8BA2;&#x9605;&#x8282;&#x70B9;-subscriber-node">&#x8BA2;&#x9605;&#x8282;&#x70B9; Subscriber Node</h2>
+<h3 id="&#x601D;&#x8DEF;">&#x601D;&#x8DEF;</h3>
+<ol>
+<li>&#x521D;&#x59CB;&#x5316; ROS &#x8282;&#x70B9;&#x548C;&#x53E5;&#x67C4;&#xFF1B;</li>
+<li>&#x8BA2;&#x9605; <code>chatter</code> &#x8BDD;&#x9898;&#xFF1B;</li>
+<li>&#x7B49;&#x5F85;&#x6D88;&#x606F;&#x5230;&#x8FBE;&#xFF1B;</li>
+<li>&#x6D88;&#x606F;&#x5230;&#x8FBE;&#x4F1A;&#x8C03;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x5728;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7F16;&#x5199;&#x6D88;&#x606F;&#x5904;&#x7406;&#x4EE3;&#x7801;&#x3002;</li>
+</ol>
+<h3 id="cpp&#x5B9E;&#x73B0;">cpp&#x5B9E;&#x73B0;</h3>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;ros/ros.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;std_msgs/String.h&quot;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">chatterCallback</span><span class="hljs-params">(<span class="hljs-keyword">const</span> std_msgs::String::ConstPtr&amp; msg)</span>
+</span>{
+  ROS_INFO(<span class="hljs-string">&quot;I heard: [%s]&quot;</span>, msg-&gt;data.c_str());
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> **argv)</span>
+</span>{
+  ros::init(argc, argv, <span class="hljs-string">&quot;listener&quot;</span>);
+
+  ros::NodeHandle n;
+
+  ros::Subscriber sub = n.subscribe(<span class="hljs-string">&quot;chatter&quot;</span>, <span class="hljs-number">1000</span>, chatterCallback);
+
+  ros::spin();
+
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h3 id="&#x4EE3;&#x7801;&#x89E3;&#x91CA;">&#x4EE3;&#x7801;&#x89E3;&#x91CA;</h3>
+<p>&#x8BA2;&#x9605;&#x7A0B;&#x5E8F;&#x4EE3;&#x7801;&#x4E2D;&#x4E00;&#x4E9B;&#x4EE3;&#x7801;&#x548C;&#x53D1;&#x5E03;&#x7A0B;&#x5E8F;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x5728;&#x4E0B;&#x9762;&#x5C31;&#x4E0D;&#x518D;&#x8D58;&#x8FF0;&#x3002;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">chatterCallback</span><span class="hljs-params">(<span class="hljs-keyword">const</span> std_msgs::String::ConstPtr&amp; msg)</span>
+</span>{
+  ROS_INFO(<span class="hljs-string">&quot;I heard: [%s]&quot;</span>, msg-&gt;data.c_str());
+}
+</code></pre>
+<p>&#x5F53; <code>chatter</code>&#x8BDD;&#x9898;&#x7684;&#x6570;&#x636E;&#x5230;&#x8FBE;&#x65F6;&#xFF0C;&#x56DE;&#x8C03;&#x51FD;&#x6570;<code>chatterCallBack()</code>&#x5C06;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x3002;&#x6D88;&#x606F;&#x4F7F;&#x7528;  <a href="http://www.boost.org/doc/libs/1_37_0/libs/smart_ptr/shared_ptr.htm" target="_blank">boost shared_ptr</a> &#x4F20;&#x9012;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x9700;&#x8981;&#x5B58;&#x50A8;&#xFF0C;&#x4E0D;&#x7528;&#x62C5;&#x5FC3;&#x5728;&#x4E0B;&#x6587;&#x88AB;&#x5220;&#x9664;&#xFF0C;&#x4E5F;&#x4E0D;&#x7528;&#x590D;&#x5236;&#x57FA;&#x7840;&#x6570;&#x636E;&#x3002;</p>
+<pre><code class="lang-cpp">  ros::Subscriber sub = n.subscribe(<span class="hljs-string">&quot;chatter&quot;</span>, <span class="hljs-number">1000</span>, chatterCallback);
+</code></pre>
+<p>&#x5411; <code>master</code>&#x8BA2;&#x9605;<code>chatter</code> &#x8BDD;&#x9898;&#x3002;&#x5F53;&#x65B0;&#x6D88;&#x606F;&#x5230;&#x8FBE;&#x65F6;&#xFF0C;ROS &#x5C06;&#x4F1A;&#x8C03;&#x7528;<code>chatterCallback()</code>&#x3002;</p>
+<p>&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4ECD;&#x7136;&#x662F;&#x8BDD;&#x9898;&#x540D;&#x79F0;&#x3002;</p>
+<p>&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x63A5;&#x6536;&#x961F;&#x5217;&#x957F;&#x5EA6;&#xFF0C;&#x5F53;&#x6570;&#x636E;&#x53D1;&#x5E03;&#x7684;&#x5F88;&#x5FEB;&#xFF0C;&#x800C;&#x8BA2;&#x9605;&#x65B9;&#x5904;&#x7406;&#x8FC7;&#x6162;&#x65F6;&#xFF0C;&#x6700;&#x591A;&#x5B58;&#x50A8;&#x8BE5;&#x961F;&#x5217;&#x957F;&#x5EA6;&#x7684;&#x6570;&#x636E;&#x3002;&#x5728;&#x8FD9;&#x91CC;&#x957F;&#x5EA6;&#x4E3A;1000&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x7F13;&#x5B58;&#x8D85;&#x8FC7;1000&#xFF0C;&#x524D;&#x9762;&#x7684;&#x65E7;&#x6570;&#x636E;&#x5C06;&#x4F1A;&#x4E22;&#x5F03;&#x3002;</p>
+<p><code>NodeHandle::subscribe()</code>&#x8FD4;&#x56DE;<code>ros::Subscriber</code>&#x5BF9;&#x8C61;&#xFF0C;&#x5728;&#x53D6;&#x6D88;&#x8BA2;&#x9605;&#x4E4B;&#x524D;&#xFF0C;&#x90FD;&#x5FC5;&#x987B;&#x4FDD;&#x6301;&#x8BE5;&#x5BF9;&#x8C61;&#x5B58;&#x5728;&#x3002;&#x5F53;&#x8BE5;&#x5BF9;&#x8C61;&#x6790;&#x6784;&#x65F6;&#xFF0C;&#x5C06;&#x81EA;&#x52A8;&#x53D6;&#x6D88;&#x8BA2;&#x9605;<code>chatter</code>&#x8BDD;&#x9898;&#x3002;</p>
+<p>ROS &#x63D0;&#x4F9B;&#x4E86;&#x591A;&#x4E2A;<code>NodeHandle::subscribe()</code> &#x7248;&#x672C;&#xFF0C;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3001;&#x6307;&#x5B9A;&#x7C7B;&#x6210;&#x5458;&#x51FD;&#x6570;&#x6216;&#x8005;&#x4EFB;&#x4F55; Boost &#x8C03;&#x7528;&#x3002;<a href="http://wiki.ros.org/roscpp/Overview" target="_blank">roscpp overview</a> &#x7ED9;&#x51FA;&#x4E86;&#x66F4;&#x8BE6;&#x7EC6;&#x7684;&#x89E3;&#x91CA;&#x3002;</p>
+<pre><code class="lang-cpp">  ros::spin();
+</code></pre>
+<p><code>ros::spin()</code>&#x8FDB;&#x5165;&#x4E00;&#x4E2A;&#x5FAA;&#x73AF;&#xFF0C;&#x5F53;&#x6D88;&#x606F;&#x5230;&#x6765;&#x65F6;&#xFF0C;&#x8C03;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;&#x5F53; <code>ros::ok()</code>&#x4E3A; <code>false</code> &#xFF0C;<code>ros::spin()</code>&#x4E5F;&#x4F1A;&#x9000;&#x51FA;&#x3002;&#x5373;&#xFF0C;<code>ctrl+c</code>&#x3001;<code>ros::shutdown()</code>&#x7B49;&#x60C5;&#x51B5;&#x4E5F;&#x9002;&#x7528; <code>ros::spin()</code>&#x3002;</p>
+<p>ROS &#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x5176;&#x4ED6;&#x5904;&#x7406;&#x8C03;&#x7528;&#x7684;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x5728; <a href="http://wiki.ros.org/roscpp_tutorials" target="_blank">roscpp_tutorials</a> &#x4E2D;&#x6709;&#x76F8;&#x5173;&#x6F14;&#x793A;&#x7A0B;&#x5E8F;&#x3002;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#x53EF;&#x4EE5;&#x53C2;&#x89C1; <a href="http://wiki.ros.org/roscpp/Overview" target="_blank">roscpp overview</a> &#x3002;</p>
+<h3 id="&#x5B8C;&#x6574;&#x6CE8;&#x91CA;&#x7248;">&#x5B8C;&#x6574;&#x6CE8;&#x91CA;&#x7248;</h3>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;ros/ros.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;std_msgs/String.h&quot;</span></span>
+
+<span class="hljs-comment">/**
+ * This tutorial demonstrates simple receipt of messages over the ROS system.
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">chatterCallback</span><span class="hljs-params">(<span class="hljs-keyword">const</span> std_msgs::String::ConstPtr&amp; msg)</span>
+</span>{
+  ROS_INFO(<span class="hljs-string">&quot;I heard: [%s]&quot;</span>, msg-&gt;data.c_str());
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> **argv)</span>
+</span>{
+  <span class="hljs-comment">/**
+   * The ros::init() function needs to see argc and argv so that it can perform
+   * any ROS arguments and name remapping that were provided at the command line.
+   * For programmatic remappings you can use a different version of init() which takes
+   * remappings directly, but for most command-line programs, passing argc and argv is
+   * the easiest way to do it.  The third argument to init() is the name of the node.
+   *
+   * You must call one of the versions of ros::init() before using any other
+   * part of the ROS system.
+   */</span>
+  ros::init(argc, argv, <span class="hljs-string">&quot;listener&quot;</span>);
+
+  <span class="hljs-comment">/**
+   * NodeHandle is the main access point to communications with the ROS system.
+   * The first NodeHandle constructed will fully initialize this node, and the last
+   * NodeHandle destructed will close down the node.
+   */</span>
+  ros::NodeHandle n;
+
+  <span class="hljs-comment">/**
+   * The subscribe() call is how you tell ROS that you want to receive messages
+   * on a given topic.  This invokes a call to the ROS
+   * master node, which keeps a registry of who is publishing and who
+   * is subscribing.  Messages are passed to a callback function, here
+   * called chatterCallback.  subscribe() returns a Subscriber object that you
+   * must hold on to until you want to unsubscribe.  When all copies of the Subscriber
+   * object go out of scope, this callback will automatically be unsubscribed from
+   * this topic.
+   *
+   * The second parameter to the subscribe() function is the size of the message
+   * queue.  If messages are arriving faster than they are being processed, this
+   * is the number of messages that will be buffered up before beginning to throw
+   * away the oldest ones.
+   */</span>
+  ros::Subscriber sub = n.subscribe(<span class="hljs-string">&quot;chatter&quot;</span>, <span class="hljs-number">1000</span>, chatterCallback);
+
+  <span class="hljs-comment">/**
+   * ros::spin() will enter a loop, pumping callbacks.  With this version, all
+   * callbacks will be called from within this thread (the main one).  ros::spin()
+   * will exit when Ctrl-C is pressed, or the node is shutdown by the master.
+   */</span>
+  ros::spin();
+
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h2 id="&#x7F16;&#x8BD1;&#x8282;&#x70B9;">&#x7F16;&#x8BD1;&#x8282;&#x70B9;</h2>
+<h3 id="cmakeliststxt">CMakeLists.txt</h3>
+<p>&#x4FEE;&#x6539; <a href="http://wiki.ros.org/catkin/CMakeLists.txt" target="_blank">CMakeLists.txt</a> &#x6587;&#x4EF6;&#xFF0C;&#x627E;&#x5230;&#x4E0B;&#x9762;&#x8BED;&#x53E5;&#x4FEE;&#x6539;&#xFF0C;&#x6216;&#x8005;&#x76F4;&#x63A5;&#x590D;&#x5236;&#x5230;&#x6587;&#x4EF6;&#x672B;&#x5C3E;&#xFF1A;</p>
+<pre><code class="lang-txt">add_executable(talker src/talker.cpp)
+target_link_libraries(talker ${catkin_LIBRARIES})
+
+add_executable(listener src/listener.cpp
+target_link_libraries(listener ${catkin_LIBRARIES})
+</code></pre>
+<p>&#x8FD9;&#x5C06;&#x521B;&#x5EFA;&#x4E24;&#x4E2A;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF0C;<code>talker</code> &#x548C; <code>listener</code>&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x5B83;&#x4EEC;&#x4F1A;&#x8FDB;&#x5165;&#x4F60;&#x7684;<a href="http://wiki.ros.org/catkin/workspaces#Development_.28Devel.29_Space" target="_blank">&#x5F00;&#x53D1;&#x7A7A;&#x95F4;</a>&#x7684;&#x5305;&#x76EE;&#x5F55;&#xFF0C;&#x9ED8;&#x8BA4;&#x4F4D;&#x4E8E; <code>~/&lt;workspace_name&gt;/devel/lib/&lt;package_name&gt;</code>&#x3002;</p>
+<p>&#x8FD9;&#x4E00;&#x6B65;&#x65F6;&#x786E;&#x4FDD;&#x5728;&#x4F7F;&#x7528;&#x4E4B;&#x524D;&#x751F;&#x6210;&#x529F;&#x80FD;&#x5305;&#x7684;&#x6D88;&#x606F;&#x5934;&#x3002;&#x5982;&#x679C;&#x60A8;&#x5728; catkin &#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x4E2D;&#x4F7F;&#x7528;&#x6765;&#x81EA;&#x5176;&#x4ED6;&#x5305;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x60A8;&#x8FD8;&#x9700;&#x8981;&#x5C06;&#x4F9D;&#x8D56;&#x9879;&#x6DFB;&#x52A0;&#x5230;&#x5B83;&#x4EEC;&#x5404;&#x81EA;&#x7684;&#x751F;&#x6210;&#x76EE;&#x6807;&#x4E2D;&#xFF0C;&#x56E0;&#x4E3A; catkin &#x5E76;&#x884C;&#x6784;&#x5EFA;&#x6240;&#x6709;&#x9879;&#x76EE;&#x3002;</p>
+<pre><code>target_link_libraries(talker ${catkin_LIBRARIES})
+</code></pre><p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528;<code>&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;</code>&#x6216;&#x8005;&#x4F7F;&#x7528;<code>rosrun</code>&#x3002;</p>
+<p>&#x5B83;&#x4EEC;&#x6CA1;&#x6709;&#x653E;&#x5728; &apos;/bin&apos; &#x4E2D;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;&#x5C06;&#x8F6F;&#x4EF6;&#x5305;&#x5B89;&#x88C5;&#x5230;&#x7CFB;&#x7EDF;&#x65F6;&#x4F1A;&#x6C61;&#x67D3; PATH&#x3002;
+&#x5982;&#x679C;&#x60A8;&#x5E0C;&#x671B;&#x60A8;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x5728;&#x5B89;&#x88C5;&#x65F6;&#x4F4D;&#x4E8E; PATH &#x4E0A;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x5B89;&#x88C5;&#x76EE;&#x6807;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;&#xFF1A;<a href="http://wiki.ros.org/catkin/CMakeLists.txt" target="_blank">catkin/CMakeLists.txt</a></p>
+<p>&#x66F4;&#x591A;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;&#x53EF;&#x4EE5;&#x53C2;&#x89C1; <a href="http://wiki.ros.org/catkin/CMakeLists.txt" target="_blank">CMakeLists.txt</a> &#x6587;&#x4EF6;&#xFF1A;<a href="http://wiki.ros.org/catkin/CMakeLists.txt" target="_blank">catkin/CMakeLists.txt</a></p>
+<h3 id="catkinmake">catkin_make</h3>
+<p>&#x4FEE;&#x6539;&#x5B8C;&#x540E;&#xFF0C;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x8F93;&#x5165;&#xFF1A;</p>
+<pre><code class="lang-shell"># &#x5207;&#x6362;&#x5230;&#x5DE5;&#x4F5C;&#x8DEF;&#x5F84;&#x4E0B;
+cd ~/catkin_ws
+catkin_make
+</code></pre>
+<h2 id="&#x8FD0;&#x884C;">&#x8FD0;&#x884C;</h2>
+<p>&#x9996;&#x5148;&#xFF0C;&#x786E;&#x4FDD;<code>roscore</code>&#x7684;&#x542F;&#x52A8;</p>
+<pre><code class="lang-shell">$ roscore
+</code></pre>
+<p>&#x5728;&#x8C03;&#x7528;<code>rosrun</code>&#x8FD0;&#x884C;&#x8282;&#x70B9;&#x4E4B;&#x524D;&#xFF0C;&#x786E;&#x4FDD;&#x8BBE;&#x7F6E;&#x4E86;&#x73AF;&#x5883;&#x53D8;&#x91CF;<code>source</code>&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x4E0B;&#x7684;<code>setup.sh</code>&#xFF1A;</p>
+<pre><code class="lang-shell"># In your catkin workspace
+$ cd ~/catkin_ws
+$ source ./devel/setup.bash
+</code></pre>
+<h3 id="publisher">Publisher</h3>
+<p>&#x6253;&#x5F00;&#x7B2C;&#x4E00;&#x4E2A;&#x7EC8;&#x7AEF;&#xFF0C;&#x8FD0;&#x884C;<code>talker</code>&#xFF1A;</p>
+<pre><code>$ rosrun beginner_tutorials talker
+</code></pre><pre><code>[INFO] [WallTime: 1314931831.774057] hello world 1314931831.77
+[INFO] [WallTime: 1314931832.775497] hello world 1314931832.77
+[INFO] [WallTime: 1314931833.778937] hello world 1314931833.78
+[INFO] [WallTime: 1314931834.782059] hello world 1314931834.78
+[INFO] [WallTime: 1314931835.784853] hello world 1314931835.78
+[INFO] [WallTime: 1314931836.788106] hello world 1314931836.79
+</code></pre><h3 id="subscriber">Subscriber</h3>
+<p><code>rosrun</code>&#x8FD0;&#x884C;<code>listener</code>&#xFF1A;</p>
+<pre><code>$ rosrun beginner_tutorials listener
+</code></pre><pre><code>[INFO] [WallTime: 1314931969.258941] /listener_17657_1314931968795I heard hello world 1314931969.26
+[INFO] [WallTime: 1314931970.262246] /listener_17657_1314931968795I heard hello world 1314931970.26
+[INFO] [WallTime: 1314931971.266348] /listener_17657_1314931968795I heard hello world 1314931971.26
+[INFO] [WallTime: 1314931972.270429] /listener_17657_1314931968795I heard hello world 1314931972.27
+[INFO] [WallTime: 1314931973.274382] /listener_17657_1314931968795I heard hello world 1314931973.27
+[INFO] [WallTime: 1314931974.277694] /listener_17657_1314931968795I heard hello world 1314931974.28
+[INFO] [WallTime: 1314931975.283708] /listener_17657_1314931968795I heard hello world 1314931975.28
+</code></pre><h2 id="reference">Reference</h2>
+<ol>
+<li><a href="http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber(c%2B%2B" target="_blank">ROS/Tutorials/WritingPublisherSubscriber(c++) - ROS Wiki</a>#roscpp_tutorials.2FTutorials.2FWritingPublisherSubscriber.The_Code_Explained)</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ros-filesys.html" class="navigation navigation-prev " aria-label="Previous page: ROS 文件系统 & 命令行工具">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ros-writing-service-client-cpp.html" class="navigation navigation-next " aria-label="Next page: ROS Service 通信简单示例">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"layout":"post","title":"ROS Topic 通信简单示例","comments":true,"date":"2022-07-16T15:07:50.000Z","updated":"2022-07-16T15:07:50.000Z","tags":["ROS","ROS-Topic"],"categories":["ROS","beginner-tutorials"],"level":"2.3.2","depth":2,"next":{"title":"ROS Service 通信简单示例","level":"2.3.3","depth":2,"path":"ros-notes/ros-tutorials/ros-writing-service-client-cpp.md","ref":"ros-notes/ros-tutorials/ros-writing-service-client-cpp.md","articles":[]},"previous":{"title":"ROS 文件系统 & 命令行工具","level":"2.3.1","depth":2,"path":"ros-notes/ros-tutorials/ros-filesys.md","ref":"ros-notes/ros-tutorials/ros-filesys.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ros-notes/ros-tutorials/ros-writing-publisher-subscriber-cpp.md","mtime":"2023-06-26T09:51:30.597Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-06-26T12:50:37.084Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

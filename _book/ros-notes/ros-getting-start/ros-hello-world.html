@@ -1,0 +1,837 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Getting Start · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../ros-concepts/" />
+    
+    
+    <link rel="prev" href="../ros-env-config/ros-ide-config.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../related-links.html">
+            
+                <a href="../related-links.html">
+            
+                    
+                    Related Links
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ros-overview.html">
+            
+                <a href="../ros-overview.html">
+            
+                    
+                    ROS Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../ros-env-config/">
+            
+                <a href="../ros-env-config/">
+            
+                    
+                    ROS Env Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../ros-env-config/ros-installation.html">
+            
+                <a href="../ros-env-config/ros-installation.html">
+            
+                    
+                    Kinetic Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../ros-env-config/ros-noetic-ubuntu20.html">
+            
+                <a href="../ros-env-config/ros-noetic-ubuntu20.html">
+            
+                    
+                    Noetic Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../ros-env-config/ros-ide-config.html">
+            
+                <a href="../ros-env-config/ros-ide-config.html">
+            
+                    
+                    IDE & Tools Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">My Notes</li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="ros-hello-world.html">
+            
+                <a href="ros-hello-world.html">
+            
+                    
+                    Getting Start
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../ros-concepts/">
+            
+                <a href="../ros-concepts/">
+            
+                    
+                    ROS Concepts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../ros-concepts/ros-esablishing-topic-connection.html">
+            
+                <a href="../ros-concepts/ros-esablishing-topic-connection.html">
+            
+                    
+                    ROS Topic 理论模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../ros-concepts/ros-establishing-service-connection.html">
+            
+                <a href="../ros-concepts/ros-establishing-service-connection.html">
+            
+                    
+                    ROS Service 理论模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../ros-tutorials/">
+            
+                <a href="../ros-tutorials/">
+            
+                    
+                    ROS Tutorials
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../ros-tutorials/ros-filesys.html">
+            
+                <a href="../ros-tutorials/ros-filesys.html">
+            
+                    
+                    ROS 文件系统 & 命令行工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../ros-tutorials/ros-writing-publisher-subscriber-cpp.html">
+            
+                <a href="../ros-tutorials/ros-writing-publisher-subscriber-cpp.html">
+            
+                    
+                    ROS Topic 通信简单示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="../ros-tutorials/ros-writing-service-client-cpp.html">
+            
+                <a href="../ros-tutorials/ros-writing-service-client-cpp.html">
+            
+                    
+                    ROS Service 通信简单示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="../ros-tutorials/ros-parameter-server.html">
+            
+                <a href="../ros-tutorials/ros-parameter-server.html">
+            
+                    
+                    ROS 参数服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="../ros-tutorials/ros-multiple-machines.html">
+            
+                <a href="../ros-tutorials/ros-multiple-machines.html">
+            
+                    
+                    ROS 分布式通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../rotors-simulator/">
+            
+                <a href="../rotors-simulator/">
+            
+                    
+                    Rotors Simulator
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../rotors-simulator/rotors-simulator-installation.html">
+            
+                <a href="../rotors-simulator/rotors-simulator-installation.html">
+            
+                    
+                    RotorS Simulator Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../rotors-simulator/rotors-with-virtual-joystick.html">
+            
+                <a href="../rotors-simulator/rotors-with-virtual-joystick.html">
+            
+                    
+                    RotorS with virtual joystick
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../rotors-simulator/rotors-simulator-usage.html">
+            
+                <a href="../rotors-simulator/rotors-simulator-usage.html">
+            
+                    
+                    Rotors Simulator Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="../rotors-simulator/rotors-distributed-comm-comprehensive-case.html">
+            
+                <a href="../rotors-simulator/rotors-distributed-comm-comprehensive-case.html">
+            
+                    
+                    RotorS 分布式通信综合案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS Official Docs</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../ros-official-docs/ros-official-tutorials/">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/">
+            
+                    
+                    ROS Official Tutorials
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/">
+            
+                    
+                    Beginner Level
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-1-installing-configuring-environment.html">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-1-installing-configuring-environment.html">
+            
+                    
+                    Installing and Configuring Your ROS Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.2" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-2-navigating-filesystem.html">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-2-navigating-filesystem.html">
+            
+                    
+                    Navigating the ROS Filesystem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.3" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/creating-a-ros-package.html">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/creating-a-ros-package.html">
+            
+                    
+                    Creating a ROS Package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.4" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/building-a-ros-package.html">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/building-a-ros-package.html">
+            
+                    
+                    Building a ROS Package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.5" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-5-understanding-nodes.html">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-5-understanding-nodes.html">
+            
+                    
+                    Understanding ROS Nodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.6" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-6-understanding-topics.html">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-6-understanding-topics.html">
+            
+                    
+                    Understanding ROS Topics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.7" data-path="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-7-understanding-services-params.html">
+            
+                <a href="../../ros-official-docs/ros-official-tutorials/beginner-level/ros-tutorials-beginner-7-understanding-services-params.html">
+            
+                    
+                    Understanding ROS Services and Parameters
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../ros-official-docs/ros-concepts.html">
+            
+                <a href="../../ros-official-docs/ros-concepts.html">
+            
+                    
+                    ROS Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../ros-official-docs/ros-command-line-tools.html">
+            
+                <a href="../../ros-official-docs/ros-command-line-tools.html">
+            
+                    
+                    ROS Command Line Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 2</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../ros2-notes/understanding-ros2-actions.html">
+            
+                <a href="../../ros2-notes/understanding-ros2-actions.html">
+            
+                    
+                    Action
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Getting Start</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="getting-start">Getting Start</h1>
+<p>&#x7F16;&#x5199;ROS&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF0C;&#x5B9E;&#x73B0;&#x6D41;&#x7A0B;&#x5927;&#x81F4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ol>
+<li>&#x521B;&#x5EFA;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#xFF1B;</li>
+<li>&#x521B;&#x5EFA;&#x529F;&#x80FD;&#x5305;&#xFF1B;</li>
+<li>&#x7F16;&#x5199;&#x6E90;&#x6587;&#x4EF6;&#xFF1B;</li>
+<li>&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1B;</li>
+<li>&#x7F16;&#x8BD1;&#x3001;&#x6267;&#x884C;&#xFF1B;</li>
+</ol>
+<h3 id="1-&#x521B;&#x5EFA;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x5E76;&#x521D;&#x59CB;&#x5316;">1 &#x521B;&#x5EFA;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x5E76;&#x521D;&#x59CB;&#x5316;</h3>
+<p>&#x521B;&#x5EFA;&#x542B;&#x6709;<code>src</code>&#x76EE;&#x5F55;&#x7684;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#xFF0C;&#x5207;&#x6362;&#x5230;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x4E0B;&#xFF0C;<code>catkin_make</code>&#x7F16;&#x8BD1;&#x5B8C;&#x6210;&#x521D;&#x59CB;&#x5316;&#xFF1A;</p>
+<pre><code class="lang-shell"># create workspace folder
+mkdir -p WORKSPACE_NAME/src
+# &#x5207;&#x6362;&#x5230;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x4E0B;
+cd WORKSPACE_NAME/
+# &#x7F16;&#x8BD1; &#x53EF;&#x4EE5;&#x89C6;&#x4E3A;&#x521D;&#x59CB;&#x5316;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;
+catkin_make
+</code></pre>
+<h3 id="2-&#x521B;&#x5EFA;&#x529F;&#x80FD;&#x5305;&#x5E76;&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;">2 &#x521B;&#x5EFA;&#x529F;&#x80FD;&#x5305;&#x5E76;&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;</h3>
+<p>&#x5207;&#x6362;&#x5230;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x7684;<code>src</code>&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x4F7F;&#x7528;<code>catkin_create_pkg</code>&#x521B;&#x5EFA;&#x529F;&#x80FD;&#x5305;&#x5E76;&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;&#xFF1A;</p>
+<pre><code class="lang-shell"># &#x5207;&#x6362;&#x5230;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x4E0B;&#x7684;src
+cd WORKSPACE_NAME/src
+# &#x521B;&#x5EFA;&#x529F;&#x80FD;&#x5305;
+catkin_create_pkg PKG_NAME roscpp rospy std_msgs
+</code></pre>
+<p>&#x8BE5;&#x529F;&#x80FD;&#x5305;&#x6DFB;&#x52A0;&#x7684;&#x4F9D;&#x8D56;&#x4E3A;<code>roscpp</code>&#x3001;<code>rospy</code>&#x548C;<code>std_msgs</code>&#xFF0C;<code>roscpp</code>&#x8868;&#x793A;&#x4F7F;&#x7528;C++&#x5B9E;&#x73B0;&#x7684;&#x5E93;&#xFF0C;<code>rospy</code>&#x8868;&#x793A;&#x4F7F;&#x7528;Python&#x5B9E;&#x73B0;&#x7684;&#x5E93;&#xFF0C;<code>std_msgs</code>&#x4E3A;&#x6807;&#x51C6;&#x6D88;&#x606F;&#x5E93;&#x3002;&#x529F;&#x80FD;&#x5305;&#x901A;&#x5E38;&#x90FD;&#x4F1A;&#x4F9D;&#x8D56;&#x8FD9;&#x4E09;&#x4E2A;&#x5E93;&#x5B9E;&#x73B0;&#x3002;</p>
+<h3 id="3-&#x7F16;&#x5199;&#x6E90;&#x6587;&#x4EF6;">3 &#x7F16;&#x5199;&#x6E90;&#x6587;&#x4EF6;</h3>
+<p>&#x5728;ROS&#x4E2D;&#xFF0C;&#x867D;&#x7136;&#x5B9E;&#x73B0;&#x540C;&#x4E00;&#x529F;&#x80FD;&#x65F6;&#xFF0C;C++&#x548C;Python&#x53EF;&#x4EE5;&#x4E92;&#x6362;&#xFF0C;&#x4F46;&#x662F;&#x5177;&#x4F53;&#x9009;&#x62E9;&#x54EA;&#x79CD;&#x8BED;&#x8A00;&#xFF0C;&#x9700;&#x8981;&#x89C6;&#x9700;&#x6C42;&#x800C;&#x5B9A;&#xFF0C;&#x56E0;&#x4E3A;&#x4E24;&#x79CD;&#x8BED;&#x8A00;&#x76F8;&#x8F83;&#x800C;&#x8A00;:C++&#x8FD0;&#x884C;&#x6548;&#x7387;&#x9AD8;&#x4F46;&#x662F;&#x7F16;&#x7801;&#x6548;&#x7387;&#x4F4E;&#xFF0C;&#x800C;Python&#x5219;&#x53CD;&#x4E4B;&#xFF0C;&#x57FA;&#x4E8E;&#x4E8C;&#x8005;&#x4E92;&#x8865;&#x7684;&#x7279;&#x70B9;&#xFF0C;ROS&#x8BBE;&#x8BA1;&#x8005;&#x5206;&#x522B;&#x8BBE;&#x8BA1;&#x4E86;<code>roscpp</code>&#x4E0E;<code>rospy</code>&#x5E93;&#xFF0C;&#x524D;&#x8005;&#x65E8;&#x5728;&#x6210;&#x4E3A;ROS&#x7684;&#x9AD8;&#x6027;&#x80FD;&#x5E93;&#xFF0C;&#x800C;&#x540E;&#x8005;&#x5219;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x5BF9;&#x6027;&#x80FD;&#x65E0;&#x8981;&#x6C42;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x65E8;&#x5728;&#x63D0;&#x9AD8;&#x5F00;&#x53D1;&#x6548;&#x7387;&#x3002;</p>
+<h4 id="c&#x5B9E;&#x73B0;">C++&#x5B9E;&#x73B0;</h4>
+<p>&#x4F7F;&#x7528;<code>vim</code>&#x521B;&#x5EFA;&#x5E76;&#x6253;&#x5F00;<code>cpp</code>&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-shell"># &#x5728;&#x529F;&#x80FD;&#x5305;&#x7684;src&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;C++&#x6587;&#x4EF6;&#x5E76;&#x6253;&#x5F00;
+vim WORKSPACE_NAME/src/PKG_NAME/src/hello_world.cpp
+</code></pre>
+<p>&#x7F16;&#x8F91;&#x76F8;&#x5173;&#x6E90;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-shell">#include &lt;ros/ros.h&gt;
+
+int main(int argc, char *argv[]) {
+    // ros node init
+    // arg3 &#x4E3A; node &#x8282;&#x70B9;&#x540D;
+    ros::init(argc, argv, &quot;hello_world_node&quot;);
+    // print &quot;hello world&quot;
+    ROS_INFO(&quot;hello world!&quot;);
+
+    return 0;
+}
+</code></pre>
+<h4 id="python&#x5B9E;&#x73B0;">Python&#x5B9E;&#x73B0;</h4>
+<p>&#x4F7F;&#x7528;<code>vim</code>&#x521B;&#x5EFA;&#x5E76;&#x6253;&#x5F00;<code>python</code>&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-shell"># &#x5728;&#x529F;&#x80FD;&#x5305;&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;scripts&#x6587;&#x4EF6;&#x5939;
+mkdir WORKSPACE_NAME/src/PKG_NAME/scripts/
+# &#x5728;&#x529F;&#x80FD;&#x5305;&#x7684;scripts&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;C++&#x6587;&#x4EF6;&#x5E76;&#x6253;&#x5F00;
+vim WORKSPACE_NAME/src/PKG_NAME/scripts/hello_world.py
+</code></pre>
+<p>&#x7F16;&#x8F91;&#x76F8;&#x5173;&#x6E90;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-comment">#! /usr/bin/env python</span>
+
+<span class="hljs-keyword">import</span> rospy
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+    rospy.init_node(<span class="hljs-string">&quot;hello_world_node_py&quot;</span>)
+    rospy.loginfo(<span class="hljs-string">&quot;Hello World! --python&quot;</span>)
+</code></pre>
+<p>&#x4E3A;<code>python</code>&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x53EF;&#x6267;&#x884C;&#x6743;&#x9650;&#xFF1A;</p>
+<pre><code class="lang-shell">chmod +x PYTHON_NAME.py
+</code></pre>
+<h3 id="4-&#x7F16;&#x8F91;&#x529F;&#x80FD;&#x5305;&#x4E0B;&#x7684;cmakelisttxt&#x6587;&#x4EF6;">4 &#x7F16;&#x8F91;&#x529F;&#x80FD;&#x5305;&#x4E0B;&#x7684;<code>CMakelist.txt</code>&#x6587;&#x4EF6;</h3>
+<h4 id="c">C++</h4>
+<pre><code class="lang-shell"># hello_world &#x4E3A;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x53EF;&#x968F;&#x610F;&#x547D;&#x540D;&#xFF0C;&#x4E00;&#x822C;&#x4E3A;&#x6E90;&#x6587;&#x4EF6;&#x540D;&#x53BB;&#x6389;&#x540E;&#x7F00;
+add_executable(hello_world_exe
+    src/hello_world.cpp
+)
+
+# hello_world &#x4E3A;&#x4E0A;&#x9762;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x7684;&#x540D;&#x5B57;
+target_link_libearies(hello_world_exe
+    ${catkin_LIBRARIES}
+)
+</code></pre>
+<h4 id="python">Python</h4>
+<pre><code class="lang-shell">catkin_install_python(PROGRAMS scripts/PYTHON_NAME.py
+    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+</code></pre>
+<h3 id="5-&#x7F16;&#x8BD1;&#x5E76;&#x6267;&#x884C;">5 &#x7F16;&#x8BD1;&#x5E76;&#x6267;&#x884C;</h3>
+<p>&#x5207;&#x6362;&#x8FDB;&#x5165;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#xFF0C;&#x4F7F;&#x7528;<code>catkin_make</code>&#x7F16;&#x8BD1;</p>
+<pre><code class="lang-shell"># &#x5207;&#x6362;&#x8FDB;&#x5165;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;
+cd WORKSPACE_NAME/
+# &#x7F16;&#x8BD1;
+catkin_make
+</code></pre>
+<p>&#x6267;&#x884C;&#xFF0C;&#x9700;&#x8981;&#x6253;&#x5F00;&#x4E24;&#x4E2A;&#x547D;&#x4EE4;&#x7A97;&#x53E3;&#xFF1A;</p>
+<p>&#x7B2C;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x7A97;&#x53E3;&#xFF0C;&#x8F93;&#x5165;</p>
+<pre><code class="lang-shell"># &#x542F;&#x52A8; ROS Master &#x8282;&#x70B9;
+roscore
+</code></pre>
+<p>&#x518D;&#x5F00;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#xFF0C;&#x8F93;&#x5165;</p>
+<pre><code class="lang-shell"># &#x5207;&#x6362;&#x5230;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x4E0B;
+cd WORKSPACE_NAME/
+# &#x8BBE;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;
+source ./devel/setup.bash
+
+# Cpp&#x6587;&#x4EF6;
+# &#x542F;&#x52A8; ROS &#x8282;&#x70B9;
+# PKG_NAME &#x4E3A;&#x529F;&#x80FD;&#x5305;&#x540D;
+# CPP_NODE_NAME &#x4E3A; ROS &#x8282;&#x70B9;&#x540D;&#xFF0C;&#x5373;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x7684;&#x540D;&#x5B57;&#xFF08;hello_world&#xFF09;
+rosrun PKG_NAME CPP_EXE_NAME
+
+# &#x6216; Python &#x6587;&#x4EF6;
+rosrun PKG_NAME PYTHON_NAME.py
+</code></pre>
+<p>&#x8F93;&#x5165;&#x5B8C;&#xFF0C;&#x56DE;&#x8F66;&#x5C31;&#x80FD;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x770B;&#x89C1;&#x8F93;&#x51FA;&#xFF1A;<strong>Hello World &#xFF01;</strong></p>
+<p>Tips : </p>
+<p><code>source ~/&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;/devel/setup.bash</code>&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x8FDB;<code>.bashrc</code>&#x6587;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528;&#x4E0A;&#x66F4;&#x65B9;&#x4FBF;</p>
+<p>&#x6DFB;&#x52A0;&#x65B9;&#x5F0F;1 : &#x76F4;&#x63A5;&#x4F7F;&#x7528; gedit &#x6216; vi &#x7F16;&#x8F91; .bashrc &#x6587;&#x4EF6;&#xFF0C;&#x6700;&#x540E;&#x6DFB;&#x52A0;&#x8BE5;&#x5185;&#x5BB9;</p>
+<p>&#x6DFB;&#x52A0;&#x65B9;&#x5F0F;2 : <code>echo &quot;source ~/&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;/devel/setup.bash&quot; &gt;&gt; ~/.bashrc</code></p>
+<h3 id="reference">Reference</h3>
+<ol>
+<li><a href="http://www.autolabor.com.cn/book/ROSTutorials/chapter1/13-rosji-cheng-kai-fa-huan-jing-da-jian/131-helloworldshi-xian-jian-jie.html" target="_blank">1.3.1 HelloWorld&#x5B9E;&#x73B0;&#x7B80;&#x4ECB; &#xB7; Autolabor-ROS&#x673A;&#x5668;&#x4EBA;&#x5165;&#x95E8;&#x8BFE;&#x7A0B;&#x300A;ROS&#x7406;&#x8BBA;&#x4E0E;&#x5B9E;&#x8DF5;&#x300B;&#x96F6;&#x57FA;&#x7840;&#x6559;&#x7A0B;</a></li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../ros-env-config/ros-ide-config.html" class="navigation navigation-prev " aria-label="Previous page: IDE & Tools Configuration">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../ros-concepts/" class="navigation navigation-next " aria-label="Next page: ROS Concepts">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"layout":"post","title":"Getting Start","date":"2022-12-20T21:10:00.000Z","updated":"2022-12-20T21:10:00.000Z","tags":["ROS"],"categories":["ROS"],"comments":true,"level":"2.1","depth":1,"next":{"title":"ROS Concepts","level":"2.2","depth":1,"path":"ros-notes/ros-concepts/README.md","ref":"ros-notes/ros-concepts/README.md","articles":[{"title":"ROS Topic 理论模型","level":"2.2.1","depth":2,"path":"ros-notes/ros-concepts/ros-esablishing-topic-connection.md","ref":"ros-notes/ros-concepts/ros-esablishing-topic-connection.md","articles":[]},{"title":"ROS Service 理论模型","level":"2.2.2","depth":2,"path":"ros-notes/ros-concepts/ros-establishing-service-connection.md","ref":"ros-notes/ros-concepts/ros-establishing-service-connection.md","articles":[]}]},"previous":{"title":"IDE & Tools Configuration","level":"1.4.3","depth":2,"path":"ros-notes/ros-env-config/ros-ide-config.md","ref":"ros-notes/ros-env-config/ros-ide-config.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ros-notes/ros-getting-start/ros-hello-world.md","mtime":"2023-06-26T09:51:30.579Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-06-26T12:50:37.084Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
