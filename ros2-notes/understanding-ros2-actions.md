@@ -12,6 +12,6 @@ Actions 使用 C/S 模式，类似发布订阅。大体流程是：action 客户
 
 ![../../../_images/Action-SingleActionClient.gif](.gitbook/understanding-ros2-actions/Action-SingleActionClient.gif)
 
-
+![](/ros2-notes/.gitbook/understanding-ros2-actions/Action-SingleActionClient.gif)
 
 ## Prerequisites
