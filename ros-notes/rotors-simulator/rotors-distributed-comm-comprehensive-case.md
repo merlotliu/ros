@@ -609,8 +609,6 @@ generate_messages(
 )
 ```
 
-### 
-
 ## Reference
 
 1. [http://docs.ros.org/en/api/geometry\_msgs/html/msg/Point.html](http://docs.ros.org/en/api/geometry_msgs/html/msg/Point.html)
