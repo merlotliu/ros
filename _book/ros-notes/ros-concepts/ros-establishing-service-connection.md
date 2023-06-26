@@ -2,10 +2,14 @@
 layout: post
 title: ROS Service 理论模型
 comments: true
-date: 2022-07-18 11:37:52
-updated: 2022-07-18 11:37:52
-tags: [ROS,ROS-Service]
-categories: [ROS,beginner-tutorials]
+date: 2022-07-18T11:37:52.000Z
+updated: 2022-07-18T11:37:52.000Z
+tags:
+  - ROS
+  - ROS-Service
+categories:
+  - ROS
+  - beginner-tutorials
 ---
 
 # ROS Service 理论模型
@@ -24,7 +28,7 @@ categories: [ROS,beginner-tutorials]
 
 > 在无人机任务执行的过程中，可能会遇到不可识别的单位，需要将采集到的数据，传输给数据处理节点，并获取有关信息。在这一情况下，通常对通信有着实时性的要求，并期待获得响应。基于请求响应的服务通信具备这样的功能，且能完成一定的逻辑处理。
 
-![img](../.gitbook/assets/ros-establishing-service-connection.assets/02_服务通信模型.jpg)
+![](/.gitbook/assets/ros-establishing-service-connection.assets/02_服务通信模型.jpg)
 
 ## 官方原文
 
@@ -49,13 +53,14 @@ By default, service connections are stateless. For each call a client wishes to 
 
 The stateless approach is generally more robust as it allows a service node to be restarted, but this overhead can be high if frequent, repeated calls are made to the same service.
 
-ROS allows for *persistent* connections to a service, which provide a very high-throughput connection for making repeated calls to a service. With these persistent connections, the connection between the client and service is kept open so that the service client can continue to send requests over the connection.
+ROS allows for _persistent_ connections to a service, which provide a very high-throughput connection for making repeated calls to a service. With these persistent connections, the connection between the client and service is kept open so that the service client can continue to send requests over the connection.
 
 Greater care should be used with persistent connections. If a new service provider appears, it does not interrupt an ongoing connection. Similarly, if a persistent connection fails, there is no attempt made to reconnect.
 
-
-
-## Reference 
+## Reference
 
 1. [ROS/Technical Overview - ROS Wiki](http://wiki.ros.org/ROS/Technical Overview)
-1. [2.2.1 服务通信理论模型 · Autolabor-ROS机器人入门课程《ROS理论与实践》零基础教程](http://www.autolabor.com.cn/book/ROSTutorials/di-2-zhang-ros-jia-gou-she-ji/23-fu-wu-tong-xin/221-fu-wu-tong-xin-li-lun-mo-xing.html)
+2. [2.2.1 服务通信理论模型 · Autolabor-ROS机器人入门课程《ROS理论与实践》零基础教程](http://www.autolabor.com.cn/book/ROSTutorials/di-2-zhang-ros-jia-gou-she-ji/23-fu-wu-tong-xin/221-fu-wu-tong-xin-li-lun-mo-xing.html)
+
+
+
