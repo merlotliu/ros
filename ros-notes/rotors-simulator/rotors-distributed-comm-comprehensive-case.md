@@ -568,6 +568,107 @@ int main(int argc, char *argv[]) {
 }
 ```
 
+## 遇到错误
+
+### 创建消息时错误
+
+#### 错误1
+
+```
+CMake Error at /home/ml/ros_pros/ros_tutorials/build/uav_msgs/cmake/uav_msgs-genmsg.cmake:3 (message):
+  Could not find messages which
+  '/home/ml/ros_pros/ros_tutorials/src/uav_msgs/srv/Task.srv' depends on.
+  Did you forget to specify generate_messages(DEPENDENCIES ...)?
+
+  Cannot locate message [Point]: unknown package [geometry_msgs] on search
+  path [{{'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'],
+  'uav_msgs': ['/home/ml/ros_pros/ros_tutorials/src/uav_msgs/msg']}}]
+```
+
+##### 分析
+
+自定义消息使用了 geometry_msgs 下的类型 
+
+##### 解决
+
+在 CMakelists.txt 中添加 find_package、generate_messages：
+
+```
+find_package(catkin REQUIRED COMPONENTS
+  roscpp
+  rospy
+  std_msgs
+  geometry_msgs
+  message_generation
+)
+
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+  geometry_msgs
+)
+```
+
+### 编写源码时错误
+
+#### 错误1
+
+```
+fatal error: uav_msgs/Task.h: No such file or directory
+```
+
+##### 解决
+
+CMakelists.txt 中 find_package和catkin_package添加 uav_msgs：
+
+```
+find_package(catkin REQUIRED COMPONENTS
+  roscpp
+  rospy
+  std_msgs
+  uav_msgs
+)
+
+catkin_package(
+#  INCLUDE_DIRS include
+#  LIBRARIES ctl_center
+ CATKIN_DEPENDS roscpp rospy std_msgs uav_msgs
+#  DEPENDS system_lib
+)
+```
+
+
+
+#### 错误2
+
+```
+CMake Error at /opt/ros/kinetic/share/catkin/cmake/catkin_package.cmake:196 (message):
+  catkin_package() the catkin package 'uav_msgs' has been find_package()-ed
+  but is not listed as a build dependency in the package.xml
+```
+
+##### 解决
+
+package.xml 中添加
+
+```
+<depend>uav_msgs</depend>
+```
+
+#### 错误3
+
+```shell
+no matching function for call to ‘ros::AdvertiseServiceOptions::initBySpecType(const string&, const boost::function<bool(uav_task_execution::Task&)>&)’
+```
+
+##### 分析
+
+AdvertiseService函数调用错误，找到正确的使用方式即可。
+
+##### 解决
+
+这里将泛型去掉即可，服务的回调函数需要有bool返回值。
+
 ## Reference
 1. http://docs.ros.org/en/api/geometry_msgs/html/msg/Point.html
 2. [ROS/Tutorials/CreatingMsgAndSrv - ROS Wiki](http://wiki.ros.org/ROS/Tutorials/CreatingMsgAndSrv)
